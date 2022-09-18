@@ -1,0 +1,48 @@
+.main-container{
+    position:fixed;
+    z-index: 1;
+    height:70px;
+    width:100%;
+    background-color: black;
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+    padding:0 20px 0 20px;
+    .artom-logo{
+        height:inherit;
+        padding: 17px 17px 17px 0;
+        cursor: pointer;
+        opacity:0.8;
+    }
+    .nav-container{
+        min-width: 300px;
+        height:inherit;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.space{
+    height:70px;
+}
+
+@media (min-width: 1000px) { //desktop
+    .nav-container{
+        width: 20%;
+        float:right;
+        .nav-button-container{
+            margin-left:50px;
+        }
+    }
+    .artom-logo{
+        display: inline-block;
+    }
+}
+@media (max-width: 1000px) { //mobile
+    .nav-container{
+        .nav-button-container{
+            margin:50px;
+        }
+    }
+    .artom-logo{
+        display: none;
+    }
+}

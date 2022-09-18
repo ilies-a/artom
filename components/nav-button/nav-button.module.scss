@@ -1,0 +1,43 @@
+$textWhiteColor: rgb(243, 243, 243);
+
+.button{
+    display: inline-block;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 500;
+    color: $textWhiteColor;
+    /*color: rgb(44, 44, 44);*/
+    .button-line{
+        margin: 5px 0 0 0;
+        height: 2px;
+        width:0%;
+        transition: width 0.2s;
+        background-image: linear-gradient(to right, blue, rgb(130, 255, 186));
+    }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = min 1280px
+*/
+
+@media (min-width: 1081px) {
+    .button:hover{
+        .button-line{
+            width: 100%;
+            transition: width 0.2s;
+        }
+    }
+}
+
+@media (max-width: 1081px) {
+    .button:active{
+        .button-line{
+            width: 100%;
+            transition: width 0.1s;
+        }
+    }
+}
+/*@media only screen and (hover: none) and (pointer: coarse){ //mobile
+
+}*/
