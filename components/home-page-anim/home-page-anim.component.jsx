@@ -34,7 +34,7 @@ class HomePageAnim extends React.Component {
                 </div>
                 <div className={styles['text-container']}>
                     <h1>
-                        Acquire a $20 fraction of art asset right now
+                        Acquire a $20 fraction of art asset now
                     </h1>
                 </div>
             </div>
