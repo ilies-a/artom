@@ -68,6 +68,8 @@ $artworkshiftleftduration: 1.2s;
 @media (max-width: 1000px) { //mobile
     .main-container{
       flex-direction: column-reverse;
+      padding-bottom: 0px;
+      margin-bottom: 50px;
     }
     .fractions-container{
         width:90%;
@@ -77,7 +79,6 @@ $artworkshiftleftduration: 1.2s;
         width:90%;
         font-size: 40px;
         text-align: center;
-        margin-bottom: 50px;
     }
     .selectedFractionRight{
         animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
