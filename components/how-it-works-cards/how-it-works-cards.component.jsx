@@ -57,15 +57,7 @@ export default function HowItWorksCards(){
               <h3>Art is landed to a museum</h3>
               <p>Once the artwork is acquired, it is either exposed in a museum, or within our facilities</p>
             </div>
-        },
-        /*{
-          text:'2nd card text content',
-          image:'test.jpg'
-        },
-        {
-          text:'3rd card text content',
-          image:'test.jpg'
-        }*/
+        }
       ];
 
     const createHowItWorksCardsCrossingLine = ()=>{

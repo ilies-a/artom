@@ -25,7 +25,6 @@ class Home extends React.Component {
   }
 
   scrollToSection = (section)=>{
-    console.log('section', section)
     var sectionRef
     switch(section) {
       case 'about-us':
