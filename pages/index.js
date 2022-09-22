@@ -112,7 +112,7 @@ class Home extends React.Component {
         </div>
         {circles.map((value, index) =>{
           const number = index+1;
-          return <div className={`${styles['circle']} ${styles['circle-'+number]}`}></div>
+          return <div key={index} className={`${styles['circle']} ${styles['circle-'+number]}`}></div>
         })}
       </div>
     )
@@ -152,7 +152,7 @@ class Home extends React.Component {
             <div className={styles['how-it-work-cards-container']}>
               {this.cards.map((value, index) =>{
                 var number = index+1;
-                return <HowItWorksCard title={(number<10?'0':'')+number} textHtml={value['textHtml']} imageName={value['imageName']} isLastCard={ index==5 ? true:false}/>
+                return <HowItWorksCard key={index} title={(number<10?'0':'')+number} textHtml={value['textHtml']} imageName={value['imageName']} isLastCard={ index==5 ? true:false}/>
               })}
               {this.createHowItWorksCardsCrossingLine()}
             </div>
