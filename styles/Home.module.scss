@@ -18,7 +18,7 @@ $darkBlue: rgb(0, 0, 153);
 }
 
 .sections-container{
-  margin: 0 100px;
+  margin: 0 10%;
 }
 
 .section-title{
@@ -42,10 +42,21 @@ $darkBlue: rgb(0, 0, 153);
   .about-us-content-container{
     flex-direction: row;
   }
+  .about-us-illustration{
+    width:500px;
+    height:500px;
+  }
 }
 @media (max-width: 1081px) {
+  .section-title{
+    text-align: center;
+  }
   .about-us-content-container{
     flex-direction: column;
+  }
+  .about-us-illustration{
+    width:100%;
+    height:500px;
   }
 }
 
@@ -67,8 +78,6 @@ $darkBlue: rgb(0, 0, 153);
   vertical-align: middle;*/
   background-color: #111;
   color: white;
-  width:500px;
-  height:500px;
   /*just to center the temporary text :*/
   display: flex;
   flex-direction: column;

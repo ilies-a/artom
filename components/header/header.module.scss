@@ -38,6 +38,9 @@ $headerHeight: 70px;
     opacity: 1;
 }
 @media (min-width: 1080px) { //desktop
+    .main-container{
+        padding:0 30px;
+    }
     .nav-container{
         width: 20%;
         min-width: 700px;
@@ -51,6 +54,9 @@ $headerHeight: 70px;
     }
 }
 @media (max-width: 1081px) { //mobile
+    .main-container{
+        padding:0 10px;
+    }
     .nav-container{
         .nav-button-container{
             margin:50px;
