@@ -1,0 +1,53 @@
+$artomBlue: rgb(0, 88, 219);
+
+.main-container{
+    width: 170px;
+    /*border: 1px solid green;*/
+    margin: 0 5px;
+}
+
+.header{
+    height:60px;
+    border-radius: 0 10px 0 0;
+    background-color: $artomBlue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 38px;
+    color: white;
+    margin-bottom:5px;
+}
+
+.body{
+    border: 1px solid $artomBlue;
+    background-color: rgba(255, 255, 255, 0.76);
+    padding: 10px 10px;
+    height: 400px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .text-container{
+        margin: 0;
+    }
+    h3{
+        color:rgb(26, 26, 26);
+        font-weight: 700;
+        margin-top: 0px;
+    }
+    p{
+        font-weight: 500;
+    }
+    img{
+        position: relative;
+        height: 25%;
+    }
+}
+
+.last-card{
+    margin-left: 120px;
+}

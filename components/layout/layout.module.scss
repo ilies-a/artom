@@ -1,0 +1,14 @@
+$background-top-cover-height: 350px;
+
+.main-container{
+    background: url('../../public/background-image.svg');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: 0px $background-top-cover-height;
+}
+.background-top-cover{
+    position: absolute;
+    width:100%;
+    height:$background-top-cover-height;
+    background-color: white;
+}

@@ -1,18 +1,25 @@
-$textWhiteColor: rgb(243, 243, 243);
-
+/*$textWhiteColor: rgb(243, 243, 243);*/
+$darkBlue: rgb(0, 0, 153);
+$artomGreen: rgb(131, 245, 180);
 .button{
     display: inline-block;
     cursor: pointer;
     font-size: large;
     font-weight: 500;
-    color: $textWhiteColor;
+    color: $darkBlue;
     /*color: rgb(44, 44, 44);*/
     .button-line{
         margin: 5px 0 0 0;
         height: 2px;
         width:0%;
         transition: width 0.2s;
-        background-image: linear-gradient(to right, blue, rgb(130, 255, 186));
+        /*background-image: linear-gradient(to right, blue, $artomGreen);*/
+        background-color: $darkBlue;
+    }
+}
+.is-selected{
+    .button-line{
+        width: 100%;
     }
 }
 

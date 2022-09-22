@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'Montreal Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Montreal Regular'), url('../../public/fonts/Montreal-Regular.woff') format('woff');
+    }
 
-$textWhiteColor: rgb(243, 243, 243);
+/*$textWhiteColor: rgb(243, 243, 243);*/
+$darkBlue: rgb(0, 0, 153);
 $headerHeight: 70px;
 
 $artworkfadeinduration: 0.8s;
@@ -34,7 +41,6 @@ $artworkshiftleftduration: 1.2s;
 
     --animatedfraction-animation-delay: 2.8s;
 
-    background-color: rgb(0, 0, 0);
     width: 100%;
     min-height: calc(100vh - $headerHeight);
     display: flex;
@@ -109,8 +115,10 @@ $artworkshiftleftduration: 1.2s;
 
 .text-container{
     /*border: 1px solid green;*/
-    color:$textWhiteColor;
-    text-align: center;
+    /*font-family: 'Montreal Regular';*/
+    color:$darkBlue;
+    font-size: 52px;
+    text-align: left;
     opacity:0;
     animation: var(--text-fadein-duration) linear var(--text-fadein-delay) fadeIn forwards, 
                 var(--text-scale-duration) linear var(--text-scale-delay) textScale forwards;
@@ -136,7 +144,7 @@ $artworkshiftleftduration: 1.2s;
 
 @keyframes artworkShiftLeft {
     from {
-        left: 100px;
+        left: -100px;
     }
     to {
         left: 0px;
@@ -166,7 +174,7 @@ $artworkshiftleftduration: 1.2s;
         width: 100%;
     }
     to {
-        width: 70%;
+        width: 80%;
     }
 }
 
