@@ -50,6 +50,9 @@ $artworkshiftleftduration: 1.2s;
 }
 
 @media (min-width: 1000px) { //desktop
+    .main-container{
+        min-height: calc(100vh - $headerHeight);
+    }
     .fractions-container{
         width:35%;
         animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shiftleft-duration) linear var(--artwork-shiftleft-delay) artworkShiftLeft forwards;
@@ -68,8 +71,8 @@ $artworkshiftleftduration: 1.2s;
 @media (max-width: 1000px) { //mobile
     .main-container{
       flex-direction: column-reverse;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      min-height: calc(100vh - $headerHeight - 50px);
+
     }
     .fractions-container{
         width:90%;
