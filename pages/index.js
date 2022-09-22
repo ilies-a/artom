@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import HomePageAnim from '../components/home-page-anim/home-page-anim.component'
 import HowItWorksCard from '../components/how-it-works-card/how-it-works-card.component'
+import HowItWorksCards from '../components/how-it-works-cards/how-it-works-cards.component'
 
 /* redux */
 import { connect } from 'react-redux';
@@ -18,63 +19,6 @@ class Home extends React.Component {
     this.section2 = React.createRef();
     this.section3 = React.createRef();
     this.section4 = React.createRef();
-    this.cards = [
-      {
-        textHtml:
-          <div>
-            <h3>We select the piece of art</h3>
-            <p>Our experts determine which art object is available on the market and has the best growth potential</p>
-          </div>,
-        imageName:'hiw-1.jpg'
-      },
-      {
-        textHtml:
-          <div>
-            <h3>Community acquires shares</h3>
-            <p>For each artwork, 20&#8364; shares are created and are put on sale on the artom.io platform.</p>
-          </div>,
-        imageName:'hiw-2.png'
-      },
-      {
-        textHtml:
-          <div>
-            <h3>artom.io acquires the art</h3>
-            <p>Once all shares are bought by the community. We acquire the physical artwork on their on their behalf.</p>
-          </div>,
-        imageName:'hiw-3.png'
-      },
-      {
-        textHtml:
-          <div>
-            <h3>Community receives their shares</h3>
-            <p>Each buyer gets as many 20&#8364; Smart contracts as shares they have in their possession.</p>
-          </div>,
-        imageName:'hiw-4.png'
-      },
-      {
-        textHtml:
-          <div>
-            <h3>Community trades Shares</h3>
-            <p>Users trade their shares within the artom.io market or on any other compatible platform (opensea, rarible, etc.)</p>
-          </div>,
-        imageName:'hiw-5.png'
-      },
-      {
-        textHtml:
-          <div>
-            <h3>Art is landed to a museum</h3>
-            <p>Once the artwork is acquired, it is either exposed in a museum, or within our facilities</p>
-          </div>
-      },
-      /*{
-        text:'2nd card text content',
-        image:'test.jpg'
-      },
-      {
-        text:'3rd card text content',
-        image:'test.jpg'
-      }*/
-    ];
   }
   componentDidMount(){
     this.props.setScrollToSectionFunction(this.scrollToSection);
@@ -98,24 +42,6 @@ class Home extends React.Component {
         break;
     }
     sectionRef.current.scrollIntoView({behavior: 'smooth'});
-  }
-
-  createHowItWorksCardsCrossingLine(){
-    const circles = new Array(8).fill('')
-    return(
-      <div>
-        <div className={`${styles['how-it-work-cards-crossing-line']} ${styles['how-it-work-cards-crossing-line1']}`}>
-          <div className={styles['arrow']}></div>
-        </div>
-        <div className={`${styles['how-it-work-cards-crossing-line']} ${styles['how-it-work-cards-crossing-line2']}`}>
-          <div className={styles['arrow']}></div>
-        </div>
-        {circles.map((value, index) =>{
-          const number = index+1;
-          return <div key={index} className={`${styles['circle']} ${styles['circle-'+number]}`}></div>
-        })}
-      </div>
-    )
   }
 
   render(){
@@ -148,14 +74,8 @@ class Home extends React.Component {
           </section>
           <section className={`${styles['section']} ${styles['how-it-works']}`}>
             <div className={styles['section-scrolling-anchor']} ref={this.section2}></div>
-            <h1 className={`${styles['section-title']} ${styles['how-it-works-title']}`} >HOW DOES IT WORKS</h1>
-            <div className={styles['how-it-work-cards-container']}>
-              {this.cards.map((value, index) =>{
-                var number = index+1;
-                return <HowItWorksCard key={index} title={(number<10?'0':'')+number} textHtml={value['textHtml']} imageName={value['imageName']} isLastCard={ index==5 ? true:false}/>
-              })}
-              {this.createHowItWorksCardsCrossingLine()}
-            </div>
+            <h1 className={`${styles['section-title']} ${styles['how-it-works-title']}`}>HOW DOES IT WORKS</h1>
+            <HowItWorksCards/>
           </section>
           <section className={`${styles['section']} ${styles['faq']}`}>
             <div className={styles['section-scrolling-anchor']} ref={this.section3}></div>

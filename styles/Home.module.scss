@@ -7,11 +7,13 @@ $darkBlue: rgb(0, 0, 153);
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 
 .section{
   position: relative;
   margin-top:100px;
+  padding:0 60px; /*manual adjustment*/
 }
 
 .section-scrolling-anchor{
@@ -38,7 +40,7 @@ $darkBlue: rgb(0, 0, 153);
   justify-content: space-around;
   align-items: center;
   margin-top:0px;
-  padding:0 150px;
+  padding:0 135px; /*manual adjustment*/
 }
 .about-us-title-and-text-container{
   display: flex;
@@ -66,75 +68,6 @@ $darkBlue: rgb(0, 0, 153);
   text-align: right;
 }*/
 
-.how-it-work-cards-container{
-  position: relative;
-  display: flex;
-  /*border: 1px solid black;*/
-
-  .circle{
-    position:absolute;
-    background: blue;
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    top: 70%;
-    transform: translateY(-50%);
-  }
-  $circle1Left: 0.067;
-  $circleShift: 0.15;
-
-  .circle-1{
-    left:percentage($circle1Left);
-  }
-  .circle-2{
-    left:calc(percentage($circle1Left) + percentage($circleShift));
-  }
-  .circle-3{
-    left:calc(percentage($circle1Left) + percentage($circleShift*2));
-  }
-  .circle-4{
-    left:calc(percentage($circle1Left) + percentage($circleShift*3));
-  }
-  .circle-5{
-    left:calc(percentage($circle1Left) + percentage($circleShift*4));
-  }
-  .circle-6{
-    left:calc(percentage($circle1Left) + percentage($circleShift*4.7));
-  }
-  .circle-7{
-    left:calc(percentage($circle1Left) + percentage($circleShift*4.85));
-  }
-  .circle-8{
-    left:calc(percentage($circle1Left) + percentage($circleShift*5));
-  }
-
-  .arrow{
-    position: absolute;
-    transform: translateY(-60%);
-    right: 0px;
-    width: 0; 
-    height: 0; 
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-left: 11px solid blue;
-
-  }
-
-  .how-it-work-cards-crossing-line{
-    position: absolute;
-    border-top: 1px solid blue;
-  }
-  .how-it-work-cards-crossing-line1{
-    width: 70%;
-    left:3%;
-    top:70%;
-  }
-  .how-it-work-cards-crossing-line2{
-    width: 17%;
-    left:76%;
-    top:70%;
-  }
-}
 
 .faq, .stay-in-touch{
   width: 82vw;
