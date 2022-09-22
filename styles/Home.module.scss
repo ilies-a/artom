@@ -3,17 +3,14 @@ $darkBlue: rgb(0, 0, 153);
 
 .container {
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  border:1px solid black;
 }
 
 .section{
   position: relative;
-  margin-top:100px;
-  padding:0 60px; /*manual adjustment*/
+  margin-top:50px;
+  margin-bottom: 50px;
+  /*padding:0 60px; manual adjustment*/
 }
 
 .section-scrolling-anchor{
@@ -22,10 +19,7 @@ $darkBlue: rgb(0, 0, 153);
 }
 
 .sections-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 0 100px;
 }
 
 .section-title{
@@ -36,45 +30,57 @@ $darkBlue: rgb(0, 0, 153);
 
 
 .about-us-content-container{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
   margin-top:0px;
-  padding:0 135px; /*manual adjustment*/
-}
-.about-us-title-and-text-container{
+  /*padding:0 135px; manual adjustment*/
+  
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: left;
+  align-items: center;
+}
+
+@media (min-width: 1081px) {
+  .about-us-content-container{
+    flex-direction: row;
+  }
+}
+@media (max-width: 1081px) {
+  .about-us-content-container{
+    flex-direction: column;
+  }
+}
+
+.about-us-title-and-text-container{
+  /*display: inline-block;
+  vertical-align: middle;*/
+
+
+
+  max-width:500px;
   p{
-    width:60%;
     font-weight: 500;
     font-size: 22px;
     text-align: justify;
   }
 }
 .about-us-illustration{
-  background-color: rgb(6, 6, 53);
+  /*display: inline-block;
+  vertical-align: middle;*/
+  background-color: #111;
   color: white;
+  width:500px;
+  height:500px;
+  /*just to center the temporary text :*/
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:800px;
-  height: 400px;
 }
 
 /*.how-it-works-title{
   text-align: right;
 }*/
 
-
-.faq, .stay-in-touch{
-  width: 82vw;
-}
-
-.stay-in-touch-email-input{
-}
 
 .main {
   min-height: 100vh;

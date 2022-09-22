@@ -67,9 +67,7 @@ class Home extends React.Component {
                   Members of the community can build a diversified portfolio of iconic artworks curated by our industry-leading research team.
                 </p>
               </div>
-              <div className={styles['about-us-illustration']}>
-                ILLUSTRATION
-              </div>
+              <div className={styles['about-us-illustration']}>ILLUSTRATION</div>
             </div>
           </section>
           <section className={`${styles['section']} ${styles['how-it-works']}`}>

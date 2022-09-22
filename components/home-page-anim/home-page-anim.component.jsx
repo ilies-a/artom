@@ -5,7 +5,7 @@ export default function HomePageAnim (){
         const totalOfFractions = 9
         const fractions = new Array(totalOfFractions).fill('')
         const selectedFractionRightIndex = totalOfFractionsByRow
-        const selectedFractionBottomIndex = totalOfFractionsByRow*2 - 2
+        const selectedFractionBottomIndex = totalOfFractionsByRow*3 - 2
         return (
             <div className={styles['main-container']}>
                 <div className={styles['text-container']}>

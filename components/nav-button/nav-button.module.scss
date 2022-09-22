@@ -28,7 +28,7 @@ $artomGreen: rgb(131, 245, 180);
   ##Screen = min 1280px
 */
 
-@media (min-width: 1081px) {
+@media (min-width: 1080px) {
     .button:hover{
         .button-line{
             width: 100%;
@@ -38,6 +38,9 @@ $artomGreen: rgb(131, 245, 180);
 }
 
 @media (max-width: 1081px) {
+    .button{
+        font-size: medium;
+    }
     .button:active{
         .button-line{
             width: 100%;

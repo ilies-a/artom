@@ -57,7 +57,8 @@ $artworkshiftleftduration: 1.2s;
     .text-container{
         width:35%;
         margin-left:50px;
-        font-size: large;
+        font-size: 52px;
+        text-align: left;
     }
     .selectedFractionBottom{
         animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
@@ -66,7 +67,7 @@ $artworkshiftleftduration: 1.2s;
 
 @media (max-width: 1000px) { //mobile
     .main-container{
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
     .fractions-container{
         width:90%;
@@ -74,6 +75,8 @@ $artworkshiftleftduration: 1.2s;
     }
     .text-container{
         width:90%;
+        font-size: 40px;
+        text-align: center;
     }
     .selectedFractionRight{
         animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
@@ -117,8 +120,6 @@ $artworkshiftleftduration: 1.2s;
     /*border: 1px solid green;*/
     /*font-family: 'Montreal Regular';*/
     color:$darkBlue;
-    font-size: 52px;
-    text-align: left;
     opacity:0;
     animation: var(--text-fadein-duration) linear var(--text-fadein-delay) fadeIn forwards, 
                 var(--text-scale-duration) linear var(--text-scale-delay) textScale forwards;

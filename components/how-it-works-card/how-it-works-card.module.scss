@@ -1,7 +1,9 @@
 $artomBlue: rgb(0, 88, 219);
 
 .main-container{
-    width: 170px;
+    min-width: 170px;
+    max-width: 400px;
+    flex:1;
     /*border: 1px solid green;*/
     margin: 0 5px;
 }
@@ -23,7 +25,6 @@ $artomBlue: rgb(0, 88, 219);
     border: 1px solid $artomBlue;
     background-color: rgba(255, 255, 255, 0.76);
     padding: 10px 10px;
-    height: 400px;
     text-align: center;
 
     display: flex;
@@ -44,10 +45,45 @@ $artomBlue: rgb(0, 88, 219);
     }
     img{
         position: relative;
-        height: 25%;
     }
 }
 
+@media (min-width: 1500px) {
+    .body{
+      height: 400px;
+      img{
+        height: 25%;
+        }
+    }
+  }
+  @media (max-width: 1501px) {
+    .main-container{
+        margin-bottom: 50px;
+    }
+    .body{
+        height: 300px;
+        img{
+            height: 50%;
+        }
+    }
+  }
+
 .last-card{
-    margin-left: 120px;
+    margin-bottom: 0px;
+}
+.not-visible{
+    opacity:1;
+}
+
+@media (min-width: 1500px) {
+    .not-visible{
+        opacity:0; //it disappears but keep its space on large width screens
+    }
+}
+
+@media (max-width: 1501px) {
+    .not-visible{
+        display:none; //it really disappears on small width screens
+    }
+    
 }

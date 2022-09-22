@@ -1,7 +1,22 @@
+@media (min-width: 1500px) {
+  .how-it-work-cards-container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1501px) {
+  .how-it-work-cards-container{
+    flex-direction: column;
+  }
+  .circle, .arrow, .how-it-work-cards-crossing-line{
+    display: none;
+  }
+}
+
 .how-it-work-cards-container{
     position: relative;
     display: flex;
-    /*border: 1px solid black;*/
+    align-items: center;
   
     .circle{
       position:absolute;
@@ -13,7 +28,7 @@
       transform: translateY(-50%);
     }
     $circle1Left: 0.067;
-    $circleShift: 0.15;
+    $circleShift: 0.142;
   
     .circle-1{
       left:percentage($circle1Left);
@@ -31,13 +46,13 @@
       left:calc(percentage($circle1Left) + percentage($circleShift*4));
     }
     .circle-6{
-      left:calc(percentage($circle1Left) + percentage($circleShift*4.7));
+      left:calc(percentage($circle1Left) + percentage($circleShift*4.86));
     }
     .circle-7{
-      left:calc(percentage($circle1Left) + percentage($circleShift*4.85));
+      left:calc(percentage($circle1Left) + percentage($circleShift*5.05));
     }
     .circle-8{
-      left:calc(percentage($circle1Left) + percentage($circleShift*5));
+      left:calc(percentage($circle1Left) + percentage($circleShift*5.24));
     }
   
     .arrow{
@@ -57,13 +72,13 @@
       border-top: 1px solid blue;
     }
     .how-it-work-cards-crossing-line1{
-      width: 70%;
+      width: 67%;
       left:3%;
       top:70%;
     }
     .how-it-work-cards-crossing-line2{
-      width: 17%;
-      left:76%;
+      width: 20%;
+      left:73%;
       top:70%;
     }
   }

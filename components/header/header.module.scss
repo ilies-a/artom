@@ -15,7 +15,6 @@ $headerHeight: 70px;
         opacity:0.8;
     }
     .nav-container{
-        min-width: 700px;
         height:inherit;
         display: flex;
         align-items: center;
@@ -38,9 +37,10 @@ $headerHeight: 70px;
 .prototype-icon:hover{
     opacity: 1;
 }
-@media (min-width: 1000px) { //desktop
+@media (min-width: 1080px) { //desktop
     .nav-container{
         width: 20%;
+        min-width: 700px;
         float:right;
         /*.nav-button-container{
             margin-left:50px;
@@ -50,7 +50,7 @@ $headerHeight: 70px;
         display: inline-block;
     }
 }
-@media (max-width: 1000px) { //mobile
+@media (max-width: 1081px) { //mobile
     .nav-container{
         .nav-button-container{
             margin:50px;

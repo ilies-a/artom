@@ -46,6 +46,14 @@ export default function HowItWorksCards(){
         {
           textHtml:
             <div>
+              <h3></h3>
+              <p></p>
+            </div>,
+          imageName:''
+        },
+        {
+          textHtml:
+            <div>
               <h3>Art is landed to a museum</h3>
               <p>Once the artwork is acquired, it is either exposed in a museum, or within our facilities</p>
             </div>
@@ -80,8 +88,8 @@ export default function HowItWorksCards(){
     return(
         <div className={styles['how-it-work-cards-container']}>
             {cards.map((value, index) =>{
-            var number = index+1;
-            return <HowItWorksCard key={index} title={(number<10?'0':'')+number} textHtml={value['textHtml']} imageName={value['imageName']} isLastCard={ index==5 ? true:false}/>
+            const number = index==6? index:index+1;
+            return <HowItWorksCard key={index} title={(number<10?'0':'')+number} textHtml={value['textHtml']} imageName={value['imageName']} isLastCard={ index==6 ? true:false} isNotVisible={ index==5 ? true:false}/>
             })}
             {createHowItWorksCardsCrossingLine()}
         </div>
