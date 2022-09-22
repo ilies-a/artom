@@ -48,6 +48,12 @@ $artomGreen: rgb(131, 245, 180);
         }
     }
 }
+
+@media (max-width: 400px) {
+    .button{
+        font-size: small;
+    }
+}
 /*@media only screen and (hover: none) and (pointer: coarse){ //mobile
 
 }*/
