@@ -3,6 +3,7 @@ import styles from './images-preloader.module.scss'
 
 export default function ImagesPreloader(){
     return(
+        
         <div className={styles['main-container']}>
             <Image src={'/artwork.jpg'} alt='artwork' layout='fill' priority />
             <Image src={'/artwork-fractions/1.jpg'} alt='artwork-fraction' layout='fill' priority/>
