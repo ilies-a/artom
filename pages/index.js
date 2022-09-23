@@ -23,9 +23,11 @@ class Home extends React.Component {
       componentIsMount: false
     }
   }
-  componentDidMount(){
+  async componentDidMount(){
     this.props.setScrollToSectionFunction(this.scrollToSection)
-    this.setState({componentIsMount:true})
+    setTimeout(()=>{
+      this.setState({componentIsMount:true})
+    }, 5000)
   }
 
   scrollToSection = (section)=>{
