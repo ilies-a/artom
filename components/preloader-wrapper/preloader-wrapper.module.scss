@@ -17,13 +17,27 @@ $artomGreen: rgb(131, 245, 180);
   }
 
   .loader {
-    border: 16px solid $artomGreen;
-    border-top: 16px solid $artomBlue;
     border-radius: 50%;
-    width: 140px;
-    height: 140px;
     animation: spin 1s linear infinite;
   }
+
+  @media (min-width: 1080px) {
+    .loader{
+        border: 16px solid $artomGreen;
+        border-top: 16px solid $artomBlue;
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 1081px) {
+    .loader{
+        border: 12px solid $artomGreen;
+        border-top: 12px solid $artomBlue;
+        width: 120px;
+        height: 120px;
+    }
+}
 
   @keyframes spin {
     0% {
