@@ -58,6 +58,18 @@ class Home extends React.Component {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         {this.state.componentIsMount ? <HomePageAnim/> : null}
+        <div className={this.state.componentIsMount ?styles['invisible']:null}>
+        <Image className={styles['artwork']} src={`${'/artwork.jpg'}`} alt='artwork' layout='fill' priority />
+          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/1.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
+          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/2.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
+          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/3.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
+          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/4.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
+          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/5.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
+          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/6.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
+          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/7.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
+          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/8.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
+          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/9.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
+        </div>
         <div className={styles['sections-container']}>
           <section className={`${styles['section']} ${styles['about-us']}`}>
             <div className={styles['section-scrolling-anchor']} ref={this.section1}></div>
