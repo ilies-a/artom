@@ -1,3 +1,6 @@
+$artomBlue: rgb(0, 88, 219);
+$artomGreen: rgb(131, 245, 180);
+
 .images-container{
     display:none;
 }
@@ -8,14 +11,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #dfdfdf;
     display: grid;
     place-items: center;
   }
 
   .loader {
-    border: 16px solid #e3e3e3;
-    border-top: 16px solid #3498db;
+    border: 16px solid $artomGreen;
+    border-top: 16px solid $artomBlue;
     border-radius: 50%;
     width: 140px;
     height: 140px;

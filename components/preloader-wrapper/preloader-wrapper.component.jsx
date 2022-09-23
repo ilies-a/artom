@@ -8,7 +8,7 @@ class PreloaderWrapper extends React.Component {
         this.state={
             imagesArePreloaded: false
         }
-        this.preloadedDelay = 1000
+        this.preloadedDelay = 500
     }
     async componentDidMount(){
         setTimeout(()=>{
