@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './home-page-anim.module.scss'
 
 export default function HomePageAnim (){
@@ -12,11 +13,11 @@ export default function HomePageAnim (){
                     <div>BUY, SELL AND TRADE SHARES OF ICONIC ARTWORKS</div>
                 </div>
                 <div className={styles['fractions-container']}>
-                    <img src={`${'artwork.jpg'}`} className={styles['artwork']}/>
+                    <Image src={`${'/artwork.jpg'}`} alt='artwork' layout='fill' priority className={styles['artwork']} />
                     {
                         fractions.map((value, index) =>{
                             return <div key={index} className={`${styles.fraction} ${index == selectedFractionRightIndex ? styles.selectedFractionRight: index == selectedFractionBottomIndex ? styles.selectedFractionBottom: styles.unselectedFraction}`}>
-                                        <img src={`${'artwork-fractions/'+(index+1)+'.jpg'}`}/>
+                                        <img src={`${'/artwork-fractions/'+(index+1)+'.jpg'}`} alt='artwork-fraction' layout='fill' priority/>
                                     </div>
                         })
                     }
