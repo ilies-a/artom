@@ -3,7 +3,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import HomePageAnim from '../components/home-page-anim/home-page-anim.component'
 import HowItWorksCards from '../components/how-it-works-cards/how-it-works-cards.component'
-import ImagesPreloader from '../components/images-preloader/images-preloader.component'
 
 /* redux */
 import { connect } from 'react-redux';
@@ -51,7 +50,6 @@ class Home extends React.Component {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <HomePageAnim/>
-        <ImagesPreloader/>
         <div className={styles['sections-container']}>
           <section className={`${styles['section']} ${styles['about-us']}`}>
             <div className={styles['section-scrolling-anchor']} ref={this.section1}></div>
