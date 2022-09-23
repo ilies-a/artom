@@ -6,7 +6,7 @@ export default function HowItWorksCards(){
         {
           textHtml:
             <div>
-              <h3>We select the piece of art</h3>
+              <h3>We select the artwork</h3>
               <p>Our experts determine which art object is available on the market and has the best growth potential</p>
             </div>,
           imageName:'hiw-1.jpg'
