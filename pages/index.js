@@ -25,7 +25,7 @@ class Home extends React.Component {
     this.props.setScrollToSectionFunction(this.scrollToSection)
     setTimeout(()=>{
       this.setState({imagesArePreloaded:true})
-    }, 100)
+    }, 5000)
   }
 
   scrollToSection = (section)=>{
