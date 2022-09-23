@@ -25,7 +25,7 @@ class Home extends React.Component {
     this.props.setScrollToSectionFunction(this.scrollToSection)
     setTimeout(()=>{
       this.setState({componentIsMount:true})
-    }, 1000)
+    }, 500)
   }
 
   scrollToSection = (section)=>{
