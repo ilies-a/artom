@@ -1,10 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import HomePageAnim from '../components/home-page-anim/home-page-anim.component'
-import HowItWorksCard from '../components/how-it-works-card/how-it-works-card.component'
 import HowItWorksCards from '../components/how-it-works-cards/how-it-works-cards.component'
+import ImagesPreloader from '../components/images-preloader/images-preloader.component'
 
 /* redux */
 import { connect } from 'react-redux';
@@ -58,18 +57,7 @@ class Home extends React.Component {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         {this.state.componentIsMount ? <HomePageAnim/> : null}
-        <div className={this.state.componentIsMount ?styles['invisible']:null}>
-        <Image className={styles['artwork']} src={`${'/artwork.jpg'}`} alt='artwork' layout='fill' priority />
-          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/1.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
-          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/2.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
-          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/3.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
-          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/4.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
-          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/5.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
-          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/6.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
-          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/7.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
-          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/8.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
-          <div className={styles['artwork-fraction']}><Image src={'/artwork-fractions/9.jpg'} alt='artwork-fraction' layout='fill' priority/></div>
-        </div>
+        <ImagesPreloader/>
         <div className={styles['sections-container']}>
           <section className={`${styles['section']} ${styles['about-us']}`}>
             <div className={styles['section-scrolling-anchor']} ref={this.section1}></div>

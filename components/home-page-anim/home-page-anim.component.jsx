@@ -13,7 +13,7 @@ export default function HomePageAnim (){
                     <div>BUY, SELL AND TRADE SHARES OF ICONIC ARTWORKS</div>
                 </div>
                 <div className={styles['fractions-container']}>
-                    <Image className={styles['artwork']} src={`${'/artwork.jpg'}`} alt='artwork' layout='fill' priority={true} />
+                    <Image className={styles['artwork']} src={'/artwork.jpg'} alt='artwork' layout='fill' priority={true} />
                     {
                         fractions.map((value, index) =>{
                             return <div key={index} className={`${styles['fraction']} ${index == selectedFractionRightIndex ? styles.selectedFractionRight: index == selectedFractionBottomIndex ? styles.selectedFractionBottom: styles.unselectedFraction}`}>
