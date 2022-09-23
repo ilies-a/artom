@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './how-it-works-card.module.scss'
 
 export default function HowItWorksCard(props){
@@ -6,7 +7,10 @@ export default function HowItWorksCard(props){
         <div className={styles['header']}>{props.title}</div>
         <div className={styles['body']}>
             <div className={styles['text-container']}>{props.textHtml}</div>
-            { props.imageName !== undefined ? <img src={`${'how-it-works-images/'+props.imageName}`}/> : null }
+            { props.imageName !== undefined ? 
+            <div className={styles['image-container']}>
+                <Image src={`${'/how-it-works-images/'+props.imageName}`} layout={'fill'} objectFit={'contain'}/>
+            </div> : null }
         </div>
     </div>
     )

@@ -43,15 +43,16 @@ $artomBlue: rgb(0, 88, 219);
     p{
         font-weight: 500;
     }
-    img{
+    .image-container{
         position: relative;
+        width: 80%;
     }
 }
 
 @media (min-width: 1500px) {
     .body{
       height: 400px;
-      img{
+      .image-container{
         height: 25%;
         }
     }
@@ -62,7 +63,7 @@ $artomBlue: rgb(0, 88, 219);
     }
     .body{
         height: 300px;
-        img{
+        .image-container{
             height: 50%;
         }
     }

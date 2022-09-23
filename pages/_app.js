@@ -1,16 +1,16 @@
 import '../styles/globals.css'
 import Layout from '../components/layout/layout.component'
 import ReduxWrapper from '../components/redux-wrapper/redux-wrapper.component'
-import PreloaderWrapper from '../components/preloader-wrapper/preloader-wrapper.component'
+import DataLoaderWrapper from '../components/data-loader-wrapper/data-loader-wrapper.component'
 
 function MyApp({ Component, pageProps }) {
   return (
     <ReduxWrapper>
-      <PreloaderWrapper>
+      <DataLoaderWrapper>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </PreloaderWrapper>
+      </DataLoaderWrapper>
     </ReduxWrapper>
   )
 }
