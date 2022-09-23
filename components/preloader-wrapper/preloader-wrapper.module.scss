@@ -23,8 +23,8 @@ $artomGreen: rgb(131, 245, 180);
 
   @media (min-width: 1080px) {
     .loader{
-        border: 16px solid $artomGreen;
-        border-top: 16px solid $artomBlue;
+        border: 16px solid transparent;
+        border-top: 16px solid $artomGreen;
         width: 140px;
         height: 140px;
     }
@@ -32,10 +32,10 @@ $artomGreen: rgb(131, 245, 180);
 
 @media (max-width: 1081px) {
     .loader{
-        border: 12px solid $artomGreen;
-        border-top: 12px solid $artomBlue;
-        width: 120px;
-        height: 120px;
+        border: 12px solid transparent;
+        border-top: 12px solid $artomGreen;
+        width: 100px;
+        height: 100px;
     }
 }
 

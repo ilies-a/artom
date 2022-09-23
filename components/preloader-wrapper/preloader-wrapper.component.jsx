@@ -19,19 +19,19 @@ class PreloaderWrapper extends React.Component {
         return(
             <div>
                 <div className={styles['images-container']}>
-                    <Image src={'/artom-logo.png'} layout='fill' priority/>
-                    <Image src={'/background-image.svg'} layout='fill' priority/>
-                    <Image src={'/prototype.png'} layout='fill' priority/>
-                    <Image src={'/artwork.jpg'} layout='fill' priority />
-                    <Image src={'/artwork-fractions/1.jpg'} layout='fill' priority/>
-                    <Image src={'/artwork-fractions/2.jpg'} layout='fill' priority/>
-                    <Image src={'/artwork-fractions/3.jpg'} layout='fill' priority/>
-                    <Image src={'/artwork-fractions/4.jpg'} layout='fill' priority/>
-                    <Image src={'/artwork-fractions/5.jpg'} layout='fill' priority/>
-                    <Image src={'/artwork-fractions/6.jpg'} layout='fill' priority/>
-                    <Image src={'/artwork-fractions/7.jpg'} layout='fill' priority/>
-                    <Image src={'/artwork-fractions/8.jpg'} layout='fill' priority/>
-                    <Image src={'/artwork-fractions/9.jpg'} layout='fill' priority/>
+                    <Image src={'/artom-logo.png'} layout='fill' alt='' priority/>
+                    <Image src={'/background-image.svg'} layout='fill' alt='' priority/>
+                    <Image src={'/prototype.png'} layout='fill' alt='' priority/>
+                    <Image src={'/artwork.jpg'} layout='fill' alt='' priority />
+                    <Image src={'/artwork-fractions/1.jpg'} layout='fill' alt='' priority/>
+                    <Image src={'/artwork-fractions/2.jpg'} layout='fill' alt='' priority/>
+                    <Image src={'/artwork-fractions/3.jpg'} layout='fill' alt='' priority/>
+                    <Image src={'/artwork-fractions/4.jpg'} layout='fill' alt='' priority/>
+                    <Image src={'/artwork-fractions/5.jpg'} layout='fill' alt='' priority/>
+                    <Image src={'/artwork-fractions/6.jpg'} layout='fill' alt='' priority/>
+                    <Image src={'/artwork-fractions/7.jpg'} layout='fill' alt='' priority/>
+                    <Image src={'/artwork-fractions/8.jpg'} layout='fill' alt='' priority/>
+                    <Image src={'/artwork-fractions/9.jpg'} layout='fill' alt='' priority/>
                 </div>
                 {this.state.imagesArePreloaded ? 
                     this.props.children:
