@@ -1,24 +1,27 @@
-@media (min-width: 1500px) {
+@media (min-width: 1400px) {
   .how-it-work-cards-container{
+
   }
 }
-@media (max-width: 1501px) {
+@media (max-width: 1401px) {
   .how-it-work-cards-container{
-    width:100%;
-    overflow-x: scroll;
   }
-  .circle, .arrow, .how-it-work-cards-crossing-line{
+  /*.circle, .arrow, .how-it-work-cards-crossing-line{
     display: none;
+  }*/
+
+  .main-container{
+    overflow-x: scroll;
   }
 }
 
 .how-it-work-cards-container{
     position: relative;
     display: flex;
-    align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    
+    align-items: center;
+    min-width: 1200px;
     .circle{
       position:absolute;
       background: blue;

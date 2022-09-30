@@ -78,12 +78,14 @@ export default function HowItWorksCards(){
         )
     }
     return(
-        <div className={styles['how-it-work-cards-container']}>
-            {cards.map((value, index) =>{
-            const number = index==6? index:index+1;
-            return <HowItWorksCard key={index} title={(number<10?'0':'')+number} textHtml={value['textHtml']} imageName={value['imageName']} isLastCard={ index==6 ? true:false} isNotVisible={ index==5 ? true:false}/>
-            })}
-            {createHowItWorksCardsCrossingLine()}
+        <div className={styles['main-container']}>
+          <div className={styles['how-it-work-cards-container']}>
+              {cards.map((value, index) =>{
+              const number = index==6? index:index+1;
+              return <HowItWorksCard key={index} title={(number<10?'0':'')+number} textHtml={value['textHtml']} imageName={value['imageName']} isLastCard={ index==6 ? true:false} isNotVisible={ index==5 ? true:false}/>
+              })}
+              {createHowItWorksCardsCrossingLine()}
+          </div>
         </div>
     )
 }
