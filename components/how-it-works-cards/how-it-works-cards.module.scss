@@ -1,12 +1,11 @@
 @media (min-width: 1500px) {
   .how-it-work-cards-container{
-    flex-direction: row;
-    justify-content: space-between;
   }
 }
 @media (max-width: 1501px) {
   .how-it-work-cards-container{
-    flex-direction: column;
+    width:100%;
+    overflow-x: scroll;
   }
   .circle, .arrow, .how-it-work-cards-crossing-line{
     display: none;
@@ -17,7 +16,9 @@
     position: relative;
     display: flex;
     align-items: center;
-  
+    flex-direction: row;
+    justify-content: space-between;
+    
     .circle{
       position:absolute;
       background: blue;

@@ -21,7 +21,6 @@ class DataLoaderWrapper extends React.Component {
     }
     render(){
         const dots = new Array(25).fill('');
-
         return(
             <div>
                 <div className={styles['images-container']}>
