@@ -3,12 +3,14 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import HomePageAnim from '../components/home-page-anim/home-page-anim.component'
 import HowItWorksCards from '../components/how-it-works-cards/how-it-works-cards.component'
+import Image from 'next/image'
 
 /* redux */
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectScrollToSectionFunction } from '../redux/homepage-handler/homepage-handler.selectors';
 import { setScrollToSectionFunction } from '../redux/homepage-handler/homepage-handler.actions';
+import { setSelectedNavButton } from '../redux/nav-bar/nav-bar.actions';
 
 class Home extends React.Component {
   constructor(props){
@@ -34,6 +36,9 @@ class Home extends React.Component {
       case 'faq':
         sectionRef = this.section3
         break;
+      case 'stay-in-touch':
+        sectionRef = this.section3
+        break;
       default:
         sectionRef = this.section4
         break
@@ -41,6 +46,12 @@ class Home extends React.Component {
     sectionRef.current.scrollIntoView({behavior: 'smooth'})
   }
 
+  scrollTo = (section)=>{
+    if(this.props.scrollToSectionFunction !== 'undefined'){
+        this.props.scrollToSectionFunction(section);
+        this.props.setSelectedNavButton(section)
+    }
+  }
   render(){
     return (
       <div className={styles.container}>
@@ -79,10 +90,53 @@ class Home extends React.Component {
         <section className={`${styles['section']} ${styles['stay-in-touch']}`}>
           <div className={styles['section-scrolling-anchor']} ref={this.section4}></div>
           <h1 className={`${styles['section-title']} ${styles['stay-in-touch-title']}`} >STAY IN TOUCH</h1>
-          <div>Email address:</div>
-          <input type='text' className={styles['stay-in-touch-email-input']}/>
+          <p>Want to know more about the project, leave us your contact details and we will get back to you soon</p>
+          <div className={styles['email-input-container']}>
+            <input type='text' className={styles['stay-in-touch-email-input']} placeholder='Email...'/>
+            <button>Ok</button>
+          </div>
+          <div className={styles['social-network-buttons-container']}>
+            <div className={styles['social-network-logo']}>
+              <Image src='/facebook-logo.png' alt='facebook-logo' layout={'fill'} objectFit={'contain'}/>
+            </div>
+            <div className={styles['social-network-logo']}>
+              <Image src='/twitter-logo.png' alt='twitter-logo' layout={'fill'} objectFit={'contain'}/>
+            </div>
+            <div className={styles['social-network-logo']}>
+              <Image src='/instagram-logo.png' alt='instagram-logo' layout={'fill'} objectFit={'contain'}/>
+            </div>
+          </div>
         </section>
       </div>
+      <footer className={styles.footer}>
+        <div className={styles['footer-block-1']}>
+          <div className={styles['artom-logo-container']}>
+            <div className={styles['artom-logo']} onClick={()=> this.scrollTo('about-us')}>
+              <Image className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'}/>
+            </div>
+          </div>
+          <div className={styles['footer-block-1-child-container']}>
+            <ul>
+              <li><span onClick={()=> this.scrollTo('about-us')}>Home</span></li>
+              <li><span onClick={()=> this.scrollTo('about-us')}>About Us</span></li>
+              <li><span onClick={()=> this.scrollTo('how-it-works')}>How it Works</span></li>
+              <li><span onClick={()=> this.scrollTo('faq')}>FAQ</span></li>
+              <li><span onClick={()=> this.scrollTo('stay-in-touch')}>Stay in Touch</span></li>
+            </ul>
+          </div>
+          <div className={styles['footer-block-1-child-container']}>
+            <div><span>White Paper</span></div>
+          </div>
+          <div className={styles['footer-block-1-child-container']}>
+            <a className={styles['artom-email']}><span>hello@artom.io</span></a>
+          </div>
+        </div>
+        <div className={styles['footer-block-2']}>
+          <div><span>Terms & Conditions</span></div>
+          <div><span>Privacy Policy</span></div>
+          <div><span>artom.io &#169; 2022</span></div>
+        </div>
+      </footer>
     </div>
     )
   }
@@ -93,7 +147,8 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = dispatch =>({
-  setScrollToSectionFunction : scrollToSectionFunction => dispatch(setScrollToSectionFunction(scrollToSectionFunction))
+  setScrollToSectionFunction : scrollToSectionFunction => dispatch(setScrollToSectionFunction(scrollToSectionFunction)),
+  setSelectedNavButton : navButtonName => dispatch(setSelectedNavButton(navButtonName)) 
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

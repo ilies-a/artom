@@ -55,10 +55,14 @@ $artworkshiftleftduration: 1.2s;
         animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shiftleft-duration) linear var(--artwork-shiftleft-delay) artworkShiftLeft forwards;
     }
     .text-container{
+        position: relative;
         width:35%;
         margin-left:50px;
         font-size: 52px;
         text-align: left;
+        //just some manual adjustments requested by client
+        left:-50px;
+        top:-100px;
     }
     .selectedFractionBottom{
         animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;

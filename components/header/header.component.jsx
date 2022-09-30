@@ -4,33 +4,32 @@ import NavButton from '../nav-button/nav-button.component'
 {/* redux */}
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { selectSelectedNavButton } from '../../redux/nav-bar/nav-bar.selectors';
+import { setSelectedNavButton } from '../../redux/nav-bar/nav-bar.actions';
 import { selectScrollToSectionFunction } from '../../redux/homepage-handler/homepage-handler.selectors';
 
 class Header extends React.Component {
     constructor(props){
         super(props);
-        this.state = {
-            selectedNavButton: undefined
-        }
     }
     scrollTo = (section)=>{
         if(this.props.scrollToSectionFunction !== 'undefined'){
             this.props.scrollToSectionFunction(section);
-            this.setState({selectedNavButton: section});
+            this.props.setSelectedNavButton(section)
         }
     }
     openPrototypePage = ()=>{
         window.open("https://artom.io/");
     }
     navButtonIsSelected = (section)=>{
-        return this.state.selectedNavButton == section ? true : false;
+        return this.props.selectedNavButton == section ? true : false;
     }
 
     render(){
         return (
             <div>
                 <div className={styles['main-container']}>
-                    <img className={styles['artom-logo']} src='artom-logo.png'/>
+                    <img className={styles['artom-logo']} src='artom-logo.png' onClick={()=> this.scrollTo('about-us')}/>
                     <div className={styles['nav-container']}>
                         <NavButton text='ABOUT US' onClickHandler={this.scrollTo} section='about-us' isSelected={this.navButtonIsSelected('about-us')}/>
                         <NavButton text='HOW IT WORKS' onClickHandler={this.scrollTo} section='how-it-works' isSelected={this.navButtonIsSelected('how-it-works')}/>
@@ -47,6 +46,9 @@ class Header extends React.Component {
 
 const mapStateToProps = createStructuredSelector({
     scrollToSectionFunction: selectScrollToSectionFunction,
+    selectedNavButton: selectSelectedNavButton
  });
- 
- export default connect(mapStateToProps, null)(Header);
+const mapDispatchToProps = dispatch =>({
+    setSelectedNavButton : navButtonName => dispatch(setSelectedNavButton(navButtonName)) 
+});
+ export default connect(mapStateToProps, mapDispatchToProps)(Header);
