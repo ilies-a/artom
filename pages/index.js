@@ -112,7 +112,7 @@ class Home extends React.Component {
         <div className={styles['footer-block-1']}>
           <div className={styles['artom-logo-container']}>
             <div className={styles['artom-logo']} onClick={()=> this.scrollTo('about-us')}>
-              <Image className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'}/>
+              <img className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'}/>
             </div>
           </div>
           <div className={styles['footer-block-1-child-container']}>

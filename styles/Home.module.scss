@@ -204,7 +204,12 @@ $mobileMaxWidth: 1080px;
     }
   }
 }
-
+@media (max-width: 435px) {
+  .footer{
+    font-size: 14px;
+    padding: 0;
+  }
+}
 
 @media (min-width: 801px) {
   .footer-block-1{
