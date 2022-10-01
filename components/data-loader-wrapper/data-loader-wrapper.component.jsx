@@ -44,7 +44,7 @@ class DataLoaderWrapper extends React.Component {
                     <Image src='/how-it-works-images/hiw-5.png' alt='artwork-fraction' layout='fill' priority onLoadingComplete={() => this.handleImageLoad()}/>
                     <Image src='/facebook-logo.png' alt='facebook-logo' layout='fill' priority onLoadingComplete={() => this.handleImageLoad()}/>
                     <Image src='/twitter-logo.png' alt='twitter-logo' layout='fill' priority onLoadingComplete={() => this.handleImageLoad()}/>
-                    <Image src='/instagram-logo.jpg' alt='twitter-logo' layout='fill' priority onLoadingComplete={() => this.handleImageLoad()}/>
+                    <Image src='/instagram-logo.png' alt='twitter-logo' layout='fill' priority onLoadingComplete={() => this.handleImageLoad()}/>
                 </div>
                 {this.props.loadingIsComplete? 
                     this.props.children:
