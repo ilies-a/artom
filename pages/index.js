@@ -97,13 +97,13 @@ class Home extends React.Component {
           </div>
           <div className={styles['social-network-buttons-container']}>
             <div className={styles['social-network-logo']}>
-              <Image src='/facebook-logo.png' alt='facebook-logo' layout={'fill'} objectFit={'contain'}/>
+              <Image src='/facebook-logo.png' alt='facebook-logo' layout={'fill'} objectFit={'contain'} priority/>
             </div>
             <div className={styles['social-network-logo']}>
-              <Image src='/twitter-logo.png' alt='twitter-logo' layout={'fill'} objectFit={'contain'}/>
+              <Image src='/twitter-logo.png' alt='twitter-logo' layout={'fill'} objectFit={'contain'} priority/>
             </div>
             <div className={styles['social-network-logo']}>
-              <Image src='/instagram-logo.png' alt='instagram-logo' layout={'fill'} objectFit={'contain'}/>
+              <Image src='/instagram-logo.png' alt='instagram-logo' layout={'fill'} objectFit={'contain'} priority/>
             </div>
           </div>
         </section>
