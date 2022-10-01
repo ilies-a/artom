@@ -9,7 +9,7 @@ export default function HowItWorksCard(props){
             <div className={styles['text-container']}>{props.textHtml}</div>
             { props.imageName !== undefined ? 
             <div className={styles['image-container']}>
-                <Image src={`${'/how-it-works-images/'+props.imageName}`} layout={'fill'} objectFit={'contain'}/>
+                <Image src={`${'/how-it-works-images/'+props.imageName}`} layout={'fill'} objectFit={'contain'} priority/>
             </div> : null }
         </div>
     </div>
