@@ -182,9 +182,9 @@ $mobileMaxWidth: 1080px;
       justify-content: left;
       position: relative;
       margin-top: 20px;
-      //border: 1px solid blue;
       width: calc($artomLogoWidth/$artomLogoResizeRatio);
       height: calc($artomLogoHeight/$artomLogoResizeRatio);
+      cursor: pointer;
     }
     @media (max-width: 800px) {
       .artom-logo-container{
@@ -206,7 +206,7 @@ $mobileMaxWidth: 1080px;
 }
 @media (max-width: 435px) {
   .footer{
-    font-size: 14px;
+    font-size: small;
     padding: 0;
   }
 }
