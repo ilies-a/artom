@@ -1,12 +1,6 @@
-@font-face {
-    font-family: 'Montreal Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Montreal Regular'), url('../../public/fonts/Montreal-Regular.woff') format('woff');
-    }
-
 /*$textWhiteColor: rgb(243, 243, 243);*/
-$darkBlue: rgb(0, 0, 153);
+$artomBlue: rgb(0, 88, 219);
+$darkBlue: $artomBlue;
 $headerHeight: 70px;
 
 $artworkfadeinduration: 0.8s;
@@ -51,6 +45,7 @@ $artworkshiftleftduration: 1.2s;
 
 @media (min-width: 1000px) { //desktop
     .fractions-container{
+        min-width: 500px;
         width:35%;
         animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shiftleft-duration) linear var(--artwork-shiftleft-delay) artworkShiftLeft forwards;
     }

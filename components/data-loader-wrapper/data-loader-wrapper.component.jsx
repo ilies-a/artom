@@ -25,8 +25,8 @@ class DataLoaderWrapper extends React.Component {
             <div>
                 <div className={styles['images-container']}>
                     {/*<Image src='/artom-logo.png' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>
-                    <Image src='/background-image.svg' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>
-                    <Image src='/prototype.png' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>*/}
+                    <Image src='/background-image.svg' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>*/}
+                    <Image src='/prototype.png' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>
                     <Image src='/artwork.jpg' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()} />
                     <Image src='/artwork-fractions/1.jpg' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>
                     <Image src='/artwork-fractions/2.jpg' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>

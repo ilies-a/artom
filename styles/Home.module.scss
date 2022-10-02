@@ -1,5 +1,6 @@
 $headerHeight: 70px;
-$darkBlue: rgb(0, 0, 153);
+$artomBlue: rgb(0, 88, 219);
+$darkBlue: $artomBlue;
 $pFontSize: 22px;
 $desktopMinWidth: 1081px;
 $mobileMaxWidth: 1080px;
@@ -21,6 +22,9 @@ $mobileMaxWidth: 1080px;
 
 .sections-container{
   margin: 0 10%;
+  @media (max-width: 1000px) { //small width
+    margin-top:50px;
+  }
 }
 
 .section-title{
