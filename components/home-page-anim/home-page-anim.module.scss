@@ -47,7 +47,7 @@ $artworkshiftleftduration: 1.2s;
     .fractions-container{
         min-width: 500px;
         width:35%;
-        animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shiftleft-duration) linear var(--artwork-shiftleft-delay) artworkShiftLeft forwards;
+        animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shiftleft-duration) ease-out var(--artwork-shiftleft-delay) artworkShiftLeft forwards;
     }
     .text-container{
         position: relative;
@@ -70,7 +70,7 @@ $artworkshiftleftduration: 1.2s;
     }
     .fractions-container{
         width:90%;
-        animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shifttop-duration) linear var(--artwork-shifttop-delay) artworkShiftTop forwards;
+        animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shifttop-duration) ease-out var(--artwork-shifttop-delay) artworkShiftTop forwards;
     }
     .text-container{
         width:90%;
@@ -107,7 +107,6 @@ $artworkshiftleftduration: 1.2s;
     .artwork-fraction{
         aspect-ratio: 1 / 1;
         position: absolute;
-        //le probleme du bug visuel du scalling de reduction est ici
         animation: var(--fraction-reduction-duration) linear var(--fraction-reduction-delay) fractionReduction forwards;
     }
 }
