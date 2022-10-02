@@ -162,6 +162,9 @@ $mobileMaxWidth: 1080px;
     }
   }
   .footer-block-1{
+    > *{
+      align-self: flex-start;
+    }
     > *:not(:last-child){
       font-weight: 700;
     }
@@ -215,7 +218,6 @@ $mobileMaxWidth: 1080px;
     max-width: 53%;
     >*{
       justify-content: center;
-      align-self: flex-start;
     }
     > *:not(:first-child) {
       min-width: 150px;

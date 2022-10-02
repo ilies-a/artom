@@ -10,7 +10,7 @@ import { setLoadingIsComplete} from '../../redux/data-loader/data-loader.actions
 class DataLoaderWrapper extends React.Component {
     constructor(props){
         super(props)
-        this.totalOfImages = 10//21
+        this.totalOfImages = 11//21
         this.loadedImages = 0;
     }
     handleImageLoad(){
