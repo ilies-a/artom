@@ -115,7 +115,6 @@ class Home extends React.Component {
               <img className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectfit={'contain'}/>
             </div>
           </div>
-          <div className={styles['footer-block-1-child-container']}>
             <ul>
               <li><span onClick={()=> this.scrollTo('about-us')}>Home</span></li>
               <li><span onClick={()=> this.scrollTo('about-us')}>About Us</span></li>
@@ -123,13 +122,9 @@ class Home extends React.Component {
               <li><span onClick={()=> this.scrollTo('faq')}>FAQ</span></li>
               <li><span onClick={()=> this.scrollTo('stay-in-touch')}>Stay in Touch</span></li>
             </ul>
-          </div>
-          <div className={styles['footer-block-1-child-container']}>
+
             <div><span>White Paper</span></div>
-          </div>
-          <div className={styles['footer-block-1-child-container']}>
             <a className={styles['artom-email']}><span>hello@artom.io</span></a>
-          </div>
         </div>
         <div className={styles['footer-block-2']}>
           <div><span>Terms & Conditions</span></div>

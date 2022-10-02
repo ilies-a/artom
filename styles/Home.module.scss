@@ -162,11 +162,6 @@ $mobileMaxWidth: 1080px;
     }
   }
   .footer-block-1{
-
-    > *:not(:first-child) {
-      align-self: flex-start;
-      justify-content: center;
-    }
     > *:not(:last-child){
       font-weight: 700;
     }
@@ -177,6 +172,7 @@ $mobileMaxWidth: 1080px;
       margin:0;
       padding: 0;
       list-style-type: none;
+      flex-direction: column;
     }
     $artomLogoWidth: 361px;
     $artomLogoHeight: 71px;
@@ -185,7 +181,7 @@ $mobileMaxWidth: 1080px;
     .artom-logo{
       justify-content: left;
       position: relative;
-      margin-top: 20px;
+      margin-top: 10px;
       width: calc($artomLogoWidth/$artomLogoResizeRatio);
       height: calc($artomLogoHeight/$artomLogoResizeRatio);
       cursor: pointer;
@@ -211,13 +207,16 @@ $mobileMaxWidth: 1080px;
 @media (max-width: 435px) {
   .footer{
     font-size: small;
-    padding: 0;
   }
 }
 
 @media (min-width: 801px) {
   .footer-block-1{
     max-width: 53%;
+    >*{
+      justify-content: center;
+      align-self: flex-start;
+    }
     > *:not(:first-child) {
       min-width: 150px;
     }
@@ -228,7 +227,6 @@ $mobileMaxWidth: 1080px;
   .footer-block-2{
     max-width: 35%;
     > * {
-      justify-content: right;
       min-width: 150px;
     }
     margin-top: 20px;
@@ -236,10 +234,29 @@ $mobileMaxWidth: 1080px;
 }
 @media (max-width: 801px) {
   .footer-block-2{
-    > * {
+    margin-top: 30px;
+  }
+  .footer-block-2{
+    > :first-child{
+      justify-content: left;
+    }
+    > :nth-child(2){
       justify-content: center;
     }
-    margin-top: 30px;
+    > :last-child{
+      justify-content: right;
+    }
+  }
+  .footer-block-1{
+    > :nth-child(2){
+        justify-content: left;
+    }
+    > :nth-child(3){
+        justify-content: center;
+    }
+    > :nth-child(4){
+        justify-content: right;      
+    }
   }
 }
 
