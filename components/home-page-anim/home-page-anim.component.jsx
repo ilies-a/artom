@@ -10,7 +10,8 @@ export default function HomePageAnim (){
         return (
             <div className={styles['main-container']}>
                 <div className={styles['text-container']}>
-                    <div>BUY, SELL AND TRADE SHARES OF ICONIC ARTWORKS</div>
+                    <div>INVEST IN BLUE CHIP ART</div>
+                    <div>Buy Sell And Trade Shares Of Iconic Artworks</div>
                 </div>
                 <div className={styles['fractions-container']}>
                     <Image className={styles['artwork']} src={'/artwork.jpg'} alt='artwork' layout='fill' priority={true} />

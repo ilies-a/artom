@@ -29,7 +29,7 @@ class Header extends React.Component {
         return (
             <div>
                 <div className={styles['main-container']}>
-                    <img className={styles['artom-logo']} src='artom-logo.png' onClick={()=> this.scrollTo('about-us')}/>
+                    <img className={styles['artom-logo']} src='artom-logo.png' onClick={()=> this.scrollTo('')}/>
                     <div className={styles['nav-container']}>
                         <NavButton text='ABOUT US' onClickHandler={this.scrollTo} section='about-us' isSelected={this.navButtonIsSelected('about-us')}/>
                         <NavButton text='HOW IT WORKS' onClickHandler={this.scrollTo} section='how-it-works' isSelected={this.navButtonIsSelected('how-it-works')}/>

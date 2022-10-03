@@ -25,9 +25,9 @@ $artworkshiftleftduration: 1.2s;
     --artwork-shifttop-delay: 0s;
     --artwork-shifttop-duration: 1.5s;
 
-    --artwork-disappear-delay: 1.75s;
+    --artwork-disappear-delay: 1.55s;
 
-    --fraction-reduction-delay: 1.7s;
+    --fraction-reduction-delay: 1.5s;
     --fraction-reduction-duration: 0.3s;
 
     --unselectedfractions-fadeout-delay: 2.1s;
@@ -51,13 +51,8 @@ $artworkshiftleftduration: 1.2s;
     }
     .text-container{
         position: relative;
-        width:35%;
-        margin-left:50px;
-        font-size: 52px;
-        text-align: left;
-        //just some manual adjustments requested by client
-        left:-50px;
-        top:-100px;
+        width:40%;
+        margin-right: 20px;
     }
     .selectedFractionBottom{
         animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
@@ -119,6 +114,15 @@ $artworkshiftleftduration: 1.2s;
     /*border: 1px solid green;*/
     /*font-family: 'Montreal Regular';*/
     color:$darkBlue;
+    text-align: center;
+    /*//just some manual adjustments requested by client
+    left:-50px;*/
+    :first-child{
+        font-size: 50px;
+    }
+    :last-child{
+        font-size: 38px;
+    }
     opacity:0;
     animation: var(--text-fadein-duration) linear var(--text-fadein-delay) fadeIn forwards, 
                 var(--text-scale-duration) linear var(--text-scale-delay) textScale forwards;

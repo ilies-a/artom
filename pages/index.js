@@ -37,7 +37,7 @@ class Home extends React.Component {
         sectionRef = this.section3
         break;
       case 'stay-in-touch':
-        sectionRef = this.section3
+        sectionRef = this.section4
         break;
       default:
         sectionRef = this.section4
@@ -75,7 +75,9 @@ class Home extends React.Component {
                 Members of the community can build a diversified portfolio of iconic artworks curated by our industry-leading research team.
               </p>
             </div>
-            <div className={styles['about-us-illustration']}>ILLUSTRATION</div>
+            <div className={styles['about-us-illustration']}>
+              <Image src='/about-us-illustration.jpg' alt='about-us-illustration' layout={'fill'} objectFit={'contain'} priority/>
+            </div>
           </div>
         </section>
         <section className={`${styles['section']} ${styles['how-it-works']}`}>
@@ -111,8 +113,8 @@ class Home extends React.Component {
       <footer className={styles.footer}>
         <div className={styles['footer-block-1']}>
           <div className={styles['artom-logo-container']}>
-            <div className={styles['artom-logo']} onClick={()=> this.scrollTo('about-us')}>
-              <img className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectfit={'contain'}/>
+            <div className={styles['artom-logo']} onClick={()=> this.scrollTo('')}>
+              <Image className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'}/>
             </div>
           </div>
             <ul>
