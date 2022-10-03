@@ -80,7 +80,7 @@ $headerHeight: 70px;
     .prototype-icon{
         $iconWidth: 981px;
         $iconHeight: 982px;
-        $iconResizeRatio: 0.03;
+        $iconResizeRatio: 0.02;
         width:calc($iconWidth*$iconResizeRatio);
         height:calc($iconHeight*$iconResizeRatio);
     }
