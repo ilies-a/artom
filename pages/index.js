@@ -37,7 +37,7 @@ class Home extends React.Component {
         sectionRef = this.section3
         break;
       case 'stay-in-touch':
-        sectionRef = this.section4
+        sectionRef = this.section3
         break;
       default:
         sectionRef = this.section4
