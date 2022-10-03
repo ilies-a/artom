@@ -53,6 +53,12 @@ $artworkshiftleftduration: 1.2s;
         position: relative;
         width:40%;
         margin-right: 20px;
+        :first-child{
+            font-size: 50px;
+        }
+        :last-child{
+            font-size: 38px;
+        }
     }
     .selectedFractionBottom{
         animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
@@ -70,7 +76,12 @@ $artworkshiftleftduration: 1.2s;
     .text-container{
         width:90%;
         font-size: 36px;
-        text-align: center;
+        :first-child{
+            font-size: 44px;
+        }
+        :last-child{
+            font-size: 32px;
+        }
     }
     .selectedFractionRight{
         animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
@@ -117,12 +128,6 @@ $artworkshiftleftduration: 1.2s;
     text-align: center;
     /*//just some manual adjustments requested by client
     left:-50px;*/
-    :first-child{
-        font-size: 50px;
-    }
-    :last-child{
-        font-size: 38px;
-    }
     opacity:0;
     animation: var(--text-fadein-duration) linear var(--text-fadein-delay) fadeIn forwards, 
                 var(--text-scale-duration) linear var(--text-scale-delay) textScale forwards;

@@ -36,19 +36,15 @@ $headerHeight: 70px;
 }
 
 .prototype-icon{
+    position: relative;
     opacity: 0.7;
     transform: translateY(-2%);
-    $iconWidth: 981px;
-    $iconHeight: 982px;
-    $iconResizeRatio: 0.035;
-    position: relative;
-    width:calc($iconWidth*$iconResizeRatio);
-    height:calc($iconHeight*$iconResizeRatio);
     cursor: pointer;
 }
 .prototype-icon:hover{
     opacity: 1;
 }
+
 @media (min-width: 1080px) { //desktop
     .main-container{
         padding:0 30px;
@@ -64,16 +60,38 @@ $headerHeight: 70px;
     .artom-logo{
         display: inline-block;
     }
-    .prototype-icon{
-        padding: 20px 0;
-    }
 }
-@media (max-width: 1081px) { //mobile
-
+@media (max-width: 1081px) { //small width
     .artom-logo{
         display: none;
     }
     .nav-container{
         width: 100%;
+    }
+}
+
+@media (max-width: 530px) { //mobile
+    .main-container{
+        padding: 5px;
+    }
+    .nav-container{
+        width: 100%;
+    }
+    .prototype-icon{
+        $iconWidth: 981px;
+        $iconHeight: 982px;
+        $iconResizeRatio: 0.03;
+        width:calc($iconWidth*$iconResizeRatio);
+        height:calc($iconHeight*$iconResizeRatio);
+    }
+}
+
+@media (min-width: 530px) { //above mobile width size
+    .prototype-icon{
+        $iconWidth: 981px;
+        $iconHeight: 982px;
+        $iconResizeRatio: 0.035;
+        width:calc($iconWidth*$iconResizeRatio);
+        height:calc($iconHeight*$iconResizeRatio);
     }
 }
