@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './header.module.scss'
 import NavButton from '../nav-button/nav-button.component'
+import Image from 'next/image'
 {/* redux */}
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -29,13 +30,17 @@ class Header extends React.Component {
         return (
             <div>
                 <div className={styles['main-container']}>
-                    <img className={styles['artom-logo']} src='artom-logo.png' onClick={()=> this.scrollTo('')}/>
+                    <div className={styles['artom-logo']}>
+                        <Image src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'} priority onClick={()=> this.scrollTo('')}/>
+                    </div>
                     <div className={styles['nav-container']}>
                         <NavButton text='ABOUT US' onClickHandler={this.scrollTo} section='about-us' isSelected={this.navButtonIsSelected('about-us')}/>
                         <NavButton text='HOW IT WORKS' onClickHandler={this.scrollTo} section='how-it-works' isSelected={this.navButtonIsSelected('how-it-works')}/>
                         <NavButton text='FAQ' onClickHandler={this.scrollTo} section='faq' isSelected={this.navButtonIsSelected('faq')}/>
                         <NavButton text='STAY IN TOUCH' onClickHandler={this.scrollTo} section='stay-in-touch' isSelected={this.navButtonIsSelected('stay-in-touch')}/>
-                        <img src='/prototype.png' className={styles['prototype-icon']} onClick={()=>this.openPrototypePage()}/>
+                    <div className={styles['prototype-icon']}>
+                        <Image src='/prototype.png' className={styles['prototype-icon']} layout={'fill'} objectFit={'contain'} priority onClick={()=> this.openPrototypePage()}/>
+                    </div>
                     </div>
                 </div>
                 <div className={styles['space']}></div>

@@ -2,6 +2,7 @@
 $artomBlue: rgb(0, 88, 219);
 $darkBlue: $artomBlue;
 $artomGreen: rgb(131, 245, 180);
+$distanceBetweenTextAndLine: 5px;
 
 .button{
     display: inline-block;
@@ -9,9 +10,10 @@ $artomGreen: rgb(131, 245, 180);
     font-size: large;
     font-weight: 500;
     color: $darkBlue;
+    margin-top: $distanceBetweenTextAndLine; //so the text doesnt appear too high
     /*color: rgb(44, 44, 44);*/
     .button-line{
-        margin: 5px 0 0 0;
+        margin: $distanceBetweenTextAndLine 0 0 0;
         height: 2px;
         width:0%;
         transition: width 0.2s;

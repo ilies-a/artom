@@ -10,7 +10,7 @@ import { setLoadingIsComplete} from '../../redux/data-loader/data-loader.actions
 class DataLoaderWrapper extends React.Component {
     constructor(props){
         super(props)
-        this.totalOfImages = 12//21
+        this.totalOfImages = 13//21
         this.loadedImages = 0;
     }
     handleImageLoad(){
@@ -24,7 +24,7 @@ class DataLoaderWrapper extends React.Component {
         return(
             <div>
                 <div className={styles['images-container']}>
-                    {/*<Image src='/artom-logo.png' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>*/}
+                    <Image src='/artom-logo.png' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>
                     <Image src='/background-image.svg' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>
                     <Image src='/prototype.png' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()}/>
                     <Image src='/artwork.jpg' layout='fill' alt='' priority onLoadingComplete={() => this.handleImageLoad()} />

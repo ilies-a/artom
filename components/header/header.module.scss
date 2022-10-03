@@ -8,9 +8,17 @@ $headerHeight: 70px;
     background-color: white;
     /*box-shadow: 0 0 10px rgb(0 0 0 / 15%);*/
     padding:0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
     .artom-logo{
-        height:inherit;
-        padding: 18px 0;
+        $artomLogoWidth: 361px;
+        $artomLogoHeight: 71px;
+        $artomLogoResizeRatio: 0.5;
+        position: relative;
+        width:calc($artomLogoWidth*$artomLogoResizeRatio);
+        height:calc($artomLogoHeight*$artomLogoResizeRatio);
         cursor: pointer;
     }
     .nav-container{
@@ -28,10 +36,15 @@ $headerHeight: 70px;
 }
 
 .prototype-icon{
-    cursor: pointer;
-    height:inherit;
     opacity: 0.7;
-    transform: translateY(-4%);
+    transform: translateY(-2%);
+    $iconWidth: 981px;
+    $iconHeight: 982px;
+    $iconResizeRatio: 0.035;
+    position: relative;
+    width:calc($iconWidth*$iconResizeRatio);
+    height:calc($iconHeight*$iconResizeRatio);
+    cursor: pointer;
 }
 .prototype-icon:hover{
     opacity: 1;
@@ -56,18 +69,11 @@ $headerHeight: 70px;
     }
 }
 @media (max-width: 1081px) { //mobile
-    .main-container{
-        padding:0 10px;
-    }
-    .nav-container{
-        .nav-button-container{
-            margin:50px;
-        }
-    }
+
     .artom-logo{
         display: none;
     }
-    .prototype-icon{
-        padding: 25px 0;
+    .nav-container{
+        width: 100%;
     }
 }
