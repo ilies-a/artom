@@ -50,6 +50,10 @@ $mobileMaxWidth: 1080px;
   .about-us-content-container{
     flex-direction: row;
   }
+  .about-us-illustration{
+    max-width:500px;
+    margin-left:50px;
+  }
 }
 @media (max-width: 1081px) {
   .section-title{
@@ -58,10 +62,13 @@ $mobileMaxWidth: 1080px;
   .about-us-content-container{
     flex-direction: column;
   }
+  .about-us-illustration{
+    margin-top:10px;
+  }
 }
 
 .about-us-title-and-text-container{
-  max-width:500px;
+
   p{
     font-weight: 500;
     font-size: $pFontSize;
@@ -70,13 +77,13 @@ $mobileMaxWidth: 1080px;
 }
 
 .about-us-illustration{
-  $illustrationWidth: 1598px;
-  $illustrationHeight: 1180px;
-  $illustrationResizeRatio: 2.5;
+  $illustrationOriginalWidth: 1598px;
+  $illustrationOriginalHeight: 1180px;
+  $illustrationHeightRatio : calc($illustrationOriginalWidth / $illustrationOriginalHeight);
   position: relative;
-  width: calc($illustrationWidth/$illustrationResizeRatio);
-  height: calc($illustrationHeight/$illustrationResizeRatio);
-  top:10px;
+  max-width:100%;
+  width: 100%;
+  aspect-ratio: $illustrationHeightRatio;
 }
 
 .invisible{
