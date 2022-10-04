@@ -103,10 +103,14 @@ $artworkshiftleftduration: 1.2s;
     @media (min-width: $imgWidth) {
         width: $imgWidth;
         height: $imgHeight;
+        min-width: $imgWidth;
+        min-height: $imgHeight;
     }
     @media (max-width: $imgWidth) {
         width: 97vw;
         height: 97vw;
+        min-width: 97vw;
+        min-height: 97vw;
     }
     position: relative;
     display: flex;

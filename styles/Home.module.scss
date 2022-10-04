@@ -110,6 +110,7 @@ $mobileMaxWidth: 1080px;
 .about-us-title-and-text-container{
   p{
     font-weight: 500;
+    color: black;
     text-align: justify;
   }
 }
@@ -123,14 +124,17 @@ $mobileMaxWidth: 1080px;
   $illustrationHeight: $illustrationWidth * $illustrationHWRatio;
 
   position: relative;
-
-  @media (max-width: 670px ) or (min-width: 1081px){
+  @media (min-width: 1081px){
     width: 100%;
     padding-bottom: $illustrationHWRatio*100%;
   }
-  @media (min-width: 670px ) and (max-width: 1081px ) {
-    width: 80%;
-    padding-bottom: $illustrationHWRatio*80%;
+  @media (min-width: 670px ) and (max-width: 1081px){
+    width: 60%;
+    padding-bottom: $illustrationHWRatio*60%;
+  }
+  @media (max-width: 670px ) {
+    width: 100%;
+    padding-bottom: $illustrationHWRatio*100%;
   }
 }
 
