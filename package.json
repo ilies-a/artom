@@ -16,7 +16,8 @@
     "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
     "reselect": "^4.1.6",
-    "sass": "^1.54.9"
+    "sass": "^1.54.9",
+    "seamless-scroll-polyfill": "^2.2.0"
   },
   "devDependencies": {
     "eslint": "8.23.1",

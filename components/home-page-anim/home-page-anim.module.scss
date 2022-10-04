@@ -130,9 +130,8 @@ $artworkshiftleftduration: 1.2s;
     color:$darkBlue;
     /*//just some manual adjustments requested by client
     left:-50px;*/
-    opacity:0;
-    animation: var(--text-fadein-duration) linear var(--text-fadein-delay) fadeIn forwards, 
-                var(--text-scale-duration) linear var(--text-scale-delay) textScale forwards;
+    //animation: var(--text-fadein-duration) linear var(--text-fadein-delay) fadeIn forwards, 
+                //var(--text-scale-duration) linear var(--text-scale-delay) textScale forwards;
 }
 
 @keyframes fadeIn {

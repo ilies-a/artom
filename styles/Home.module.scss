@@ -11,15 +11,16 @@ $mobileMaxWidth: 1080px;
 
 .section{
   position: relative;
-  height:100vh;
+  height:calc(100vh - $headerHeight);
+  max-height:calc(100vh - $headerHeight);
 }
 
-.section:not(.stay-in-touch){
-  /*padding:0 60px; manual adjustment*/
-  padding-top:100px;
-}
+/*.section:not(.stay-in-touch){
+  margin: 100px 0;
+  border: 1px solid red;
+}*/
+
 .stay-in-touch{
-  /*padding:0 60px; manual adjustment*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,9 +33,11 @@ $mobileMaxWidth: 1080px;
 }
 
 .sections-container{
-  margin: 0 10%;
-  @media (max-width: 1000px) { //small width
-    margin-top:50px;
+  @media (min-width: 1081px) { //large width
+    margin: 0 10%;
+  }
+  @media (max-width: 1081px) { //small width
+    margin: 0 5%;
   }
 }
 
@@ -44,12 +47,13 @@ $mobileMaxWidth: 1080px;
   font-size: 32px;
   margin:10px 0;
 }
-
+.section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .about-us-content-container{
-
-  margin-top:0px;
-  /*padding:0 135px; manual adjustment*/
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,6 +73,14 @@ $mobileMaxWidth: 1080px;
   .about-us-title-and-text-container{
     position: relative;
     top:-20px;
+    .about-us-title{
+      span{
+        display: block;
+      }
+    }
+    p{
+      font-size: $pFontSize;
+    }
   }
 
   .about-us-illustration{
@@ -83,15 +95,21 @@ $mobileMaxWidth: 1080px;
   .about-us-content-container{
     flex-direction: column;
   }
+  
   .about-us-illustration{
     margin-top:10px;
+  }
+
+  .about-us-title-and-text-container{
+    p{
+      font-size: 18px;
+    }
   }
 }
 
 .about-us-title-and-text-container{
   p{
     font-weight: 500;
-    font-size: $pFontSize;
     text-align: justify;
   }
 }
@@ -102,8 +120,24 @@ $mobileMaxWidth: 1080px;
   $illustrationHeightRatio : calc($illustrationOriginalWidth / $illustrationOriginalHeight);
   position: relative;
   max-width:100%;
-  width: 100%;
+  @media (min-width: 1081px) {
+    width: 100%;
+  }
+  @media (min-width: 670px ) and (max-width: 1081px ) {
+    width: 70%;
+  }
+  @media (max-width: 670px ) {
+    width: 100%;
+  }
   aspect-ratio: $illustrationHeightRatio;
+}
+
+.how-it-works-title{
+  width: 100%;
+}
+
+.how-it-works-cards-wrapper{
+  width:100%;
 }
 
 .invisible{
