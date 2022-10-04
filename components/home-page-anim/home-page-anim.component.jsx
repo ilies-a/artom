@@ -14,11 +14,11 @@ export default function HomePageAnim (){
                     <div>Buy, Sell and Trade Shares of Iconic Artworks</div>
                 </div>
                 <div className={styles['fractions-container']}>
-                    <Image className={styles['artwork']} src={'/artwork.jpg'} alt='artwork' layout='fill' priority={true} />
+                    <Image className={styles['artwork']} src={'/artwork.jpg'} alt='artwork' layout='fill' objectFit='contains' priority={true} />
                     {
                         fractions.map((value, index) =>{
                             return <div key={index} className={`${styles['fraction']} ${index == selectedFractionRightIndex ? styles.selectedFractionRight: index == selectedFractionBottomIndex ? styles.selectedFractionBottom: styles.unselectedFraction}`}>
-                                        <div className={styles['artwork-fraction']}><Image src={`${'/artwork-fractions/'+(index+1)+'.jpg'}`} alt='artwork-fraction' layout='fill' priority={true}/></div>
+                                        <div className={styles['artwork-fraction']}><Image src={`${'/artwork-fractions/'+(index+1)+'.jpg'}`} alt='artwork-fraction' layout='fill' objectFit='contains' priority={true}/></div>
                                     </div>
                         })
                     }

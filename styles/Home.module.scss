@@ -117,19 +117,21 @@ $mobileMaxWidth: 1080px;
 .about-us-illustration{
   $illustrationOriginalWidth: 1598px;
   $illustrationOriginalHeight: 1180px;
-  $illustrationHeightRatio : calc($illustrationOriginalWidth / $illustrationOriginalHeight);
+  $illustrationHWRatio : $illustrationOriginalHeight / $illustrationOriginalWidth;
+  $resizeRatio: 0.5;
+  $illustrationWidth: $illustrationOriginalWidth * $resizeRatio;
+  $illustrationHeight: $illustrationWidth * $illustrationHWRatio;
+
   position: relative;
-  max-width:100%;
-  @media (min-width: 1081px) {
+
+  @media (max-width: 670px ) or (min-width: 1081px){
     width: 100%;
+    padding-bottom: $illustrationHWRatio*100%;
   }
   @media (min-width: 670px ) and (max-width: 1081px ) {
-    width: 70%;
+    width: 80%;
+    padding-bottom: $illustrationHWRatio*80%;
   }
-  @media (max-width: 670px ) {
-    width: 100%;
-  }
-  aspect-ratio: $illustrationHeightRatio;
 }
 
 .how-it-works-title{
