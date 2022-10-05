@@ -16,7 +16,7 @@ export default class FaqItem extends React.Component {
     }
     componentDidMount(){
         window.addEventListener('resize',  this.handleResize);
-        handleResize();
+        this.handleResize();
     }
     componentWillUnmount(){
         window.removeEventListener('resize', this.handleResize);
