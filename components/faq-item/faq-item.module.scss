@@ -1,0 +1,29 @@
+
+.title{
+    position: relative;
+    margin:0;
+    font-weight: 500;
+}
+.arrow-button{
+    position: relative;
+    width:calc(980px * 0.025);
+    height:calc(654px * 0.025);
+    opacity: 0.9;
+    margin:0;
+    margin-left:10px;
+    cursor: pointer;
+    transition: 0.2s;
+    transform: rotate(90deg);
+    &.is-selected{
+        transform: rotate(-90deg);
+    }
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.text{
+    span{
+        text-decoration: underline;
+    }
+}

@@ -65,7 +65,12 @@ $artworkshiftleftduration: 1.2s;
         }
     }
     .selectedFractionBottom{
-        animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
+        &.animationOn {
+            animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
+        }
+        &.animationOff {
+            opacity: 0.3;
+        }
     }
 }
 
@@ -88,8 +93,13 @@ $artworkshiftleftduration: 1.2s;
             font-size: 22px;
         }
     }
-    .selectedFractionRight{
-        animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
+    .selectedFractionLeft{
+        &.animationOn {
+            animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
+        }
+        &.animationOff {
+            opacity: 0.3;
+        }
     }
 }
 
@@ -131,7 +141,6 @@ $artworkshiftleftduration: 1.2s;
         flex: 1 0 33%;
         align-items: center;
         justify-content: center;
-        opacity: 1;
         width: 33%;
         height: 33%;
 
@@ -142,13 +151,19 @@ $artworkshiftleftduration: 1.2s;
             animation: var(--fraction-reduction-duration) linear var(--fraction-reduction-delay) fractionReduction forwards;
         }
     }
+    .unselectedFraction{
+        &.animationOn {
+            animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
+        }
+        &.animationOff {
+            opacity:0.3;
+        }
+    }
 }
 
 
 
-.unselectedFraction{
-    animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
-}
+
 
 .text-container{
     /*border: 1px solid green;*/

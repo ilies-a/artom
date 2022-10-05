@@ -5,7 +5,8 @@ import HomePageAnim from '../components/home-page-anim/home-page-anim.component'
 import HowItWorksCards from '../components/how-it-works-cards/how-it-works-cards.component'
 import Image from 'next/image'
 import { scrollTo } from "seamless-scroll-polyfill";
-
+import FaqList from '../components/faq-list/faq-list.component'
+import Footer from '../components/footer/footer.component'
 /* redux */
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -26,7 +27,6 @@ class Home extends React.Component {
     this.section3 = React.createRef()
     this.section4 = React.createRef()
     this.section0 = React.createRef()
-    this.footer = React.createRef()
 
     this.section1ScrollingAnchor = React.createRef()
     this.section2ScrollingAnchor = React.createRef()
@@ -65,7 +65,7 @@ class Home extends React.Component {
     const section2Top = this.section2.current.offsetTop - this.section2.current.offsetHeight/2 + shift;
     const section3Top = this.section3.current.offsetTop - this.section3.current.offsetHeight/2 + shift;
     const section4Top = this.section4.current.offsetTop - this.section4.current.offsetHeight/2 + shift;
-    const footerTop = this.footer.current.offsetTop;
+    const section4Bottom = section4Top+this.section4.current.offsetHeight;
 
     const adjuster = 0; 
     let sectionToSelect
@@ -82,7 +82,7 @@ class Home extends React.Component {
     {
       sectionToSelect='faq'
     }
-    else if(scrollY>section4Top && scrollY<=footerTop)
+    else if(scrollY>section4Top && scrollY<=section4Bottom)
     {
       sectionToSelect='stay-in-touch'
     }
@@ -174,6 +174,7 @@ class Home extends React.Component {
         <section className={`${styles['section']} ${styles['faq']}`} ref={this.section3}>
           <div className={styles['section-scrolling-anchor']} ref={this.section3ScrollingAnchor}></div>
           <h1 className={`${styles['section-title']} ${styles['faq-title']}`} >FAQ</h1>
+          <FaqList/>
         </section>
         <section className={`${styles['section']} ${styles['stay-in-touch']}`} ref={this.section4}>
           <div className={styles['section-scrolling-anchor']} ref={this.section4ScrollingAnchor}></div>
@@ -196,30 +197,7 @@ class Home extends React.Component {
           </div>
         </section>
       </div>
-      <footer className={styles.footer} ref={this.footer}>
-        <div className={styles['footer-block-1']}>
-          <div className={styles['artom-logo-container']}>
-            <div className={styles['artom-logo']} onClick={()=> this.scrollTo('')}>
-              <Image className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'}/>
-            </div>
-          </div>
-            <ul>
-              <li><span onClick={()=> this.scrollTo('')}>Home</span></li>
-              <li><span onClick={()=> this.scrollTo('about-us')}>About Us</span></li>
-              <li><span onClick={()=> this.scrollTo('how-it-works')}>How it Works</span></li>
-              <li><span onClick={()=> this.scrollTo('faq')}>FAQ</span></li>
-              <li><span onClick={()=> this.scrollTo('stay-in-touch')}>Stay in Touch</span></li>
-            </ul>
-
-            <div><span>White Paper</span></div>
-            <a className={styles['artom-email']}><span>hello@artom.io</span></a>
-        </div>
-        <div className={styles['footer-block-2']}>
-          <div><span>Terms & Conditions</span></div>
-          <div><span>Privacy Policy</span></div>
-          <div><span>artom.io &#169; 2022</span></div>
-        </div>
-      </footer>
+      <Footer handleClick={this.scrollTo}/>
     </div>
     )
   }
