@@ -194,6 +194,12 @@ class Home extends React.Component {
             <div className={styles['social-network-logo']}>
               <Image src='/instagram-logo.png' alt='instagram-logo' layout={'fill'} objectFit={'contain'} priority/>
             </div>
+            <div className={styles['social-network-logo']}>
+              <Image src='/discord-logo.png' alt='discord-logo' layout={'fill'} objectFit={'contain'} priority/>
+            </div>
+            <div className={styles['social-network-logo']}>
+              <Image src='/telegram-logo.png' alt='telegram-logo' layout={'fill'} objectFit={'contain'} priority/>
+            </div>
           </div>
         </section>
       </div>

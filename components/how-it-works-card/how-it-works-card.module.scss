@@ -1,91 +1,49 @@
 $artomBlue: rgb(0, 88, 219);
+$box-shadow: 3px 3px 3px rgb(26, 100, 63);
 
 .main-container{
-    width: 170px;
-    flex:1;
+    flex:45%;
     /*border: 1px solid green;*/
-    margin: 0 5px;
+    margin: 0 0px;
 }
 
 .header{
-    height:60px;
-    border-radius: 0 10px 0 0;
+    border-radius: 0 20px 0 0;
     background-color: $artomBlue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 38px;
     color: white;
     margin-bottom:5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+    box-shadow: $box-shadow;
+    .number{
+        margin:0px 18px;
+        font-size: 38px;
+    }
+    .title{
+        font-size: 22px;
+    }
 }
 
 .body{
     border: 1px solid $artomBlue;
     background-color: rgba(255, 255, 255, 0.76);
     padding: 10px 10px;
-    text-align: center;
+    text-align: left;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height:150px;
+    box-shadow: $box-shadow;
+    color:$artomBlue;
 
-    height: 370px;
-    .image-container{
-      height: 25%;
-    }
-    
-    .text-container{
-        margin: 0;
-    }
-    h3{
-        color:rgb(26, 26, 26);
-        font-weight: 700;
-        margin-top: 0px;
-    }
-    p{
-        font-weight: 500;
-    }
+
     .image-container{
         position: relative;
-        width: 80%;
+        width:130px;
+        height: 130px;
     }
 }
-
-/*@media (min-width: 1500px) {
-    .body{
-      height: 400px;
-      .image-container{
-        height: 25%;
-        }
-    }
-  }
-  @media (max-width: 1501px) {
-    .body{
-        height: 300px;
-        .image-container{
-            height: 50%;
-        }
-    }
-  }*/
-
-.last-card{ //useless now after some changes in the code
-}
-
-.not-visible{
-    opacity:0;
-}
-
-/*@media (min-width: 1500px) {
-    .not-visible{
-        opacity:0; //it disappears but keep its space on large width screens
-    }
-}
-
-@media (max-width: 1501px) {
-    .not-visible{
-        display:none; //it really disappears on small width screens
-    }
-    
-}*/

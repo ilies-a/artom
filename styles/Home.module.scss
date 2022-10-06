@@ -8,11 +8,14 @@ $mobileMaxWidth: 1080px;
 .container {
   padding: 0;
 }
-
-.section:not(.faq){
+.section{
+  padding: 2vh 0;
+}
+.section:not(.how-it-works, .faq){
   position: relative;
   height:calc(100vh - $headerHeight);
-  max-height:calc(100vh - $headerHeight);
+  /*max-height:calc(100vh - $headerHeight);
+  min-height:calc(100vh - $headerHeight);*/
   display: flex;
   flex-direction: column;
   justify-content: center;
