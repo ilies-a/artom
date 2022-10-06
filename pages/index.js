@@ -160,7 +160,7 @@ class Home extends React.Component {
               </p>
             </div>
             <div className={styles['about-us-illustration']}>
-              {/*<Image src='/about-us-illustration.png' alt='about-us-illustration' layout={'fill'} objectFit={'contain'} priority/>*/}
+              <Image src='/about-us-illustration.png' alt='about-us-illustration' layout={'fill'} objectFit={'contain'} priority/>
             </div>
           </div>
         </section>
@@ -190,6 +190,15 @@ class Home extends React.Component {
             </div>
             <div className={styles['social-network-logo']}>
               <Image src='/twitter-logo.png' alt='twitter-logo' layout={'fill'} objectFit={'contain'} priority/>
+            </div>
+            <div className={styles['social-network-logo']}>
+              <Image src='/instagram-logo.png' alt='instagram-logo' layout={'fill'} objectFit={'contain'} priority/>
+            </div>
+            <div className={styles['social-network-logo']}>
+              <Image src='/discord-logo.png' alt='discord-logo' layout={'fill'} objectFit={'contain'} priority/>
+            </div>
+            <div className={styles['social-network-logo']}>
+              <Image src='/telegram-logo.png' alt='telegram-logo' layout={'fill'} objectFit={'contain'} priority/>
             </div>
           </div>
         </section>
