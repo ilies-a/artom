@@ -39,7 +39,7 @@ class Header extends React.Component {
                         <NavButton text='FAQ' onClickHandler={this.scrollTo} section='faq' isSelected={this.navButtonIsSelected('faq')}/>
                         <NavButton text='STAY IN TOUCH' onClickHandler={this.scrollTo} section='stay-in-touch' isSelected={this.navButtonIsSelected('stay-in-touch')}/>
                     <div className={styles['prototype-icon']}>
-                        <Image src='/prototype.png' className={styles['prototype-icon']} layout={'fill'} objectFit={'contain'} priority onClick={()=> this.openPrototypePage()}/>
+                        <Image src='/prototype.png' alt='prototype-icon' className={styles['prototype-icon']} layout={'fill'} objectFit={'contain'} priority onClick={()=> this.openPrototypePage()}/>
                     </div>
                     </div>
                 </div>
