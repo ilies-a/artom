@@ -160,7 +160,7 @@ class Home extends React.Component {
               </p>
             </div>
             <div className={styles['about-us-illustration']}>
-              <Image src='/about-us-illustration.png' alt='about-us-illustration' layout={'fill'} objectFit={'contain'} priority/>
+              {/*<Image src='/about-us-illustration.png' alt='about-us-illustration' layout={'fill'} objectFit={'contain'} priority/>*/}
             </div>
           </div>
         </section>
