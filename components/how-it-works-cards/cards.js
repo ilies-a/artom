@@ -12,7 +12,7 @@ export const cards = [
     {
         title:'ACQUISITION',
         text:'Once all shares are bought by the community. We acquire the physical artwork on their on their behalf.',
-        imageName:'hiw-3.png'
+        imageName:'hiw-3.jpg'
     },
     {
         title:'VOTING',
