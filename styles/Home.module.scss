@@ -114,8 +114,8 @@ $mobileMaxWidth: 1080px;
 }
 
 .about-us-illustration{
-  $illustrationOriginalWidth: 1598px;
-  $illustrationOriginalHeight: 1180px;
+  $illustrationOriginalWidth: 2692px;
+  $illustrationOriginalHeight: 2516px;
   $illustrationHWRatio : $illustrationOriginalHeight / $illustrationOriginalWidth;
   $resizeRatio: 0.5;
   $illustrationWidth: $illustrationOriginalWidth * $resizeRatio;
