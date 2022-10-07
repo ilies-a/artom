@@ -66,8 +66,7 @@ $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeig
 .about-us-content-container{
   width: 100%;
   display: grid;
-  align-items: center;
-  justify-items: center;
+  justify-content: space-between;
 }
 
 
