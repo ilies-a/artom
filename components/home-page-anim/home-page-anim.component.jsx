@@ -22,11 +22,11 @@ export default class HomePageAnim extends React.Component {
         const totalOfFractions = 9
         const fractions = new Array(totalOfFractions).fill('')
         const selectedFractionLeftIndex = totalOfFractionsByRow
-        const selectedFractionBottomIndex = totalOfFractionsByRow*3 - 2
+        const selectedFractionBottomIndex = 1
         return (
             <div className={styles['main-container']}>
                 <div className={styles['text-container']}>
-                    <div>INVEST IN BLUE CHIP ART</div>
+                    <div>COLLECT SHARES<br/>OF BLUE-CHIP ARTWORKS</div>
                     <div>Buy, Sell and Trade Shares of Iconic Artworks</div>
                 </div>
                 <div className={styles['fractions-container']}>

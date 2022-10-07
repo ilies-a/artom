@@ -9,6 +9,8 @@ $artworkshiftleftdelay: 0s;
 $artworkshiftleftduration: 1.2s;
 
 
+$horizontal-min-width: 800px;
+
 .main-container{
     --text-fadein-delay: 2.5s;
     --text-fadein-duration: 0.5s;
@@ -38,23 +40,33 @@ $artworkshiftleftduration: 1.2s;
     position: relative;
     width: 100%;
     height: calc(100vh - $headerHeight);
-    min-height: calc(100vh - $headerHeight);
-    max-height: calc(100vh - $headerHeight);
-    display: flex;
+
+    display: grid;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+
+
+    column-gap: 0px;
 }
 
-@media (min-width: 1000px) { //desktop
+
+
+@media (min-width: $horizontal-min-width) {
+    $artwork-img-height: 620px;
+    .main-container{
+        grid-auto-flow: column;
+        $padding-bottom: 100px;
+        min-height: $artwork-img-height+$padding-bottom;
+    }
     .fractions-container{
-        min-width: 500px;
-        width:35%;
+        $dim-ratio: 1;
+        height: $artwork-img-height;
+        width: $artwork-img-height*$dim-ratio;
         animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shiftleft-duration) ease-out var(--artwork-shiftleft-delay) artworkShiftLeft forwards;
     }
     .text-container{
         position: relative;
-        width:40%;
-        margin-right: 20px;
+
         text-align: left;
         :first-child{
             font-size: 50px;
@@ -74,17 +86,24 @@ $artworkshiftleftduration: 1.2s;
     }
 }
 
-@media (max-width: 1000px) { //mobile
+@media (max-width: $horizontal-min-width) { //mobile
+    $artwork-img-width: 95vw;
+    $dim-ratio: 1;
+    $artwork-img-height: $artwork-img-width / $dim-ratio;
+    $text-height: 100px;
     .main-container{
-      flex-direction: column-reverse;
-      padding-bottom: $headerHeight;
+      grid-auto-flow: row;
+      min-height: calc($artwork-img-height + $text-height);
     }
     .fractions-container{
-        width:85%;
+        $dim-ratio: 1;
+        width: $artwork-img-width;
+        height: $artwork-img-height;
         animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shifttop-duration) ease-out var(--artwork-shifttop-delay) artworkShiftTop forwards;
     }
     .text-container{
         width:90%;
+        height:$text-height;
         text-align: center;
         :first-child{
             font-size: 26px;
@@ -105,34 +124,17 @@ $artworkshiftleftduration: 1.2s;
 
 
 .fractions-container{
-    $originalImgWidth: 1240px;
-    $originalImgHeight: 1240px;
-    $resizeRatio: 0.5;
-    $imgWidth: $originalImgWidth * $resizeRatio;
-    $imgHeight: $originalImgHeight * $resizeRatio;
-    @media (min-width: $imgWidth) {
-        width: $imgWidth;
-        height: $imgHeight;
-        min-width: $imgWidth;
-        min-height: $imgHeight;
-    }
-    @media (max-width: $imgWidth) {
-        width: 97vw;
-        height: 97vw;
-        min-width: 97vw;
-        min-height: 97vw;
-    }
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
     opacity:0;
-
+    margin: 0;
     .artwork{
         position: absolute;
-        width:100%;
+        width: 100%;
+        height: 100%;
         animation: 0s linear var(--artwork-disappear-delay) artworkDisappear forwards;
-        z-index: 5;
+        z-index: 1;
     }
     
     .fraction{

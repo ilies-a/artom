@@ -152,12 +152,14 @@ class Home extends React.Component {
           <div className={styles['about-us-content-container']}>
             <div className={styles['about-us-title-and-text-container']}>
               <h1 className={`${styles['section-title']} ${styles['about-us-title']}`} ><span>A DIVERSIFIED</span> <span>PORTFOLIO</span></h1>
-              <p>
-                artom.io is a unique platform that enables you to buy and sell shares of iconic artworks using the blockchain technology.
-              </p>
-              <p>
-                Members of the community can build a diversified portfolio of iconic artworks curated by our industry-leading research team.
-              </p>
+              <div className={styles['about-us-text']}>
+                <p>
+                  artom.io is a unique platform that enables you to buy and sell shares of iconic artworks using the blockchain technology.
+                </p>
+                <p>
+                  Members of the community can build a diversified portfolio of iconic artworks curated by our industry-leading research team.
+                </p>
+              </div>
             </div>
             <div className={styles['about-us-illustration']}>
               <Image src='/about-us-illustration.png' alt='about-us-illustration' layout={'fill'} objectFit={'contain'} priority/>

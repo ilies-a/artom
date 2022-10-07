@@ -14,12 +14,17 @@ const getColor = props =>{
 }
 
 export const FaqItemContainer = styled.div`
-    border-top: 1px solid black;
     height:${getHeight};
-    overflow: hidden;
-    color:${getColor};
     transition: height 0.2s;
     margin-bottom:10px;
+    overflow: hidden;
+    >div{
+        border-radius: 5px;
+        padding:0px 10px;
+        padding-bottom:10px;
+        background-color: rgba(255,255,255,0.5);
+        color:${getColor};
+    }
     `
 
 export const TitleAndButtonContainer = styled.div`

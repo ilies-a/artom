@@ -16,7 +16,9 @@ export default class FaqItem extends React.Component {
     }
     componentDidMount(){
         window.addEventListener('resize',  this.handleResize);
-        this.handleResize();
+        setTimeout(()=>{ //without delay, this.contentRef.current.offsetHeight is not accurate...
+            this.handleResize();
+        },2000)
     }
     componentWillUnmount(){
         window.removeEventListener('resize', this.handleResize);

@@ -7,7 +7,7 @@ const Footer = (props)=>{
         <div className={styles['footer-block-1']}>
           <div className={styles['artom-logo-container']}>
             <div className={styles['artom-logo']} onClick={()=> props.handleClick('')}>
-              <Image className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'}/>
+              <Image className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'} priority/>
             </div>
           </div>
             <ul>

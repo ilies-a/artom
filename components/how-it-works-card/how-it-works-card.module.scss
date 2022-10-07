@@ -2,7 +2,6 @@ $artomBlue: rgb(0, 88, 219);
 $box-shadow: 3px 3px 3px rgb(26, 100, 63);
 
 .main-container{
-    flex:45%;
     /*border: 1px solid green;*/
     margin: 0 0px;
 }
@@ -31,7 +30,6 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
     background-color: rgba(255, 255, 255, 0.76);
     padding: 10px 10px;
     text-align: left;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,11 +37,44 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
     height:150px;
     box-shadow: $box-shadow;
     color:$artomBlue;
-
-
+    .text-container{
+        max-width:70%;
+    }
+    $img-width: 100px;
     .image-container{
         position: relative;
-        width:130px;
-        height: 130px;
+        width:$img-width;
+    }
+    .image-1-container{
+        $dim-ratio: 92/93;
+        height: calc($img-width/$dim-ratio);
+    }
+    .image-2-container{
+        $dim-ratio: 616/613;
+        height: calc($img-width/$dim-ratio);
+    }
+    .image-3-container{
+        $dim-ratio: 503/491;
+        height: calc($img-width/$dim-ratio);
+    }
+    .image-3-container{
+        $dim-ratio: 503/491;
+        height: calc($img-width/$dim-ratio);
+    }
+    .image-4-container{
+        $dim-ratio: 591/353;
+        height: calc($img-width/$dim-ratio);
+    }
+    .image-5-container{
+        $dim-ratio: 970/654;
+        height: calc($img-width/$dim-ratio);
+    }
+    .image-6-container{
+        $dim-ratio: 591/353;
+        height: calc($img-width/$dim-ratio);
+    }
+    .image-7-container{
+        $dim-ratio: 3475/4874;
+        height: calc($img-width/$dim-ratio);
     }
 }
