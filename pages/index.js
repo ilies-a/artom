@@ -154,7 +154,7 @@ class Home extends React.Component {
               <h1 className={`${styles['section-title']} ${styles['about-us-title']}`} ><span>A DIVERSIFIED</span> <span>PORTFOLIO</span></h1>
               <div className={styles['about-us-text']}>
                 <p>
-                  artom.io is a unique platform that enables you to buy and sell shares of iconic artworks using the blockchain technology.
+                  artom.io is a unique community-driven platform that enables you to buy and sell shares of iconic artworks using the blockchain technology.
                 </p>
                 <p>
                   Members of the community can build a diversified portfolio of iconic artworks curated by our industry-leading research team.

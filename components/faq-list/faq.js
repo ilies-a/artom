@@ -54,7 +54,7 @@ export const faqs = [
     },            
     {
         title: 'What do I need to participate',
-        text: 'Before making any purchase in artom.io, you must create a Wallet to hold to hold your funds and/or your shares. If you already have a wallet, '
+        text: 'Before making any purchase in artom.io, you must create a Wallet to hold your funds and/or your shares. If you already have a wallet, '
         +'you can sign up to artom.io by connecting it.<br/>If you sign up with your email address, artom.io will automatically create a wallet for you.<br/><br/>'
         +'Please make sure to sign-up with a valid and accessible email address. It you lose the access to your email address; we will not be able to access '
         +'your shares nor your funds.'
