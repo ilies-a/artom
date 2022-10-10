@@ -45,9 +45,6 @@ $horizontal-min-width: 800px;
     align-items: center;
     justify-content: space-between;
     column-gap: 0px;
-
-    padding-left: 110px;
-    padding-right: 110px;
 }
 
 
@@ -58,6 +55,8 @@ $horizontal-min-width: 800px;
         grid-auto-flow: column;
         $padding-bottom: 100px;
         min-height: $artwork-img-height+$padding-bottom;
+        padding-left: 110px;
+        padding-right: 110px;
     }
     .fractions-container{
         $dim-ratio: 1;
