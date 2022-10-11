@@ -40,7 +40,7 @@ export const faqs = [
         text: 'Yes, you are! All Shares you acquire are linked to a real and tangible artwork.'          
     },            
     {
-        title: 'Once an artwork is acquired, where is stored.',
+        title: 'Once an artwork is acquired, where is it stored?',
         text: 'At artom.io we try as much as possible not to have artworks stored. We believe that art is a good for all and we aim to have all '
         +'the artworks acquired by the community displayed in museums and foundations with whom we have a partnership. Information about the '
         +'location of the artwork will always be visible in the artwork profile page.'
