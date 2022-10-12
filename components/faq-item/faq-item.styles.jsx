@@ -1,9 +1,22 @@
 import styled from 'styled-components'
 
+const UNSELECTED_CONTAINER_HEIGHT_FOR_SMALL_WIDTH = 70;
+const UNSELECTED_CONTAINER_HEIGHT_FOR_LARGE_WIDTH = 50;
+const HORIZONTAL_MIN_WIDTH= 960;
 
-const getHeight = props =>{
-    return props.height;
+const getHeightForSmallWidth = props =>{
+
+    const result = props.isSelected ? props.contentHeight : UNSELECTED_CONTAINER_HEIGHT_FOR_SMALL_WIDTH;
+    console.log("result",result)
+    return result;
 }
+
+const getHeightForLargeWidth = props =>{
+    console.log("props.isSelected",props.isSelected)
+
+    return props.isSelected ? props.contentHeight : UNSELECTED_CONTAINER_HEIGHT_FOR_LARGE_WIDTH;
+}
+
 
 const getUnselectedHeight = props =>{
     return props.unselectedHeight;
@@ -14,7 +27,12 @@ const getColor = props =>{
 }
 
 export const FaqItemContainer = styled.div`
-    height:${getHeight};
+    @media(min-width: ${HORIZONTAL_MIN_WIDTH}px){
+        height:${getHeightForLargeWidth}px;
+    }
+    @media(max-width: ${HORIZONTAL_MIN_WIDTH}px){
+        height:${getHeightForSmallWidth}px;
+    }
     transition: height 0.2s;
     margin-bottom:10px;
     overflow: hidden;
@@ -31,6 +49,11 @@ export const TitleAndButtonContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: ${getUnselectedHeight};
+    @media(min-width: ${HORIZONTAL_MIN_WIDTH}px){
+        height:${UNSELECTED_CONTAINER_HEIGHT_FOR_LARGE_WIDTH}px;
+    }
+    @media(max-width: ${HORIZONTAL_MIN_WIDTH}px){
+        height:${UNSELECTED_CONTAINER_HEIGHT_FOR_SMALL_WIDTH}px;
+    }
     align-items: center;
     `
