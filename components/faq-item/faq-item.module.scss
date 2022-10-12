@@ -1,8 +1,12 @@
+$max-width-for-mobile: 420px;
 
 .title{
     position: relative;
     margin:0;
     font-weight: bold;
+    @media (max-width: $max-width-for-mobile) {
+        font-size: 18px;
+    }
 }
 .arrow-button{
     position: relative;

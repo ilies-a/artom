@@ -196,6 +196,7 @@ $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeig
   p{
     font-weight: 500;
     font-size: $pFontSize;
+    color: $darkBlue;
   }
   @media (min-width: 1081px) {
     p{
@@ -205,6 +206,13 @@ $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeig
   @media (max-width: 1081px) {
     p{
       text-align: center;
+    }
+  }
+  @media (max-width: $max-width-for-mobile) {
+    p{
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
     }
   }
 }
