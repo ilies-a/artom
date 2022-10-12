@@ -8,14 +8,22 @@ $desktopMinWidth: 1081px;
 $mobileMaxWidth: 1080px;
 
 $horizontal-min-width: 960px;
+$max-width-for-mobile: 420px;
 
 $illustrationOriginalWidth: 2692px;
 $illustrationOriginalHeight: 2516px;
 $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeight;
 
-.container {
+.container{
   padding: 0;
 }
+/*.main-container-scroll-wrapper-for-mobile{
+  @media(max-width: $max-width-for-mobile){
+    max-height: calc(100vh - $header-height-small-screen);
+    overflow: scroll;
+  }
+}*/
+
 .section:not(.about-us){
   padding: 2vh 0;
 }
@@ -50,10 +58,10 @@ $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeig
 }
 
 .sections-container{
-  @media (min-width: $header-height-large-screen) { //large width
+  @media (min-width: $horizontal-min-width) { //large width
     margin: 0 10%;
   }
-  @media (max-width: $header-height-small-screen) { //small width
+  @media (max-width: $horizontal-min-width) { //small width
     margin: 0 5%;
   }
 }

@@ -6,7 +6,7 @@ $distanceBetweenTextAndLine: 5px;
 
 
 $horizontal-min-width: 960px;
-$max-width-for-mobile: 400px;
+$max-width-for-mobile: 420px;
 
 .button{
     display: inline-block;
@@ -16,9 +16,8 @@ $max-width-for-mobile: 400px;
     color: $darkBlue;
     margin-top: $distanceBetweenTextAndLine; //so the text doesnt appear too high
     /*color: rgb(44, 44, 44);*/
-
-
     @media (max-width: $max-width-for-mobile) {
+        background-color: white;
         border: 1px solid $darkBlue;
         border-radius: 14px;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
