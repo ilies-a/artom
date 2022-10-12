@@ -26,7 +26,7 @@ export default class HomePageAnim extends React.Component {
         return (
             <div className={styles['main-container']}>
                 <div className={styles['text-container']}>
-                    <div>COLLECT SHARES<br/>OF BLUE-CHIP ARTWORKS</div>
+                    <div>COLLECT SHARES<br/>OF BLUE-CHIP ART</div>
                     <div>Buy, Sell and Trade Shares of Iconic Artworks</div>
                 </div>
                 <div className={styles['fractions-container']}>
