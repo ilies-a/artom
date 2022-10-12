@@ -103,7 +103,9 @@ $section-title-size-for-mobile: 22px;
       font-weight: normal;
       font-size: 54px;
       @media (max-width: $max-width-for-mobile) {
-        font-size: $section-title-size-for-mobile;
+        font-weight: bold;
+        font-size: 26px
+        ;
       }
       span{
         display: block;

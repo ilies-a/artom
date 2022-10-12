@@ -76,6 +76,8 @@ $max-width-for-mobile: 420px;
         :first-child{
             font-size: 58px;
             margin-bottom: 20px;
+            font-weight: bold;
+
         }
         :last-child{
             font-size: 30px;
@@ -128,6 +130,8 @@ $max-width-for-mobile: 420px;
         margin-bottom:$half-of-space-between-text-and-artwork;
         :first-child{
             font-size: 26px;
+            font-weight: bold;
+
         }
         :last-child{
             font-size: 22px;
