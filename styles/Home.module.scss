@@ -1,11 +1,13 @@
-$headerHeight: 70px;
+$header-height-large-screen: 70px;
+$header-height-small-screen: 100px;
+
 $artomBlue: rgb(0, 88, 219);
 $darkBlue: $artomBlue;
 $pFontSize: 22px;
 $desktopMinWidth: 1081px;
 $mobileMaxWidth: 1080px;
 
-$horizontal-min-width: 800px;
+$horizontal-min-width: 960px;
 
 $illustrationOriginalWidth: 2692px;
 $illustrationOriginalHeight: 2516px;
@@ -18,39 +20,40 @@ $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeig
   padding: 2vh 0;
 }
 
-
-.section:not(.how-it-works, .faq){
+.section{
   position: relative;
-  height: calc(100vh - $headerHeight);
+  height: auto;
+  min-height: calc(100vh - $header-height-large-screen);
+  @media(max-width: $horizontal-min-width){
+      min-height: calc(100vh - $header-height-small-screen);
+  }
   /*max-height:calc(100vh - $headerHeight);
   min-height:calc(100vh - $headerHeight);*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-shrink: 1;
 }
 /*.section:not(.stay-in-touch){
   margin: 100px 0;
   border: 1px solid red;
 }*/
 
-.stay-in-touch{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .section-scrolling-anchor{
   position: absolute;
-  top: -$headerHeight;
+  top: -$header-height-large-screen;
+  @media(max-width: $horizontal-min-width){
+    height: calc(100vh - $header-height-small-screen);
+  }
 }
 
 .sections-container{
-  @media (min-width: 1081px) { //large width
+  @media (min-width: $header-height-large-screen) { //large width
     margin: 0 10%;
   }
-  @media (max-width: 1081px) { //small width
+  @media (max-width: $header-height-small-screen) { //small width
     margin: 0 5%;
   }
 }
@@ -70,16 +73,12 @@ $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeig
 
 
 @media (min-width: $horizontal-min-width) {
-  $about-us-content-height-for-large-screen: 420px;
 
-  .about-us{
-    min-height: $about-us-content-height-for-large-screen;
-  }
+
 
   .about-us-content-container{
     grid-auto-flow: column;
     justify-content: space-between;
-    height: $about-us-content-height-for-large-screen;
   }
 
   .about-us-title-and-text-container{
@@ -105,7 +104,7 @@ $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeig
   .about-us-illustration{
     position: relative;
     height: inherit;
-    width:  $about-us-content-height-for-large-screen * $illustration-dim-ratio;
+    width:  420px * $illustration-dim-ratio;
   }
 }
 @media (max-width: $horizontal-min-width) {
@@ -114,12 +113,8 @@ $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeig
     text-align: center;
   }
   
-  $about-us-title-and-text-height:300px;
-  $illustration-height: 300px;
+  $illustration-height: 250px;
 
-  .about-us{
-    min-height: $about-us-title-and-text-height+$illustration-height;
-  }
   .about-us-content-container{
     display: row;
     justify-items: center;
@@ -134,7 +129,6 @@ $illustration-dim-ratio : $illustrationOriginalWidth / $illustrationOriginalHeig
 
   .about-us-title-and-text-container{
     text-align: justify;
-    height: $about-us-title-and-text-height;
     display: flex;
     flex-direction: column;
     align-items: center;

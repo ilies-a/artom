@@ -6,7 +6,7 @@ import navBarReducer from "./nav-bar/nav-bar.reducer";
 const rootReducer = combineReducers({
     'homePageHandler': homePageHandlerReducer,
     'dataLoader': dataLoaderReducer,
-    'navBar': navBarReducer,
+    'navBar': navBarReducer
 });
 
 export default rootReducer;

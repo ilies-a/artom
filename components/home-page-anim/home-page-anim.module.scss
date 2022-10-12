@@ -1,7 +1,10 @@
 /*$textWhiteColor: rgb(243, 243, 243);*/
 $artomBlue: rgb(0, 88, 219);
 $darkBlue: $artomBlue;
-$headerHeight: 70px;
+
+$header-height-large-screen: 70px;
+$header-height-small-screen: 100px;
+
 
 $artworkfadeinduration: 0.8s;
 
@@ -9,7 +12,8 @@ $artworkshiftleftdelay: 0s;
 $artworkshiftleftduration: 1.2s;
 
 
-$horizontal-min-width: 800px;
+$horizontal-min-width: 960px;
+$max-width-for-mobile: 400px;
 
 .main-container{
     --text-fadein-delay: 2.5s;
@@ -39,12 +43,10 @@ $horizontal-min-width: 800px;
 
     position: relative;
     width: 100%;
-    height: calc(100vh - $headerHeight);
-
-    display: grid;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 0px;
+    height: calc(100vh - $header-height-large-screen);
+    @media(max-width: $horizontal-min-width){
+        height: calc(100vh - $header-height-small-screen);
+    }
 }
 
 
@@ -52,7 +54,11 @@ $horizontal-min-width: 800px;
 @media (min-width: $horizontal-min-width) {
     $artwork-img-height: 550px;
     .main-container{
+        display: grid;
+        align-items: center;
+        column-gap: 0px;
         grid-auto-flow: column;
+        justify-content: space-between;
         $padding-bottom: 100px;
         min-height: $artwork-img-height+$padding-bottom;
         padding-left: 110px;
@@ -85,30 +91,55 @@ $horizontal-min-width: 800px;
     }
 }
 
-@media (max-width: $horizontal-min-width) { //mobile
+
+@media (max-width: $horizontal-min-width) { //small width
+
     $artwork-img-width: 95vw;
     $dim-ratio: 1;
     $artwork-img-height: $artwork-img-width / $dim-ratio;
-    $text-height: 100px;
+    $android-bottom-nav-bar-height: 50px;
+
     .main-container{
-      grid-auto-flow: row;
-      min-height: calc($artwork-img-height + $text-height);
+        height: auto;
+        min-height: calc(100vh - $header-height-large-screen);
+        @media(max-width: $horizontal-min-width){
+            min-height: calc(100vh - $header-height-small-screen);
+        }
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 1;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: $android-bottom-nav-bar-height;
     }
+
+    $half-of-space-between-text-and-artwork: 15px;
+
     .fractions-container{
         $dim-ratio: 1;
         width: $artwork-img-width;
         height: $artwork-img-height;
+        min-height: $artwork-img-height;
+        margin-top:$half-of-space-between-text-and-artwork;
         animation: var(--artwork-fadein-duration) linear var(--artwork-fadein-delay) fadeIn forwards, var(--artwork-shifttop-duration) ease-out var(--artwork-shifttop-delay) artworkShiftTop forwards;
     }
     .text-container{
-        width:90%;
-        height:$text-height;
         text-align: center;
+        margin-bottom:$half-of-space-between-text-and-artwork;
         :first-child{
             font-size: 26px;
         }
         :last-child{
             font-size: 22px;
+        }  
+
+        @media (max-width: $max-width-for-mobile) {
+            :first-child{
+                font-size: 16px;
+            }
+            :last-child{
+                font-size: 12px;
+            }        
         }
     }
     .selectedFractionLeft{
@@ -227,8 +258,8 @@ $horizontal-min-width: 800px;
         height: 100%;
     }
     to {
-        width: 80%;
-        height: 80%;
+        width: 90%; //80%
+        height: 90%; //80%
     }
 }
 

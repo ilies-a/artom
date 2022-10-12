@@ -34,12 +34,12 @@ class Header extends React.Component {
                         <Image src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'} priority onClick={()=> this.scrollTo('')}/>
                     </div>
                     <div className={styles['nav-container']}>
-                        <NavButton text='ABOUT US' onClickHandler={this.scrollTo} section='about-us' isSelected={this.navButtonIsSelected('about-us')}/>
-                        <NavButton text='HOW IT WORKS' onClickHandler={this.scrollTo} section='how-it-works' isSelected={this.navButtonIsSelected('how-it-works')}/>
-                        <NavButton text='FAQ' onClickHandler={this.scrollTo} section='faq' isSelected={this.navButtonIsSelected('faq')}/>
-                        <NavButton text='STAY IN TOUCH' onClickHandler={this.scrollTo} section='stay-in-touch' isSelected={this.navButtonIsSelected('stay-in-touch')}/>
+                        <NavButton text={{desktop:'ABOUT US', mobile:'About Us'}} onClickHandler={this.scrollTo} section='about-us' isSelected={this.navButtonIsSelected('about-us')}/>
+                        <NavButton text={{desktop:'HOW IT WORKS', mobile:'How it works'}} onClickHandler={this.scrollTo} section='how-it-works' isSelected={this.navButtonIsSelected('how-it-works')}/>
+                        <NavButton text={{desktop:'FAQ', mobile:'FAQ'}} onClickHandler={this.scrollTo} section='faq' isSelected={this.navButtonIsSelected('faq')}/>
+                        <NavButton text={{desktop:'STAY IN TOUCH', mobile:'Stay In Touch'}} onClickHandler={this.scrollTo} section='stay-in-touch' isSelected={this.navButtonIsSelected('stay-in-touch')}/>
                     <div className={styles['prototype-icon']}>
-                        <Image src='/prototype.png' alt='prototype-icon' className={styles['prototype-icon']} layout={'fill'} objectFit={'contain'} priority onClick={()=> this.openPrototypePage()}/>
+                        <Image src='/prototype.png' alt='prototype-icon'  layout={'fill'} objectFit={'contain'} priority onClick={()=> this.openPrototypePage()}/>
                     </div>
                     </div>
                 </div>

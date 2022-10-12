@@ -4,6 +4,10 @@ $darkBlue: $artomBlue;
 $artomGreen: rgb(131, 245, 180);
 $distanceBetweenTextAndLine: 5px;
 
+
+$horizontal-min-width: 960px;
+$max-width-for-mobile: 400px;
+
 .button{
     display: inline-block;
     cursor: pointer;
@@ -12,19 +16,47 @@ $distanceBetweenTextAndLine: 5px;
     color: $darkBlue;
     margin-top: $distanceBetweenTextAndLine; //so the text doesnt appear too high
     /*color: rgb(44, 44, 44);*/
-    .button-line{
-        margin: $distanceBetweenTextAndLine 0 0 0;
-        height: 2px;
-        width:0%;
-        transition: width 0.2s;
-        /*background-image: linear-gradient(to right, blue, $artomGreen);*/
-        background-color: $darkBlue;
+
+
+    @media (max-width: $max-width-for-mobile) {
+        border: 1px solid $darkBlue;
+        border-radius: 14px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        padding:5px;
+        width:90px;
+        height: 25px;
+        text-align: center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 8px;
+        &.is-selected, &:active{
+            background-color: $darkBlue;
+            color: white;
+            border-color: $artomGreen;
+        }
+        .button-line{
+            display:none;
+        }
+
     }
-}
-.is-selected{
-    .button-line{
-        width: 100%;
+    @media (min-width: $max-width-for-mobile) {
+        .button-line{
+            margin: $distanceBetweenTextAndLine 0 0 0;
+            height: 2px;
+            width:0%;
+            transition: width 0.2s;
+            /*background-image: linear-gradient(to right, blue, $artomGreen);*/
+            background-color: $darkBlue;
+        }
+        &.is-selected{
+            .button-line{
+                width: 100%;
+            }
+        }
+        
     }
+
 }
 
 /* 
@@ -32,7 +64,7 @@ $distanceBetweenTextAndLine: 5px;
   ##Screen = min 1280px
 */
 
-@media (min-width: 1080px) {
+@media (min-width: $horizontal-min-width) {
     .button:hover{
         .button-line{
             width: 100%;
@@ -41,10 +73,10 @@ $distanceBetweenTextAndLine: 5px;
     }
 }
 
-@media (max-width: 1081px) {
-    .button{
+@media (max-width: $horizontal-min-width) {
+    /*.button{
         font-size: medium;
-    }
+    }*/
     .button:active{
         .button-line{
             width: 100%;
@@ -52,12 +84,12 @@ $distanceBetweenTextAndLine: 5px;
         }
     }
 }
-
-@media (max-width: 400px) {
+/*
+@media (max-width: $max-width-for-mobile) {
     .button{
         font-size: small;
     }
-}
+}*/
 /*@media only screen and (hover: none) and (pointer: coarse){ //mobile
 
 }*/

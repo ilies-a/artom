@@ -14,7 +14,9 @@ import { selectScrollToSectionFunction } from '../redux/homepage-handler/homepag
 import { setScrollToSectionFunction } from '../redux/homepage-handler/homepage-handler.actions';
 import { setSelectedNavButton } from '../redux/nav-bar/nav-bar.actions';
 
-const HEADER_HEIGHT = 70;
+const HEADER_HEIGHT_FOR_DESKTOP = 70;
+const HEADER_HEIGHT_FOR_MOBILE = 100;
+const MIN_WIDTH_FOR_MOBILE_HEADER = 960;
 
 class Home extends React.Component {
   constructor(props){
@@ -26,13 +28,13 @@ class Home extends React.Component {
     this.section2 = React.createRef()
     this.section3 = React.createRef()
     this.section4 = React.createRef()
-    this.section0 = React.createRef()
+    this.mainContainer = React.createRef()
 
     this.section1ScrollingAnchor = React.createRef()
     this.section2ScrollingAnchor = React.createRef()
     this.section3ScrollingAnchor = React.createRef()
     this.section4ScrollingAnchor = React.createRef()
-    this.section0ScrollingAnchor = React.createRef()
+    this.mainContainerScrollingAnchor = React.createRef()
     this.enableSetSelectedNavButton = true;
   }
   async componentDidMount(){
@@ -51,6 +53,10 @@ class Home extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
+  getDesktopOrMobileHeight(){
+    return window.innerWidth>MIN_WIDTH_FOR_MOBILE_HEADER ? HEADER_HEIGHT_FOR_DESKTOP : HEADER_HEIGHT_FOR_MOBILE;
+  }
+
   handleScroll = event => {
     //console.log('window.scrollY', window.scrollY);
     if(this.enableSetSelectedNavButton){
@@ -60,11 +66,13 @@ class Home extends React.Component {
 
   getCurrentScrolledSection = (scrollY) =>{
 
-    const shift = -HEADER_HEIGHT;
-    const section1Top = this.section1.current.offsetTop - this.section1.current.offsetHeight/2 + shift;
-    const section2Top = this.section2.current.offsetTop - this.section2.current.offsetHeight/2 + shift;
-    const section3Top = this.section3.current.offsetTop - this.section3.current.offsetHeight/2 + shift;
-    const section4Top = this.section4.current.offsetTop - this.section4.current.offsetHeight/2 + shift;
+    const vh = window.innerHeight;
+    const shift = -this.getDesktopOrMobileHeight();
+    const section1Top = this.section1.current.offsetTop - vh/2 + shift;
+    console.log('offsetHeight', this.section1.current.offsetHeight)
+    const section2Top = this.section2.current.offsetTop - vh/2 + shift;
+    const section3Top = this.section3.current.offsetTop - vh/2 + shift;
+    const section4Top = this.section4.current.offsetTop - vh/2 + shift;
     const section4Bottom = section4Top+this.section4.current.offsetHeight;
 
     const adjuster = 0; 
@@ -109,12 +117,12 @@ class Home extends React.Component {
         sectionRef = this.section4
         break;
       default:
-        sectionRef = this.section0
+        sectionRef = this.mainContainer
         break
     }
     this.disableSetSelectedNavButtonForShortTime()
     //sectionRef.current.scrollIntoView({behavior: 'smooth'})
-    this.scrollToTestFunc(sectionRef.current.offsetTop-HEADER_HEIGHT)
+    this.scrollToTestFunc(sectionRef.current.offsetTop-this.getDesktopOrMobileHeight())
   }
 
   scrollToTestFunc = (y) =>{
@@ -137,7 +145,7 @@ class Home extends React.Component {
 
   render(){
     return (
-      <div className={styles.container} ref={this.section0}>
+      <div className={styles.container} ref={this.mainContainer}>
         <div className={styles['section-scrolling-anchor']} ref={this.section0ScrollingAnchor}></div>
         <Head>
           <title>Artom</title>
@@ -154,10 +162,10 @@ class Home extends React.Component {
               <h1 className={`${styles['section-title']} ${styles['about-us-title']}`} ><span>A DIVERSIFIED</span> <span>PORTFOLIO</span></h1>
               <div className={styles['about-us-text']}>
                 <p>
-                  artom.io is a unique community-driven platform that enables you to buy and sell shares of iconic artworks using the blockchain technology.
+                  artom.io is a unique community-driven platform that enables you to buy, sell and trade shares of blue-chip art using the blockchain technology.
                 </p>
                 <p>
-                  Members of the community can build a diversified portfolio of iconic artworks curated by our industry-leading research team.
+                  Members of the artom.io Community can build a diversified portfolio of iconic artworks curated by our industry-leading research team.
                 </p>
               </div>
             </div>
@@ -212,7 +220,7 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  scrollToSectionFunction: selectScrollToSectionFunction,
+  scrollToSectionFunction: selectScrollToSectionFunction
 });
 
 const mapDispatchToProps = dispatch =>({

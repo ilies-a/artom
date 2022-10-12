@@ -14,7 +14,7 @@ export default class FaqItem extends React.Component {
             isSelected: false
         }
     }
-    componentDidMount(){
+    /*componentDidMount(){
         window.addEventListener('resize',  this.handleResize);
         setTimeout(()=>{ //without delay, this.contentRef.current.offsetHeight is not accurate...
             this.handleResize();
@@ -28,9 +28,13 @@ export default class FaqItem extends React.Component {
             return
         }
         this.setState({contentHeight:this.contentRef.current.offsetHeight+'px'});
-    }
+    }*/
     handleClick =()=>{
-        this.setState({isSelected:!this.state.isSelected})
+        /*if( this.contentRef.current === null || this.contentRef.current.offsetHeight === null){
+            return
+        }*/
+        this.setState({contentHeight:this.contentRef.current.offsetHeight+'px', isSelected:!this.state.isSelected});
+        //this.setState({isSelected:!this.state.isSelected})
     }
 
     render(){
