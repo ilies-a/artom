@@ -34,8 +34,9 @@ $max-width-for-mobile: 420px;
         width:calc($artomLogoWidth*$artomLogoResizeRatio);
         height:calc($artomLogoHeight*$artomLogoResizeRatio);
         @media(max-width: $horizontal-min-width){
-            width:calc($artomLogoWidth*$artomLogoResizeRatio*0.6);
-            height:calc($artomLogoHeight*$artomLogoResizeRatio*0.6);
+            margin-top: 5px;
+            width:calc($artomLogoWidth*$artomLogoResizeRatio*0.8);
+            height:calc($artomLogoHeight*$artomLogoResizeRatio*0.8);
         }
 
         cursor: pointer;

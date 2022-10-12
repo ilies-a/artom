@@ -104,8 +104,7 @@ $section-title-size-for-mobile: 22px;
       font-size: 54px;
       @media (max-width: $max-width-for-mobile) {
         font-weight: bold;
-        font-size: 26px
-        ;
+        font-size: 26px;
       }
       span{
         display: block;
@@ -195,6 +194,12 @@ $section-title-size-for-mobile: 22px;
 
 .how-it-works-cards-wrapper{
   width:100%;
+}
+
+.faq-title{
+  @media (max-width: $max-width-for-mobile) {
+    font-size: 19px;
+  }
 }
 
 .invisible{

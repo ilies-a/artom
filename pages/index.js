@@ -182,7 +182,7 @@ class Home extends React.Component {
         </section>
         <section className={`${styles['section']} ${styles['faq']}`} ref={this.section3}>
           <div className={styles['section-scrolling-anchor']} ref={this.section3ScrollingAnchor}></div>
-          <h1 className={`${styles['section-title']} ${styles['faq-title']}`} >FAQ</h1>
+          <h1 className={`${styles['section-title']} ${styles['faq-title']}`} >FREQUENTLY ASKED QUESTIONS</h1>
           <FaqList/>
         </section>
         <section className={`${styles['section']} ${styles['stay-in-touch']}`} ref={this.section4}>
