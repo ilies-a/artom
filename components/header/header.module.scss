@@ -11,8 +11,8 @@ $max-width-for-mobile: 420px;
     width:100%;
     //background-color: white;
     @media(max-width: $max-width-for-mobile){
-        //background-color: rgba(255, 255, 255, 0.5);
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 60%,  rgba(255, 0, 0, 0) 95%)
+        background-color: rgba(255, 255, 255, 0.8);
+        //background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 60%,  rgba(255, 255, 255, 0) 95%)
     }
     /*box-shadow: 0 0 10px rgb(0 0 0 / 15%);*/
     padding:0 30px;
