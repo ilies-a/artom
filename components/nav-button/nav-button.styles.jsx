@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const maxWidthForMobile = '400px';
+const maxWidthForMobile = '420px';
 
 const getTextForMobile = props =>{
     return props.text.mobile;
