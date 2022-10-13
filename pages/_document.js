@@ -8,7 +8,7 @@ export default function Document() {
             rel="preload"
             href="/fonts/NeueMontreal-Medium.otf"
             as="font"
-            crossOrigin
+            crossOrigin="true"
             type="font/otf"
         />
       </Head>

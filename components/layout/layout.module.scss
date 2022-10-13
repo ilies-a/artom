@@ -12,14 +12,14 @@ $background-top-cover-height: 350px;
     background-color: white;
     background: url('../../public/background-image.svg');
     background-size: contain;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: 0px $background-top-cover-height;
     font-family: 'NeueMontreal';
     width: 100%;
-}
+}/*
 .background-top-cover{
     position: absolute;
     width:100%;
     height:$background-top-cover-height;
     background-color: white;
-}
+}*/
