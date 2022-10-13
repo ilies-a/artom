@@ -254,7 +254,7 @@ $faq-title-size-for-mobile: 19px;
             }
             &::placeholder{
               //all
-              color: rgb(49, 204, 116);
+              color: $text-black;
               font-style: italic;
             }
           }
