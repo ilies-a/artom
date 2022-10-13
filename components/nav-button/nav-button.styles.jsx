@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-const maxWidthForMobile = '420px';
-
 const getTextForMobile = props =>{
     return props.text.mobile;
 }
@@ -11,14 +9,12 @@ const getTextForDesktop = props =>{
 }
 
 export const ButtonTextContainer = styled.div`
-    @media (max-width: ${maxWidthForMobile}) {
+    &:before {
+        content: "${getTextForDesktop}";
+    }
+    @media (pointer:coarse) {
         &:before{
             content: "${getTextForMobile}";
-        }
-    }
-    @media (min-width: ${maxWidthForMobile}) {
-        &:after {
-            content: "${getTextForDesktop}";
         }
     }
     `

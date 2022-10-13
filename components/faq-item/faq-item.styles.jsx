@@ -17,11 +17,6 @@ const getHeightForLargeWidth = props =>{
     return props.isSelected ? props.contentHeight : UNSELECTED_CONTAINER_HEIGHT_FOR_LARGE_WIDTH;
 }
 
-
-const getUnselectedHeight = props =>{
-    return props.unselectedHeight;
-}
-
 const getColor = props =>{
     return props.isSelected ? 'black':'rgb(48, 48, 48)';
 }

@@ -68,7 +68,7 @@ $max-width-for-mobile: 420px;
         &hover{
             opacity: 1;
         }
-        @media (max-width: $max-width-for-mobile) {
+        @media (pointer: coarse) {
             display:none;
         }
     }
