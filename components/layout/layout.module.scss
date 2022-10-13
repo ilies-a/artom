@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 $background-top-cover-height: 350px;
 
 @font-face {
@@ -16,6 +18,7 @@ $background-top-cover-height: 350px;
     background-position: 0px $background-top-cover-height;
     font-family: 'NeueMontreal';
     width: 100%;
+    color: $text-black;
 }
 .background-top-cover{
     position: absolute;

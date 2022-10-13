@@ -36,14 +36,15 @@ $distanceBetweenTextAndLine: 5px;
         padding:5px;
         width: 125px;
         height: 30px;
-        @media(max-width: $small-screen-max-width){
-            width:90px;
-            height: 25px;
-        }
         text-align: center;
         display:flex;
         justify-content: center;
         align-items: center;
+        //s
+        @media(max-width: $small-screen-max-width){
+            width:90px;
+        }
+
     }
     //&
     &:hover{
@@ -59,7 +60,7 @@ $distanceBetweenTextAndLine: 5px;
         @media(pointer:coarse){
             background-color: $artom-blue;
             color: white;
-            border-color: $artom-green;
+            border-color: $artom-blue;
         }
         //ch
         .button-line{

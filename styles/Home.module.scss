@@ -35,7 +35,7 @@ $faq-title-size-for-mobile: 19px;
     }
     //medium
     @media (max-width: $medium-screen-max-width) {
-      margin: 0 5%;
+      margin: 0 6%;
     }
     //small
     //touchscreen
@@ -76,7 +76,6 @@ $faq-title-size-for-mobile: 19px;
       //children
       .section-title{
         //all
-        color:$artom-blue;
         margin:10px 0;
         width: 100%;
         //medium
@@ -138,12 +137,12 @@ $faq-title-size-for-mobile: 19px;
 
           .about-us-title{
             //all
+            text-align: left;
             //l
             @media (min-width: $medium-screen-max-width) {
-              text-align: left;
               margin:0px;
               font-weight: normal;
-              font-size: 54px;
+              font-size: 44px;
               width: 450px;
             }
             //m
@@ -151,13 +150,6 @@ $faq-title-size-for-mobile: 19px;
             @media (max-width: $small-screen-max-width) {
               font-weight: bold;
               font-size: $about-us-title-size-for-mobile;
-            }
-            //ch
-            span{
-              //l
-              @media (min-width: $medium-screen-max-width) {
-                display: block;
-              }
             }
           }
           .about-us-text{
@@ -167,15 +159,15 @@ $faq-title-size-for-mobile: 19px;
             }
             //ch
             p{
+              //l
               @media (min-width: $medium-screen-max-width) {
-                width: 380px;
+                width: 430px;
               }
             }
           }
           p{
             //all
             font-weight: 500;
-            color: $artom-blue;
             //m
             @media (max-width: $medium-screen-max-width) {
               font-size: 18px;            
@@ -219,7 +211,6 @@ $faq-title-size-for-mobile: 19px;
           //all
           font-weight: 500;
           font-size: $pFontSize;
-          color: $artom-blue;
           //l
           @media (min-width: $medium-screen-max-width) {
             text-align: left;

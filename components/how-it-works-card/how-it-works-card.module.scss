@@ -1,81 +1,84 @@
-$artomBlue: rgb(0, 88, 219);
+@import "../../styles/variables";
+
 $box-shadow: 3px 3px 3px rgb(26, 100, 63);
 
 .main-container{
-    /*border: 1px solid green;*/
-    margin: 0 0px;
-}
-
-.header{
-    border-radius: 0 20px 0 0;
-    background-color: $artomBlue;
-    color: white;
-    margin-bottom:5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px 0;
-    box-shadow: $box-shadow;
-    .number{
-        margin:0px 18px;
-        font-size: 38px;
-    }
-    .title{
-        font-size: 22px;
-    }
-}
-
-.body{
-    border: 1px solid $artomBlue;
+    border: 1px solid rgb(87, 87, 87);
     background-color: rgba(255, 255, 255, 0.76);
-    padding: 10px 10px;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height:150px;
-    box-shadow: $box-shadow;
-    color:$artomBlue;
-    font-size: 18px;
-    .text-container{
-        max-width:70%;
+    .header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-shrink: 1;
+        padding: 5px 0;
+        .number{
+            margin-left:23px;
+            margin-right:28px;
+            font-weight: bold;
+            color: $artom-blue;
+            font-size: 46px;
+
+            //s
+            @media(max-width: $small-screen-max-width){
+                margin-left:20px;
+                margin-right:22px;
+                font-size: 36px;
+            }
+        }
+        .title{
+            font-size: 28px;
+            color: $text-black;
+            //s
+            @media(max-width: $small-screen-max-width){
+                font-size: 20px;
+            }
+        }
     }
-    $img-width: 100px;
-    .image-container{
-        position: relative;
-        width:$img-width;
+    .body{
+        padding: 10px 15px;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: $text-black;
+        font-size: 18px;
+        .text-container{
+            max-width:70%;
+        }
+        $img-width: 100px;
+        .image-container{
+            position: relative;
+            width:$img-width;
+        }
+        .image-1-container{
+            $dim-ratio: 98/98;
+            height: calc($img-width/$dim-ratio);
+        }
+        .image-2-container{
+            $dim-ratio: 147/147;
+            height: calc($img-width/$dim-ratio);
+        }
+        .image-3-container{
+            $dim-ratio: 115/113;
+            height: calc($img-width/$dim-ratio);
+        }
+        .image-4-container{
+            $dim-ratio: 207/123;
+            height: calc($img-width/$dim-ratio);
+        }
+        .image-5-container{
+            $dim-ratio: 145/147;
+            height: calc($img-width/$dim-ratio);
+        }
+        .image-6-container{
+            $dim-ratio: 207/124;
+            height: calc($img-width/$dim-ratio);
+        }
+        .image-7-container{
+            $dim-ratio: 90/127;
+            height: calc(($img-width/$dim-ratio)*0.8);
+        }
     }
-    .image-1-container{
-        $dim-ratio: 92/93;
-        height: calc($img-width/$dim-ratio);
-    }
-    .image-2-container{
-        $dim-ratio: 616/613;
-        height: calc($img-width/$dim-ratio);
-    }
-    .image-3-container{
-        $dim-ratio: 503/491;
-        height: calc($img-width/$dim-ratio);
-    }
-    .image-3-container{
-        $dim-ratio: 503/491;
-        height: calc($img-width/$dim-ratio);
-    }
-    .image-4-container{
-        $dim-ratio: 591/353;
-        height: calc($img-width/$dim-ratio);
-    }
-    .image-5-container{
-        $dim-ratio: 970/654;
-        height: calc($img-width/$dim-ratio);
-    }
-    .image-6-container{
-        $dim-ratio: 591/353;
-        height: calc($img-width/$dim-ratio);
-    }
-    .image-7-container{
-        $dim-ratio: 3475/4874;
-        height: calc($img-width/$dim-ratio);
-    }
+    
 }

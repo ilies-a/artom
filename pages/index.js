@@ -149,7 +149,7 @@ class Home extends React.Component {
         <section className={`${styles['section']} ${styles['about-us']}`} ref={this.section1}>
           <div className={styles['about-us-content-container']}>
             <div className={styles['about-us-title-and-text-container']}>
-              <h1 className={`${styles['section-title']} ${styles['about-us-title']}`} ><span>A DIVERSIFIED</span> <span>PORTFOLIO</span></h1>
+              <h1 className={`${styles['section-title']} ${styles['about-us-title']}`} >A Diversfied<br/>Portfolio</h1>
               <div className={styles['about-us-text']}>
                 <p>
                   artom.io is a unique community-driven platform that enables you to buy, sell and trade shares of blue-chip art using the blockchain technology.
@@ -165,17 +165,17 @@ class Home extends React.Component {
           </div>
         </section>
         <section className={`${styles['section']} ${styles['how-it-works']}`} ref={this.section2}>
-          <h1 className={`${styles['section-title']} ${styles['how-it-works-title']}`}>HOW IT WORKS</h1>
+          <h1 className={`${styles['section-title']} ${styles['how-it-works-title']}`}>How It Works</h1>
           <div className={styles['how-it-works-cards-wrapper']}>
             <HowItWorksCards/>
           </div>
         </section>
         <section className={`${styles['section']} ${styles['faq']}`} ref={this.section3}>
-          <h1 className={`${styles['section-title']} ${styles['faq-title']}`} >FREQUENTLY ASKED QUESTIONS</h1>
+          <h1 className={`${styles['section-title']} ${styles['faq-title']}`} >Frequently Asked Questions</h1>
           <FaqList/>
         </section>
         <section className={`${styles['section']} ${styles['stay-in-touch']}`} ref={this.section4}>
-          <h1 className={`${styles['section-title']} ${styles['stay-in-touch-title']}`} >STAY IN TOUCH</h1>
+          <h1 className={`${styles['section-title']} ${styles['stay-in-touch-title']}`} >Stay In Touch</h1>
           <p>Want to know more about the project, leave us your contact details and we will get back to you soon</p>
           <div className={styles['email-input-container']}>
             <input type='text' className={styles['stay-in-touch-email-input']} placeholder='Email...'/>
