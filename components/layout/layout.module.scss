@@ -10,7 +10,7 @@ $background-top-cover-height: 350px;
 
 .main-container{
     background-color: white;
-    background: url('../../public/background-image.svg');
+    background-image: url('../../public/background-image.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 0px $background-top-cover-height;
