@@ -1,5 +1,4 @@
-$artomBlue: rgb(0, 88, 219);
-$artomGreen: rgb(131, 245, 180);
+@import "../../styles/variables";
 
 .images-container{
     display:none;
@@ -59,7 +58,7 @@ $animation-distance: 25px;
       animation-duration: $animation-time;
       animation-iteration-count: infinite; 
       animation-timing-function: ease;
-      background: $artomBlue;
+      background: $artom-blue;
       border-radius: 50%;
       content: '';
       display: block;
@@ -68,8 +67,8 @@ $animation-distance: 25px;
     }
     
     &:nth-of-type(even)::before {
-      background-color: $artomGreen;
-      box-shadow: inset 0 0 4px darken($artomGreen, 10%);
+      background-color: $artom-green;
+      box-shadow: inset 0 0 4px darken($artom-green, 10%);
     }
   }
 }
