@@ -2,7 +2,7 @@ export const faqs = [
     {
         title: 'What is artom.io?',
         text: 'artom.io is a unique web3 platform that aims to democratize and popularize art. '
-        +'We aim to unable anyone to invest in blue chip art and buy, trade and sell shares of iconic artworks.'
+        +'We aim to unable anyone to invest in blue chip art and buy, trade and sell Shares of iconic artworks.'
     },
     {
         title: 'How does artom.io work?',
@@ -16,23 +16,30 @@ export const faqs = [
                 +'tokens that are linked to the real asset. Each artwork will have a fixed number of tokens that cannot change overtime.'
             +'</li>'
             +'<li>'
-                +'<span>Acquiring</span>: Once the artwork has been fractionalized, and all the shares bought by the community, the '
-                +'artwork is acquired and shares are distributed among the buyers.'
+                +'<span>Acquiring</span>: Once the artwork has been fractionalized, and all the Shares bought by the community, the '
+                +'artwork is acquired and Shares are distributed among the buyers.'
             +'</li>'
             +'<li>'
-                +'<span>Trading</span>: Once you are the owner of one or more shares of an artwork, you are ready to sell and trade '
-                +'them in our secondary market. Otherwise, you can keep your shared until the artwork is sold and collect your benefits.'
+                +'<span>Voting</span>:When acquiring your Shares, you will be requested to vote from a list of preselected locations, on '
+                +'where the artwork will be displayed. One Share is equal to one vote'
+            +'</li>'
+            +'<li>'
+                +'<span>Displaying</span>:After the voting process is over, the artwork will be moved to the location that received most of the votes'
+            +'</li>'
+            +'<li>'
+                +'<span>Trading</span>: Once you are the owner of one or more Shares of an artwork, you are ready to sell and trade '
+                +'them in our secondary market. Otherwise, you can keep your Shared until the artwork is sold and collect your benefits.'
             +'</li>'
             +'<li>'
                 +'<span>Selling</span>:: from time to time and always depending on the market evolution, Owners will be requested to vote '
                 +'on whether the artwork should be sold. If a majority of owners decide to sell it, it is then sold and owners receive their '
-                +'benefits in exchange of their shares.'
+                +'benefits in exchange of their Shares.'
             +'</li>'
         +'</ul>'
     },            {
         title: 'What is a Share?',
-        text: 'A share is a unique digital security token (STO).<br/>artom.io uses STO to fractionalize the artworks. These STOs are minted '
-        +'in the Polygon Blockchain and acquirable on artom.io platform. Each artwork will have an initial limited number of STOs linked to '
+        text: 'A Share is a unique digital security token (STO).<br/>artom.io uses STO to fractionalize the artworks. These STOs are minted '
+        +'on the Polygon Blockchain and acquirable on artom.io platform. Each artwork will have an initial limited number of STOs linked to '
         +'it that cannot change overtime.'
     },
     {
@@ -49,15 +56,15 @@ export const faqs = [
         title: 'Why acquiring Shares?',
         text: 'There are many benefits in acquiring Shares of one or more artworks.<br/>Shares give you a voting power on key decisions concerning'
         +'the artwork such as when to resell it, or where to expose it.<br/>Moreover, the more Shares you acquire, the more artom.io Social Club '
-        +'points you collect. You will be then be able to trade your points for a range of art related benefits such as museum tickets, private '
+        +'points you collect. You will then be able to trade your points for a range of art related benefits such as museum tickets, private '
         +'visits of museums with curators, etc.<br/><br/>When the artwork is sold, the proceeds will be returned to Shares owners in exchange of their Shares.'         
     },            
     {
-        title: 'What do I need to participate',
-        text: 'Before making any purchase in artom.io, you must create a Wallet to hold your funds and/or your shares. If you already have a wallet, '
+        title: 'What do I need to participate?',
+        text: 'Before making any purchase in artom.io, you must create a Wallet to hold your funds and/or your Shares. If you already have a wallet, '
         +'you can sign up to artom.io by connecting it.<br/>If you sign up with your email address, artom.io will automatically create a wallet for you.<br/><br/>'
         +'Please make sure to sign-up with a valid and accessible email address. It you lose the access to your email address; we will not be able to access '
-        +'your shares nor your funds.'
+        +'your Shares nor your funds.'
     },
     {
         title: 'Is there a minimum contribution?',
@@ -71,17 +78,17 @@ export const faqs = [
     },            
     {
         title: 'Who owns the artwork?',
-        text: 'artom.io will remains the legal owner of the artwork until either the community votes to sell the artworks or when a single member of the '
+        text: 'artom.io will remain the legal owner of the artwork until either the community votes to sell the artworks or when a single member of the '
         +'community acquires 100% of the artworks and takes custody of it.'
     },
     {
-        title: 'Can artom.io retain ownership of shares?',
-        text: 'Yes, this allows us to remain aligned and connected with the interest of our community. We may vary the number of shares we hold for an '
+        title: 'Can artom.io retain ownership of Shares?',
+        text: 'Yes, this allows us to remain aligned and connected with the interest of our community. We may vary the number of Shares we hold for an '
         +'asset and may use some of them in the framework of marketing promotion. However, and in order to treat all member of the community fairly, we will not be allowed to take part in any voting process concerning the artworks. That includes the displayed location as well as the selloff voting process.'          
     },
     {
-        title: 'How many shares are linked to each asset?',
-        text: 'The number of shares minted depends fully on the underlying asset\'s value. However, the total number of shares created for a specific '
+        title: 'How many Shares are linked to each asset?',
+        text: 'The number of shares minted depends fully on the underlying artwork\'s value. However, the total number of Shares created for a specific '
         +'artwork is fix and will never change over time.'          
     },
     {
@@ -90,7 +97,7 @@ export const faqs = [
     },
     {
         title: 'Is artom.io an investment platform?',
-        text: 'Yes, artom.io offers you the possibility to acquire, sell and trade shares linked to tangible artworks. Despite not being ourselves a financial institution, we have implemented all the required standards in order to act in the best interest of our community. Moreover, any third party that '
+        text: 'Yes, artom.io offers you the possibility to acquire, sell and trade Shares linked to tangible artworks. Despite not being ourselves a financial institution, we have implemented all the required standards in order to act in the best interest of our community. Moreover, any third party that '
         +'artom.io is working with is regulated in all the jurisdictions we operate in.'          
     },
     {
@@ -98,10 +105,10 @@ export const faqs = [
         text: 'Such as any other investment, investing in an artwork implies a high degree of risk. You will find below a non-exhaustive list of the risks. Before investing in any artom.io artwork, we invite you to carefully assess them:'
         +'<ul>'
             +'<li>'
-                +'Your ability to trade or sell your shares is highly uncertain and depends on the demand in the secondary markets.'
+                +'Your ability to trade or sell your Shares is highly uncertain and depends on the demand in the secondary markets.'
             +'</li>'
             +'<li>'
-                +'At this moment, there is no public secondary market and you can only trade or sell your shares on artom.io secondary market.'
+                +'At this moment, there is no public secondary market and you can only trade or sell your Shares on artom.io secondary market.'
             +'</li>'
             +'<li>'
                 +'Artworks may be sold at loss'
@@ -110,7 +117,7 @@ export const faqs = [
                 +'Investing in art is subject to numerous risks, including (i) claims with respect to authenticity or provenance, (ii) physical damage, (iii) legal challenges to ownership, (iv) market risks, (v) economic risks and (vi) fraud.'
             +'</li>'
             +'<li>'
-                +'Art shares and artworks are highly illiquid, so you must be prepared to hold your investment for an indefinite period.'
+                +'Art Shares and artworks are highly illiquid, so you must be prepared to hold your investment for an indefinite period.'
             +'</li>'
             +'<li>'
                 +'Timing of sale of a painting is uncertain'
@@ -123,7 +130,7 @@ export const faqs = [
     },
     {
         title: 'What is the artom.io Social Club?',
-        text: 'The artom.io Social Club is formed by all the members of the community. The more shares they acquire, the more points they collect. Artom.io Social Club points are minted on the Polygon Blockchain and can be exchanged for a wide '
+        text: 'The artom.io Social Club is formed by all the members of the community. The more Shares they acquire, the more points they collect. Artom.io Social Club points are minted on the Polygon Blockchain and can be exchanged for a wide '
         +'range of art related benefits on our partners´ platforms. Additionally, the more points you own the more advantages you get within artom.io platform (E.g., invitation to pre-sale when a new artwork is made available).'        
     }
 ]
