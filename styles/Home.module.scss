@@ -207,7 +207,7 @@ $faq-title-size-for-mobile: 19px;
       }
       &.stay-in-touch{
         //ch
-        p{
+        /*p{
           //all
           font-weight: 500;
           font-size: $pFontSize;
@@ -225,7 +225,7 @@ $faq-title-size-for-mobile: 19px;
             font-weight: 500;
             font-size: 18px;
           }    
-        }
+        }*/
         .email-input-container{
           //all
           text-align: center;
@@ -242,6 +242,7 @@ $faq-title-size-for-mobile: 19px;
             padding: 0 5px;
             margin-right: 3px;
             width: 200px;
+            background-color: white;
             &:focus{
               //all
               outline: none;
@@ -259,6 +260,7 @@ $faq-title-size-for-mobile: 19px;
             height: 100%;
             width: 45px;
             font-weight: 600;
+            background-color: #f0efef;
           }
         }
         .social-network-buttons-container{

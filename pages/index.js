@@ -176,7 +176,6 @@ class Home extends React.Component {
         </section>
         <section className={`${styles['section']} ${styles['stay-in-touch']}`} ref={this.section4}>
           <h1 className={`${styles['section-title']} ${styles['stay-in-touch-title']}`} >Stay In Touch</h1>
-          <p>Want to know more about the project, leave us your contact details and we will get back to you soon</p>
           <div className={styles['email-input-container']}>
             <input type='text' className={styles['stay-in-touch-email-input']} placeholder='Email...'/>
             <button>Ok</button>
