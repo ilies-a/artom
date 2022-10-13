@@ -35,7 +35,7 @@ export const FaqItemContainer = styled.div`
         border-radius: 5px;
         padding:0px 10px;
         padding-bottom:10px;
-        background-color: rgba(255,255,255,0.5);
+        background-color: rgba(255,255,255,0.75);
         color:${getColor};
     }
     `

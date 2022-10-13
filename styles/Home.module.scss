@@ -78,12 +78,15 @@ $faq-title-size-for-mobile: 19px;
         //all
         margin:10px 0;
         width: 100%;
+        font-weight: normal;
+        font-size: 44px;
         //medium
         @media (max-width: $medium-screen-max-width) {
           text-align: center;
         }
         //small
         @media (max-width: $small-screen-max-width) {
+          font-weight: bold;
           font-size: $section-title-size-for-mobile;
         }
         //&
