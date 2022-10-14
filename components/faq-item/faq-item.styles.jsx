@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const UNSELECTED_CONTAINER_HEIGHT_FOR_SMALL_WIDTH = 70;
 const UNSELECTED_CONTAINER_HEIGHT_FOR_LARGE_WIDTH = 50;
-const HORIZONTAL_MIN_WIDTH= 960;
+const HORIZONTAL_MIN_WIDTH= 950;
 
 const getHeightForSmallWidth = props =>{
 

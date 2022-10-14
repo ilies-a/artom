@@ -3,8 +3,14 @@ $artom-green: rgb(131, 245, 180);
 
 $text-black: black; 
 
-$medium-screen-max-width: 1000px;
+$medium-screen-max-width: 950px;
 $small-screen-max-width: 420px;
 
 $large-screen-header-height: 70px;
 $small-screen-header-height: 100px;
+
+:export {
+    largeScreenHeaderHeight: $large-screen-header-height;
+    smallScreenHeaderHeight: $small-screen-header-height;
+    smallScreenMaxWidth: $small-screen-max-width;
+  }

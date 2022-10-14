@@ -125,6 +125,8 @@ $faq-title-size-for-mobile: 19px;
           @media (min-width: $medium-screen-max-width) {
             position: relative;
             height: inherit;
+            min-width: none;
+            max-width: 430px;
           }
           //m
           @media (max-width: $medium-screen-max-width) {
@@ -146,7 +148,7 @@ $faq-title-size-for-mobile: 19px;
               margin:0px;
               font-weight: normal;
               font-size: 44px;
-              width: 450px;
+
             }
             //m
             //s
@@ -159,13 +161,6 @@ $faq-title-size-for-mobile: 19px;
             //l
             @media (min-width: $medium-screen-max-width) {
               font-size: $pFontSize;
-            }
-            //ch
-            p{
-              //l
-              @media (min-width: $medium-screen-max-width) {
-                width: 430px;
-              }
             }
           }
           p{
