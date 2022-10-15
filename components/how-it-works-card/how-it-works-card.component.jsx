@@ -21,7 +21,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
             {
             fractions.map((value, index) => {
                 return(
-                    <div className={styles['fraction']} style={{zIndex:index}}>
+                    <div key={index} className={styles['fraction']} style={{zIndex:index}}>
                         <div className={styles['price']}>$20</div>
                     </div>
                 );
