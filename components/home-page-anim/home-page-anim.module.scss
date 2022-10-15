@@ -83,7 +83,7 @@ $max-width-for-mobile: 420px;
             font-size: 30px;
         }
     }
-    .selectedFractionBottom{
+    .selectedFractionTop{
         &.animationOn {
             animation: var(--unselectedfractions-fadeout-duration) linear var(--unselectedfractions-fadeout-delay) unselectedFractionsFadeOut forwards;
         }

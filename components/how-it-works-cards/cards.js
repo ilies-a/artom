@@ -1,27 +1,27 @@
 export const cards = [
     {
         title:'SOURCING',
-        text:'Our experts determine which artwork is available on the market and has the best growth potential',
-        imageName:'1.jpg'
+        text:'Our experts determine which artwork is available on the market and has the best growth potential.',
+        imageName:'1.png'
     },
     {
         title:'MINTING',
-        text:'For each curated artwork, 20&#8364; Shares are created and made available for purchase on artom.io',
+        text:'For each curated artwork, 20&#8364; Shares are created and made available for purchase on artom.io.',
         imageName:'2.jpg'
     },
     {
-        title:'ACQUISITION',
+        title:'ACQUIRING',
         text:'Once all shares are bought by the community. We acquire the artwork on behalf of the Community.',
         imageName:'3.png'
     },
     {
         title:'VOTING',
-        text:'When acquiring your shares, you get to vote from a list of pre-selected museum on where the artwork will be displayed',
+        text:'When acquiring your shares, you get to vote from a list of pre-selected museum on where the artwork will be displayed.',
         imageName:'6.png'
     },
     {
-        title:'EXHIBITION',
-        text:'Once the acquisition process is finalized, the artwork is lent and exposed in the museum that got the most votes',
+        title:'DISPLAYING',
+        text:'Once the acquisition process is finalized, the artwork is lent and exposed in the museum that got the most votes.',
         imageName:'5.jpg'
     },
     {
@@ -31,7 +31,7 @@ export const cards = [
     },
     {
         title:'SELLING',
-        text:'If the Shares Owner decide to sell the artwork it is then sold and owners receive their benefits in exchange of their Shares',
+        text:'If the Shares Owner decide to sell the artwork it is then sold and owners receive their benefits in exchange of their Shares.',
         imageName:'7.png'
     }
   ];
