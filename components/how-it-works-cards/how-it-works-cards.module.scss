@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .main-container{
     position: relative;
     /*display: flex;
@@ -9,12 +11,12 @@
     display: grid;
     grid-row-gap: 100px;//15px;
     grid-column-gap: 25px;
+    grid-template-columns: repeat(1, 1fr);
 
-
-    @media (min-width: 1000px) {
+    @media (min-width: $medium-screen-max-width) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media (max-width: 1000px) {
-      grid-template-columns: repeat(1, 1fr);
+    @media (max-width: $small-screen-max-width) {
+      grid-row-gap: 15px;
     }
 }

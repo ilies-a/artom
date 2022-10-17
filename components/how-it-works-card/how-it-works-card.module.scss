@@ -12,12 +12,25 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
     perspective: 800px;
     border-radius: 25px;
     border: 1px solid rgb(68, 68, 68);
+    //l
+    /*@media (min-width: $medium-screen-max-width) {
+        max-width: calc(100vw - 20vw); // 20/2 = 10 is the margin for large width sections see Home.module.css
+      }*/
+    //m
+    @media (max-width: $medium-screen-max-width) {
+        max-width: calc(100vw - 12vw); // 12/2 = 6 is the margin for non large width sections see Home.module.css
+    }
+    @media (max-width: $medium-screen-max-width) {
+        height:215px;
+        //max-width: calc(100vw - 12vw); // 12/2 = 6 is the margin for non large width sections see Home.module.css
+    }
     //ch
     .header-and-text-container{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         max-width: 55%;
+        
         .header{
             display: flex;
             flex-direction: row;
@@ -32,8 +45,7 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
     
                 //s
                 @media(max-width: $small-screen-max-width){
-                    margin-left:20px;
-                    margin-right:22px;
+                    margin-right:15px;
                     font-size: 36px;
                 }
             }
@@ -42,7 +54,7 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 color: $text-black;
                 //s
                 @media(max-width: $small-screen-max-width){
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
         }
@@ -53,7 +65,8 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
         }
     }
     $artwork-size-large: 215px;
-    $artwork-size-small: 90px;
+    $artwork-size-medium: 130px;
+    $artwork-size-small: 130px;
     $artwork-box-shadow: rgba(0, 0, 0, 0.425) 1.95px 1.95px 2.6px;
     //$artwork-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     //$artwork-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -67,36 +80,55 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
         justify-content: center;
         align-items: center;
         transform: rotate3d(0, 1, 0, -45deg);
-
+        margin-left:0px;
         .illustration-1, .illustration-3{
+            @media(min-width: $medium-screen-max-width){
+                width:  $artwork-size-large;
+                height:  $artwork-size-large;
+            }
+            //m
+            @media(max-width: $medium-screen-max-width){
+                width:  $artwork-size-medium;
+                height:  $artwork-size-medium;
+            }
+            //s
+            @media(max-width: $small-screen-max-width){
+                width:  $artwork-size-small;
+                height:  $artwork-size-small;
+            }
             .artwork{
                 //border: 1px solid rgb(179, 178, 178);
                 position: relative;
-                width: $artwork-size-large;
-                height: $artwork-size-large;
+                width:100%;
+                height:100%;
                 //background-image: linear-gradient(-30deg, $artom-blue 10%, $artom-green 80%);
                 background-image: $artwork-background-image;
                 box-shadow: $artwork-box-shadow;
                 display:flex;
                 justify-content: center;
                 align-items: center;
-                //s
-                @media(max-width: $small-screen-max-width){
-                    width:  $artwork-size-small;
-                    height:  $artwork-size-small;
-                }
+                //l
+
             }
         }
         .illustration-2{
             $growing-ratio: 1.1;
             display: flex;
             flex-wrap: wrap;
-            width:  $artwork-size-large*$growing-ratio;
-            height: $artwork-size-large*$growing-ratio;
+            //l
+            @media(min-width: $medium-screen-max-width){
+                width:  $artwork-size-large*$growing-ratio;
+                height:  $artwork-size-large*$growing-ratio;
+            }
+            //m
+            @media(max-width: $medium-screen-max-width){
+                width:  $artwork-size-medium*$growing-ratio;
+                height:  $artwork-size-medium*$growing-ratio;
+            }
             //s
             @media(max-width: $small-screen-max-width){
-                width:  $artwork-size-small;
-                height:  $artwork-size-small;
+                width:  $artwork-size-small*$growing-ratio;
+                height:  $artwork-size-small*$growing-ratio;
             }
             .fraction{
                 position: relative;
@@ -117,6 +149,21 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
             }
         }
         .illustration-3{
+            //l
+            @media(min-width: $medium-screen-max-width){
+                width:  $artwork-size-large;
+                height:  $artwork-size-large;
+            }
+            //m
+            @media(max-width: $medium-screen-max-width){
+                width:  $artwork-size-medium;
+                height:  $artwork-size-medium;
+            }
+            //s
+            @media(max-width: $small-screen-max-width){
+                width:  $artwork-size-small;
+                height:  $artwork-size-small;
+            }
             .artwork{
                 filter: grayscale(1)
             }
@@ -130,6 +177,9 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 height: 30%;
             }
         }
+        $phone-image-reduction-ratio-medium: 0.75;
+        $phone-image-reduction-ratio-small: 0.7;
+
         .illustration-4{
             $vote-image-height: 240px;
             $vote-image-dim-ratio: 0.7;
@@ -140,31 +190,97 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 position: relative;
                 width: $vote-image-width;
                 height: $vote-image-height;
+                //l
+                @media(min-width: $medium-screen-max-width){
+                    width: $vote-image-width;
+                    height: $vote-image-height;
+                }
+                //m
+                @media(max-width: $medium-screen-max-width){
+                    width: $vote-image-width * $phone-image-reduction-ratio-medium;
+                    height: $vote-image-height * $phone-image-reduction-ratio-medium;
+                }
+                //s
+                @media(max-width: $small-screen-max-width){
+                    width: $vote-image-width * $phone-image-reduction-ratio-small;
+                    height: $vote-image-height * $phone-image-reduction-ratio-small;
+                }
             }
         }
         .illustration-5{
-            $museum-image-size: $artwork-size-large;
             .museum-image{
                 position: relative;
-                width: $museum-image-size;
-                height: $museum-image-size;
                 box-shadow: $artwork-box-shadow;
+
+                //l
+                @media(min-width: $medium-screen-max-width){
+                    width: $artwork-size-large;
+                    height: $artwork-size-large;
+                }
+                //m
+                @media(max-width: $medium-screen-max-width){
+                    width: $artwork-size-medium;
+                    height: $artwork-size-medium;
+                }
+                //s
+                @media(max-width: $small-screen-max-width){
+                    width: $artwork-size-small;
+                    height: $artwork-size-small;
+                }
             }
         }
         .illustration-6{
-            width:  $artwork-size-large*1.17;
-            height: $artwork-size-large*1.17;
-            $size: 140px;
+            position: relative;
+            width:  $artwork-size-large;
+            height: $artwork-size-large;
+            //l
+            @media(min-width: $medium-screen-max-width){
+                width:  $artwork-size-large;
+                height: $artwork-size-large;
+            }
+            //m
+            @media(max-width: $medium-screen-max-width){
+                width:  $artwork-size-medium;
+                height: $artwork-size-medium;
+            }
+            //s
+            @media(max-width: $small-screen-max-width){
+                width:  $artwork-size-small;
+                height: $artwork-size-small;
+            }
+            $size: $artwork-size-small;
+            $size-medium-reduction-ratio: 1;
+            $size-small-reduction-ratio: 1;
+            $growing-ratio: 1.1;
             .trade-image-1, .trade-image-2{
                 position: absolute;
                 left:50%;
                 top:50%;
-                width:$size;
-                height:$size;
                 z-index: 1;
                 box-shadow: $artwork-box-shadow;
+                //l
+                @media(min-width: $medium-screen-max-width){
+                    $size: $artwork-size-large*0.5 * $growing-ratio;
+                    width: $size;
+                    height: $size;
+                }
+                //m
+                @media(max-width: $medium-screen-max-width){
+                    $size: $artwork-size-medium*0.5 * $growing-ratio;
+                    width: $size;
+                    height: $size;
+                }
+                //s
+                @media(max-width: $small-screen-max-width){
+                    $size: $artwork-size-small*0.5 * $growing-ratio;
+                    width: $size;
+                    height: $size;
+                }
             }
             .trade-arrow-1, .trade-arrow-2{
+                $width-ratio: 0.5;
+                $height-ratio: 0.7;
+
                 position: absolute;
                 left:50%;
                 top:50%;
@@ -173,6 +289,24 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 height: $size*0.7;
                 color: $artom-blue;
                 text-align: center;
+                //l
+                @media(min-width: $medium-screen-max-width){
+                    $size: $artwork-size-large*0.5 * $growing-ratio;
+                    width: $size * $width-ratio;
+                    height: $size * $height-ratio;
+                }
+                //m
+                @media(max-width: $medium-screen-max-width){
+                    $size: $artwork-size-medium*0.5 * $growing-ratio;
+                    width: $size * $size-medium-reduction-ratio * $width-ratio;
+                    height: $size * $size-medium-reduction-ratio * $height-ratio;
+                }
+                //s
+                @media(max-width: $small-screen-max-width){
+                    $size: $artwork-size-small*0.5 * $growing-ratio;
+                    width: $size * $size-small-reduction-ratio * $width-ratio;
+                    height: $size * $size-small-reduction-ratio * $height-ratio;
+                }
             }
             .trade-image-1{
                 transform: translate(-90%, -90%);
@@ -198,18 +332,33 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 position: relative;
                 width: $sell-image-width;
                 height: $sell-image-height;
+                //l
+                @media(min-width: $medium-screen-max-width){
+                    width: $sell-image-width;
+                    height: $sell-image-height;
+                }
+                //m
+                @media(max-width: $medium-screen-max-width){
+                    width: $sell-image-width * $phone-image-reduction-ratio-medium;
+                    height: $sell-image-height * $phone-image-reduction-ratio-medium;
+                }
+                //s
+                @media(max-width: $small-screen-max-width){
+                    width: $sell-image-width * $phone-image-reduction-ratio-small;
+                    height: $sell-image-height * $phone-image-reduction-ratio-small;
+                }
             }
         }
     }
 
 
-    $img-width: 200px;
-    /*.illustration-container{
+    /*$img-width: 200px;
+    .illustration-container{
         position: relative;
         width:$img-width;
         align-self: center;
 
-    }*/
+    }
     .image-1-container{
         $dim-ratio: 98/98;
         height: calc($img-width/$dim-ratio);
@@ -237,5 +386,5 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
     .image-7-container{
         $dim-ratio: 90/127;
         height: calc(($img-width/$dim-ratio)*0.8);
-    }
+    }*/
 }

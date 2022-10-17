@@ -66,6 +66,9 @@ $faq-title-size-for-mobile: 19px;
       &.how-it-works{
         //all
         margin-bottom: 50px;
+        @media (max-width: $medium-screen-max-width) {
+          margin-top: 50px;
+        }
         //ch
         .how-it-works-cards-wrapper{
           //all
