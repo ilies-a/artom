@@ -80,6 +80,15 @@ export default function HowItWorksCard({number, title, text, imageName}){
             </div>
         )
     }
+    const getIllustration7 = ()=>{
+        return(
+            <div className={styles['illustration-7']}>
+                <div className={styles['sell-image']}>
+                    <Image src={`${'/how-it-works-images/7.png'}`} layout={'fill'} objectFit={'contain'} priority/>
+                </div>
+            </div>
+        )
+    }
     const getIllustrationHtml = (number) => {
         var htmlIllustration;
         switch(number){
@@ -100,6 +109,9 @@ export default function HowItWorksCard({number, title, text, imageName}){
             break;
         case 6:
             htmlIllustration = getIllustration6();
+            break;
+        case 7:
+            htmlIllustration = getIllustration7();
             break;
         default:
             break;

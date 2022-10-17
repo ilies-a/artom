@@ -67,7 +67,7 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
         justify-content: center;
         align-items: center;
         transform: rotate3d(0, 1, 0, -45deg);
-        
+
         .illustration-1, .illustration-3{
             .artwork{
                 //border: 1px solid rgb(179, 178, 178);
@@ -186,6 +186,18 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
             }
             .trade-arrow-2{
                 transform: translate(-95%, -10%) rotate(210deg);
+            }
+        }
+        .illustration-7{
+            $sell-image-height: 240px;
+            $sell-image-dim-ratio: 0.7;
+            $sell-image-width: $sell-image-height*$sell-image-dim-ratio;
+
+            .sell-image{
+                align-items: center;
+                position: relative;
+                width: $sell-image-width;
+                height: $sell-image-height;
             }
         }
     }
