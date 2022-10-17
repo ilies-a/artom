@@ -8,9 +8,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return(
             <div className={styles['illustration-1']}>
                 <div className={styles['artwork']}>
-                    <div className={styles['laurel']}>
-                        <Image src={`${'/how-it-works-images/laurel3.png'}`} layout={'fill'} objectFit={'contain'} priority/>
-                    </div>
+                        <Image src={`${'/artwork.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
                     {/*<div className={styles['target']}>
                         <div className={styles['target-text']}>&#x2713;</div>
                     </div>*/}
@@ -19,19 +17,42 @@ export default function HowItWorksCard({number, title, text, imageName}){
         )
     }
     const getIllustration2 = ()=>{
-        const fractions = new Array(9).fill('');
+        const fractions = new Array(36).fill('');
         return <div className={styles['illustration-2']}>
             {
             fractions.map((value, index) => {
                 return(
                     <div key={index} className={styles['fraction']} style={{zIndex:index}}>
-                        {/*<div className={styles['price']}>$20</div>*/}
+                        <Image src={`${'/how-it-works-images/artwork-fractions/'+(index+1)}.jpg`} layout={'fill'} objectFit={'contain'} priority/>
                     </div>
                 );
             })}
         </div>
     }
-
+    const getIllustration3 = ()=>{
+        return(
+            <div className={styles['illustration-3']}>
+                <div className={styles['artwork']}>
+                    <Image src={`${'/artwork.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    {/*<div className={styles['target']}>
+                        <div className={styles['target-text']}>&#x2713;</div>
+                    </div>*/}
+                </div>
+                <div className={styles['artom-logo']}>
+                    <Image src={`${'/favicon.ico'}`} layout={'fill'} objectFit={'contain'} priority/>
+                </div>
+            </div>
+        )
+    }
+    const getIllustration5 = ()=>{
+        return(
+            <div className={styles['illustration-5']}>
+                <div className={styles['museum']}>
+                    <Image src={`${'/how-it-works-images/5.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                </div>
+            </div>
+        )
+    }
     const getIllustrationHtml = (number) => {
         var htmlIllustration;
         switch(number){
@@ -40,6 +61,12 @@ export default function HowItWorksCard({number, title, text, imageName}){
             break;
         case 2:
             htmlIllustration = getIllustration2();
+            break;
+        case 3:
+            htmlIllustration = getIllustration3();
+            break;
+        case 5:
+            htmlIllustration = getIllustration5();
             break;
         default:
             break;

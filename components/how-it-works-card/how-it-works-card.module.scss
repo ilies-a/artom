@@ -64,9 +64,9 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: rotate3d(0, 1, 0, -55deg);
+        transform: rotate3d(0, 1, 0, -50deg);
 
-        .illustration-1{
+        .illustration-1, .illustration-3{
             .artwork{
                 //border: 1px solid rgb(179, 178, 178);
                 position: relative;
@@ -82,33 +82,6 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 @media(max-width: $small-screen-max-width){
                     width:  $artwork-size-small;
                     height:  $artwork-size-small;
-                }
-                .laurel{
-                    position: relative;
-                    width:80%;
-                    height: 80%;
-                }
-                .target{
-                    position:absolute;
-                    border: 5px dashed $gray;
-                    width: 80%;
-                    height: 80%;
-                    top:50%;
-                    left:50%;
-                    transform: translate(-50%, -50%);
-                    //ch
-                    .target-text{
-                        position:absolute;
-                        top:50%;
-                        left:50%;
-                        transform: translate(-50%, -50%);
-                        font-size: 60px;
-                        color:$gray;
-
-                        @media(max-width: $small-screen-max-width){
-                            font-size: 26px;
-                        }
-                    }
                 }
             }
         }
@@ -126,9 +99,9 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
             .fraction{
                 position: relative;
                 box-shadow: $artwork-box-shadow;
-                flex: 1 0 33%;
-                width: 33%;
-                height: 33%;
+                flex: 1 0 16.5%;
+                width: 16.5%;
+                height: 16.5%;
                 transform:scale(80%, 80%);
                 background-image: $artwork-background-image;
                 .price{
@@ -139,6 +112,29 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                     color: $gray;
                     font-size: 14px;
                 }
+            }
+        }
+        .illustration-3{
+            .artwork{
+                filter: grayscale(1)
+            }
+            .artom-logo{
+                position: absolute;
+                top:100%;
+                left:100%;
+                border-radius: 70px;
+                transform: translate(-80%, -80%);
+                width:30%;
+                height: 30%;
+            }
+        }
+        .illustration-5{
+            $museum-image-size: $artwork-size-large;
+            .museum{
+                position: relative;
+                width: $museum-image-size;
+                height: $museum-image-size;
+                box-shadow: $artwork-box-shadow;
             }
         }
     }
