@@ -44,11 +44,38 @@ export default function HowItWorksCard({number, title, text, imageName}){
             </div>
         )
     }
+    const getIllustration4 = ()=>{
+        return(
+            <div className={styles['illustration-4']}>
+                <div className={styles['vote-image']}>
+                    <Image src={`${'/how-it-works-images/4.png'}`} layout={'fill'} objectFit={'contain'} priority/>
+                </div>
+            </div>
+        )
+    }
     const getIllustration5 = ()=>{
         return(
             <div className={styles['illustration-5']}>
-                <div className={styles['museum']}>
+                <div className={styles['museum-image']}>
                     <Image src={`${'/how-it-works-images/5.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                </div>
+            </div>
+        )
+    }
+    const getIllustration6 = ()=>{
+        return(
+            <div className={styles['illustration-6']}>
+                <div className={styles['trade-image-1']}>
+                    <Image src={`${'/how-it-works-images/artwork-fractions/14.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                </div>
+                <div className={styles['trade-image-2']}>
+                    <Image src={`${'/how-it-works-images/artwork-fractions/16.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                </div>
+                <div className={styles['trade-arrow-1']}>
+                    <Image src={`${'/how-it-works-images/trade-arrow.png'}`} layout={'fill'} objectFit={'contain'} priority/>
+                </div>
+                <div className={styles['trade-arrow-2']}>
+                    <Image src={`${'/how-it-works-images/trade-arrow.png'}`} layout={'fill'} objectFit={'contain'} priority/>
                 </div>
             </div>
         )
@@ -65,8 +92,14 @@ export default function HowItWorksCard({number, title, text, imageName}){
         case 3:
             htmlIllustration = getIllustration3();
             break;
+        case 4:
+            htmlIllustration = getIllustration4();
+            break;
         case 5:
             htmlIllustration = getIllustration5();
+            break;
+        case 6:
+            htmlIllustration = getIllustration6();
             break;
         default:
             break;
