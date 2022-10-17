@@ -8,9 +8,12 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return(
             <div className={styles['illustration-1']}>
                 <div className={styles['artwork']}>
-                    <div className={styles['target']}>
-                        <div className={styles['target-text']}>&#x2713;</div>
+                    <div className={styles['laurel']}>
+                        <Image src={`${'/how-it-works-images/laurel3.png'}`} layout={'fill'} objectFit={'contain'} priority/>
                     </div>
+                    {/*<div className={styles['target']}>
+                        <div className={styles['target-text']}>&#x2713;</div>
+                    </div>*/}
                 </div>
             </div>
         )
@@ -22,7 +25,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
             fractions.map((value, index) => {
                 return(
                     <div key={index} className={styles['fraction']} style={{zIndex:index}}>
-                        <div className={styles['price']}>$20</div>
+                        {/*<div className={styles['price']}>$20</div>*/}
                     </div>
                 );
             })}

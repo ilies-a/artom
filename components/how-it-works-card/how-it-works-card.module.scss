@@ -3,14 +3,14 @@
 $box-shadow: 3px 3px 3px rgb(26, 100, 63);
 
 .main-container{
-    border: 1px solid rgb(87, 87, 87);
     background-color: rgba(255, 255, 255, 0.75);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 10px;
     height:200px;
-    
+    perspective: 800px;
+
     //ch
     .header-and-text-container{
         display: flex;
@@ -50,17 +50,22 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
             color: $text-black;
         }
     }
-    $artwork-size-large: 150px;
+    $artwork-size-large: 215px;
     $artwork-size-small: 90px;
-
-    $artwork-box-shadow: 3px 3px 3px rgb(151, 151, 151);
-    $artwork-background-image: linear-gradient(-30deg, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.5) 50%);
+    $artwork-box-shadow: rgba(0, 0, 0, 0.425) 1.95px 1.95px 2.6px;
+    //$artwork-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    //$artwork-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    //$artwork-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    //$artwork-box-shadow: 3px 3px 3px rgb(151, 151, 151);
+    $artwork-background-image: linear-gradient(-30deg, rgba(230, 230, 230, 0.8) 20%, rgba(255, 255, 255, 0.8) 50%);
     $gray: rgb(71, 71, 71);
     .illustration-container{
         align-self: center;
         display: flex;
         justify-content: center;
         align-items: center;
+        transform: rotate3d(0, 1, 0, -55deg);
+
         .illustration-1{
             .artwork{
                 //border: 1px solid rgb(179, 178, 178);
@@ -70,10 +75,18 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 //background-image: linear-gradient(-30deg, $artom-blue 10%, $artom-green 80%);
                 background-image: $artwork-background-image;
                 box-shadow: $artwork-box-shadow;
+                display:flex;
+                justify-content: center;
+                align-items: center;
                 //s
                 @media(max-width: $small-screen-max-width){
                     width:  $artwork-size-small;
                     height:  $artwork-size-small;
+                }
+                .laurel{
+                    position: relative;
+                    width:80%;
+                    height: 80%;
                 }
                 .target{
                     position:absolute;
@@ -100,10 +113,11 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
             }
         }
         .illustration-2{
+            $growing-ratio: 1.1;
             display: flex;
             flex-wrap: wrap;
-            width:  $artwork-size-large;
-            height: $artwork-size-large;
+            width:  $artwork-size-large*$growing-ratio;
+            height: $artwork-size-large*$growing-ratio;
             //s
             @media(max-width: $small-screen-max-width){
                 width:  $artwork-size-small;
