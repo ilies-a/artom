@@ -48,6 +48,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return(
             <div className={styles['illustration-4']}>
                 <div className={styles['vote-image']}>
+                    <div className={styles['vote-image-shadow']}></div>
                     <Image src={`${'/how-it-works-images/4.png'}`} layout={'fill'} objectFit={'contain'} priority/>
                 </div>
             </div>
@@ -84,6 +85,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return(
             <div className={styles['illustration-7']}>
                 <div className={styles['sell-image']}>
+                    <div className={styles['sell-image-shadow']}></div>
                     <Image src={`${'/how-it-works-images/7.png'}`} layout={'fill'} objectFit={'contain'} priority/>
                 </div>
             </div>

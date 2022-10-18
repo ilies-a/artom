@@ -66,7 +66,8 @@ $faq-title-size-for-mobile: 19px;
       &.how-it-works{
         //all
         margin-bottom: 50px;
-        @media (max-width: $medium-screen-max-width) {
+        //s
+        @media (max-width: $small-screen-max-width) {
           margin-top: 50px;
         }
         //ch
