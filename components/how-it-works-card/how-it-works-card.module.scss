@@ -352,10 +352,11 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
 
         .vote-image-shadow, .sell-image-shadow{
             position:absolute;
-            left:0;
-            top:5px;
-            width:99%;
-            height:95%;
+            left:calc(100% - 2px);
+            top:50%;
+            transform: translate(-100%, -50%);
+            width:94%;
+            height:94%;
             box-shadow: $artwork-box-shadow;
             border-radius: 20px;
         }
