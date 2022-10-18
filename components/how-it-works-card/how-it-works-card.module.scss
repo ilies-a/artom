@@ -36,8 +36,12 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
             flex-direction: row;
             align-items: center;
             flex-shrink: 1;
+            //s
+            @media(max-width: $small-screen-max-width){
+                margin-top: 5px;
+            }
             .number{
-                margin-left:5px;
+                //margin-left:5px;
                 margin-right:25px;
                 font-weight: bold;
                 color: $artom-blue;
