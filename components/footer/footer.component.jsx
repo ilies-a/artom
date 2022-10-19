@@ -8,6 +8,7 @@ import { scrollToTop } from '../../utils.js';
 import { selectSelectedNavButton } from '../../redux/nav-bar/nav-bar.selectors';
 import { setSelectedNavButton } from '../../redux/nav-bar/nav-bar.actions';
 import { selectScrollToSectionFunction } from '../../redux/homepage-handler/homepage-handler.selectors';
+import { useRouter, push } from 'next/router';
 
 const Footer = (props)=>{
   const scrollToSection = (section)=>{
@@ -16,6 +17,21 @@ const Footer = (props)=>{
         props.setSelectedNavButton(section);
     }
   }
+  const {
+      pathname
+    } = useRouter();
+
+  const isIndexPage = pathname=='/'? true:false;
+
+  const handleClickOnSection = (section) => {
+      if(isIndexPage){
+          scrollToSection(section);
+      }else{
+          props.setSelectedNavButton(section);
+          push('/');
+      }
+  }
+
     return(
         <footer className={styles.footer}>
         <div className={styles['footer-block-1']}>
@@ -25,11 +41,11 @@ const Footer = (props)=>{
             </div>
           </div>
             <ul>
-              <li><span onClick={()=> scrollToSection('')}>Home</span></li>
-              <li><span onClick={()=> scrollToSection('about-us')}>About Us</span></li>
-              <li><span onClick={()=> scrollToSection('how-it-works')}>How it Works</span></li>
-              <li><span onClick={()=> scrollToSection('faq')}>FAQ</span></li>
-              <li><span onClick={()=> scrollToSection('stay-in-touch')}>Stay in Touch</span></li>
+              <li><span onClick={()=> handleClickOnSection('')}>Home</span></li>
+              <li><span onClick={()=> handleClickOnSection('about-us')}>About Us</span></li>
+              <li><span onClick={()=> handleClickOnSection('how-it-works')}>How it Works</span></li>
+              <li><span onClick={()=> handleClickOnSection('faq')}>FAQ</span></li>
+              <li><span onClick={()=> handleClickOnSection('stay-in-touch')}>Stay in Touch</span></li>
             </ul>
 
             <div><span>White Paper</span></div>

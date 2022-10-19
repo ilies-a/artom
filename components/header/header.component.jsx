@@ -19,7 +19,6 @@ const Header = (props) => {
             props.setSelectedNavButton(section);
         }
     }
-
     const {
         pathname
       } = useRouter();
@@ -34,6 +33,7 @@ const Header = (props) => {
             push('/');
         }
     }
+    
     const navButtonIsSelected = (section)=>{
         return props.selectedNavButton == section ? true : false;
     }
