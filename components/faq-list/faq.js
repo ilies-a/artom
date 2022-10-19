@@ -43,7 +43,7 @@ export const faqs = [
         +'it that cannot change overtime.'
     },
     {
-        title: 'As a member of “The Community”, I am buying a real artwork?',
+        title: 'As a member of “The Community”, am I buying a real artwork?',
         text: 'Yes, you are! All Shares you acquire are linked to a real and tangible artwork.'          
     },            
     {
@@ -63,7 +63,7 @@ export const faqs = [
         title: 'What do I need to participate?',
         text: 'Before making any purchase in artom.io, you must create a Wallet to hold your funds and/or your Shares. If you already have a wallet, '
         +'you can sign up to artom.io by connecting it.<br/>If you sign up with your email address, artom.io will automatically create a wallet for you.<br/><br/>'
-        +'Please make sure to sign-up with a valid and accessible email address. It you lose the access to your email address; we will not be able to access '
+        +'Please make sure to sign-up with a valid and accessible email address. If you lose the access to your email address; we will not be able to access '
         +'your Shares nor your funds.'
     },
     {
@@ -74,7 +74,7 @@ export const faqs = [
     {
         title: 'How do we select which piece of art to acquire?',
         text: 'To determine which art object is available on the market and has the best growth potential, we collaborate, with a global network of curators '
-        +'and with consultants in the most important auction houses. These external supports come as complement the to our in-house team of specialists.'          
+        +'and with consultants in the most important auction houses. These external supports come as a complement to our in-house team of specialists.'          
     },            
     {
         title: 'Who owns the artwork?',

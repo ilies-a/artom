@@ -8,45 +8,44 @@ import { createStructuredSelector } from 'reselect';
 import { selectSelectedNavButton } from '../../redux/nav-bar/nav-bar.selectors';
 import { setSelectedNavButton } from '../../redux/nav-bar/nav-bar.actions';
 import { selectScrollToSectionFunction } from '../../redux/homepage-handler/homepage-handler.selectors';
+import { scrollToTop } from '../../utils.js';
 
-class Header extends React.Component {
-    constructor(props){
-        super(props);
-    }
-    scrollTo = (section)=>{
-        if(this.props.scrollToSectionFunction !== 'undefined'){
-            this.props.scrollToSectionFunction(section);
-            this.props.setSelectedNavButton(section)
+const Header = (props) => {
+
+    const scrollToSection = (section)=>{
+        if(props.scrollToSectionFunction !== 'undefined'){
+            props.scrollToSectionFunction(section);
+            props.setSelectedNavButton(section);
         }
     }
-    openPrototypePage = ()=>{
+    const navButtonIsSelected = (section)=>{
+        return props.selectedNavButton == section ? true : false;
+    }
+    const openPrototypePage = ()=>{
         window.open("https://artom.io/");
     }
-    navButtonIsSelected = (section)=>{
-        return this.props.selectedNavButton == section ? true : false;
-    }
 
-    render(){
+
         return (
             <div>
                 <div className={styles['main-container']}>
                     <div className={styles['artom-logo']}>
-                        <Image src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'} priority onClick={()=> this.scrollTo('')}/>
+                        <Image src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'} priority onClick={scrollToTop}/>
                     </div>
                     <div className={styles['nav-container']}>
-                        <NavButton text={{desktop:'ABOUT US', mobile:'About Us'}} onClickHandler={this.scrollTo} section='about-us' isSelected={this.navButtonIsSelected('about-us')}/>
-                        <NavButton text={{desktop:'HOW IT WORKS', mobile:'How it works'}} onClickHandler={this.scrollTo} section='how-it-works' isSelected={this.navButtonIsSelected('how-it-works')}/>
-                        <NavButton text={{desktop:'FAQ', mobile:'FAQ'}} onClickHandler={this.scrollTo} section='faq' isSelected={this.navButtonIsSelected('faq')}/>
-                        <NavButton text={{desktop:'STAY IN TOUCH', mobile:'Stay In Touch'}} onClickHandler={this.scrollTo} section='stay-in-touch' isSelected={this.navButtonIsSelected('stay-in-touch')}/>
+                        <NavButton text={{desktop:'ABOUT US', mobile:'About Us'}} onClickHandler={scrollToSection} section='about-us' isSelected={navButtonIsSelected('about-us')}/>
+                        <NavButton text={{desktop:'HOW IT WORKS', mobile:'How it works'}} onClickHandler={scrollToSection} section='how-it-works' isSelected={navButtonIsSelected('how-it-works')}/>
+                        <NavButton text={{desktop:'FAQ', mobile:'FAQ'}} onClickHandler={scrollToSection} section='faq' isSelected={navButtonIsSelected('faq')}/>
+                        <NavButton text={{desktop:'STAY IN TOUCH', mobile:'Stay In Touch'}} onClickHandler={scrollToSection} section='stay-in-touch' isSelected={navButtonIsSelected('stay-in-touch')}/>
                     <div className={styles['prototype-icon']}>
-                        <Image src='/prototype.png' alt='prototype-icon'  layout={'fill'} objectFit={'contain'} priority onClick={()=> this.openPrototypePage()}/>
+                        <Image src='/prototype.png' alt='prototype-icon'  layout={'fill'} objectFit={'contain'} priority onClick={()=> openPrototypePage()}/>
                     </div>
                     </div>
                 </div>
                 <div className={styles['space']}></div>
             </div>
         )
-    }
+    
 }
 
 const mapStateToProps = createStructuredSelector({
