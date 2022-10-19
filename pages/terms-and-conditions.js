@@ -27,7 +27,7 @@ const TermsAndConditions = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                artom.io is provided Artom project S.L a Spanish company with its registered address at [Address to be included once company is domiciliated] ("artom", “artom.io” "we", "our" or "us"). If you would like to contact us, please email us at info@artom.io. 
+                artom.io is provided Artom project S.L a Spanish company with its registered address at [Address to be included once company is domiciliated] (&quot;artom&quot;, “artom.io” &quot;we&quot;, &quot;our&quot; or &quot;us&quot;). If you would like to contact us, please email us at info@artom.io. 
                 </li>
             </ItemListContainer>
 
@@ -47,10 +47,10 @@ const TermsAndConditions = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                These terms and conditions (the "Terms & Conditions") set out the terms on which we will provide the artom.io to you. It is important that you read and understand these Terms & Conditions before using the Service. We will ask you to agree to these Terms and Conditions when you using the service. You will not be allowed to use the service if you do not agree to these Terms & Conditions. 
+                These terms and conditions (the &quot;Terms & Conditions&quot;) set out the terms on which we will provide the artom.io to you. It is important that you read and understand these Terms & Conditions before using the Service. We will ask you to agree to these Terms and Conditions when you using the service. You will not be allowed to use the service if you do not agree to these Terms & Conditions. 
                 </li>
                 <li>
-                Additional terms will apply to the sale of Fractions to you through the artom.io platform, which are set out at https://www.artom.io/fraction-terms ("Fraction Terms"). You should ensure that you read and understand these Fraction Terms before you buy any Fractions through the artom.io platform, as we will ask you to agree to them when you buy Fractions through the Service.
+                Additional terms will apply to the sale of Fractions to you through the artom.io platform, which are set out at https://www.artom.io/fraction-terms (&quot;Fraction Terms&quot;). You should ensure that you read and understand these Fraction Terms before you buy any Fractions through the artom.io platform, as we will ask you to agree to them when you buy Fractions through the Service.
                 </li>
             </ItemListContainer>
 
@@ -78,7 +78,7 @@ const TermsAndConditions = () =>{
 
                 </li>
                 <li>
-                When signing up to the artom.io Service, you will be able to create a new crypto "wallet" to execute transactions involving Fractions or link an existing supported wallet to your account on the artom.io Service. In either case, your crypto wallet is only accessible through a combination of a particular private key and public key. The way your private key is secured and stored will vary depending on which third-party service you use to create your crypto wallet. For instance, your private key may be encrypted and stored by your wallet provider, linked to your phone number or stored on your device.
+                When signing up to the artom.io Service, you will be able to create a new crypto &quot;wallet&quot; to execute transactions involving Fractions or link an existing supported wallet to your account on the artom.io Service. In either case, your crypto wallet is only accessible through a combination of a particular private key and public key. The way your private key is secured and stored will vary depending on which third-party service you use to create your crypto wallet. For instance, your private key may be encrypted and stored by your wallet provider, linked to your phone number or stored on your device.
 
                 </li>
                 <li>
@@ -191,7 +191,7 @@ const TermsAndConditions = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                By using this platform, users acknowledge that these Terms & Conditions set out the terms of the agreement between Artom Project S.L and the user only, and do not apply to your relationship with Google Ireland Limited, Apple, Inc. or any other provider of an app store or distribution platform from which you download the artom.io App (the "Store Provider").
+                By using this platform, users acknowledge that these Terms & Conditions set out the terms of the agreement between Artom Project S.L and the user only, and do not apply to your relationship with Google Ireland Limited, Apple, Inc. or any other provider of an app store or distribution platform from which you download the artom.io App (the &quot;Store Provider&quot;).
                 </li>
                 <li>
                 Artom Project S.L is the sole responsible for the artom.io App, any content made available through the artom.io App and any support or maintenance in respect of the artom.io App.  
@@ -206,7 +206,7 @@ const TermsAndConditions = () =>{
                 You acknowledge that:
                 <ul>
                                     <li>
-                                    you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a "terrorist supporting" country; and
+                                    you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a &quot;terrorist supporting&quot; country; and
                                     </li>
                                     <li>
                                     you are not listed on any U.S. Government list of prohibited or restricted parties.
@@ -223,7 +223,7 @@ const TermsAndConditions = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                In addition to the other requirements within these Terms & Conditions, this section describes specific rules that apply to your use of the artom.io Service (the "Rules of Acceptable Use").
+                In addition to the other requirements within these Terms & Conditions, this section describes specific rules that apply to your use of the artom.io Service (the &quot;Rules of Acceptable Use&quot;).
                 </li>
                 <li>
                 When using the artom.io Service you must not:
@@ -250,7 +250,7 @@ const TermsAndConditions = () =>{
                                     collect any data from the Service other than in accordance with these Terms & Conditions;
                                     </li>
                                     <li>
-                                    use any automated system, including without limitation "robots", "spiders" or "offline readers" to access the Service in a manner that send more request messages to the Service than a human can reasonably produce in the same period of time.
+                                    use any automated system, including without limitation &quot;robots&quot;, &quot;spiders&quot; or &quot;offline readers&quot; to access the Service in a manner that send more request messages to the Service than a human can reasonably produce in the same period of time.
                                     </li>
                             </ul>
                 </li>
@@ -345,7 +345,7 @@ const TermsAndConditions = () =>{
                 We are constantly updating and improving the Service to try and find ways to provide you with new and innovative features and services. Improvements and updates are also made to reflect changing technologies, tastes, behaviors and the way people use the Internet and the Service.
                 </li>
                 <li>
-                In order to do this, we may need to update, reset, stop offering and/or supporting a particular part of the Service, or feature relating to the Service ("changes to the Service"). These changes to the Service may affect your past activities on the Service and certain features that you use ("Service Elements"). Any changes to the Service could involve your Service Elements being deleted or reset.
+                In order to do this, we may need to update, reset, stop offering and/or supporting a particular part of the Service, or feature relating to the Service (&quot;changes to the Service&quot;). These changes to the Service may affect your past activities on the Service and certain features that you use (&quot;Service Elements&quot;). Any changes to the Service could involve your Service Elements being deleted or reset.
                 </li>
                 <li>
                 You agree that a key characteristic of the Service is that changes to the Service will take place over time and this is an important basis on which we grant you access to the Service. Once we have made changes to the Service, your continued use of the Service will show that you have accepted any changes to the Service. You are always free to stop using the Service.

@@ -22,7 +22,7 @@ const FractionTerms = () =>{
                     allows users to search for and purchase fractions of real physical artworks (“The Service”). 
                 </li>
                 <li>
-                    This document and any documents referred to within it (collectively, the "Fraction Terms") set out the terms 
+                    This document and any documents referred to within it (collectively, the &quot;Fraction Terms&quot;) set out the terms 
                     on which we will issue and sell Fractions to you, and the rights attaching to those Fractions. You will need 
                     to agree to these Fraction Terms before purchasing any Fractions issued by artom.io. It is important that you 
                     read and understand the Fraction Terms, and in particular what rights are attached to the Fractions issued by 
@@ -43,7 +43,7 @@ const FractionTerms = () =>{
             <ItemListContainer className={styles['item-list']}>
                 <li>
                     artom.io is provided Artom Project S.L a Spanish company with its registered address at [Address to be included once 
-                    company is domiciliated] ("artom", “artom.io” "we", "our" or "us"). If you would like to contact us, please email us 
+                    company is domiciliated] (&quot;artom&quot;, “artom.io” &quot;we&quot;, &quot;our&quot; or &quot;us&quot;). If you would like to contact us, please email us 
                     at info@artom.io. 
                 </li>
             </ItemListContainer>
@@ -124,7 +124,7 @@ const FractionTerms = () =>{
                     The purchase of Fractions may not be subject to the protections of any laws or regulations in the country where you live governing the purchase and sale of financial products. You may therefore not benefit from the same protections you might have under applicable laws as you might do when you buy other financial products.
                 </li>
                 <li>
-                    Newly created Fractions will be sent to your crypto "wallet address" (your “Wallet”) at the time of purchase. The crypto Wallet that executes transactions involving Fractions is only accessible through a combination of a particular private key and public key. Together, the private key and public key form your unique identifier on the relevant blockchain network (your "Key Pair"). Your Wallet can only be accessed by you and if you lose access this can only be recovered using a specific "recovery code" (also known as a "Seed", “Seed Phrase”, or "Mnemonic") made up of a series of 12 or 24 random words.
+                    Newly created Fractions will be sent to your crypto &quot;wallet address&quot; (your “Wallet”) at the time of purchase. The crypto Wallet that executes transactions involving Fractions is only accessible through a combination of a particular private key and public key. Together, the private key and public key form your unique identifier on the relevant blockchain network (your &quot;Key Pair&quot;). Your Wallet can only be accessed by you and if you lose access this can only be recovered using a specific &quot;recovery code&quot; (also known as a &quot;Seed&quot;, “Seed Phrase”, or &quot;Mnemonic&quot;) made up of a series of 12 or 24 random words.
                 </li>
                 <li>
                 You are responsible for keeping your Key Pair and recovery code secure. You should never give your Key Pair or your recovery code to any other person, as this will enable them to execute transactions using your Wallet. artom.io will never ask for this information. We will not be responsible for any losses you might suffer from disclosing your Key Pair or recovery code to another person (whether intentionally or accidentally) or any unlawful access to your Wallet, your recovery code, your funds or your Fractions by another person.
@@ -154,7 +154,7 @@ const FractionTerms = () =>{
                 <li>What Fractions do we make available?</li>
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
-                <li>Each Fraction that we issue is unique and associated with a real-world asset held by us (the "Fraction Asset") as identified to you on the Service, and gives you the right to:
+                <li>Each Fraction that we issue is unique and associated with a real-world asset held by us (the &quot;Fraction Asset&quot;) as identified to you on the Service, and gives you the right to:
                     <ul>
                         <li>
                         own the Fraction Asset and have it delivered to you, in accordance with paragraphs 11 and 12 of these Fraction Terms;
@@ -166,7 +166,7 @@ const FractionTerms = () =>{
                         receive a share of the proceeds from the sale of a Fraction Asset, as set out in paragraph 13,
                         </li>
                         <li>
-                        (collectively, the "Fraction Holder Rights").
+                        (collectively, the &quot;Fraction Holder Rights&quot;).
                         </li>
                     </ul>
                 </li>
@@ -205,7 +205,7 @@ const FractionTerms = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                You can purchase Fractions through the artom.io platform or through the artom.io App by connecting your Wallet and selecting the number of Fractions you wish to purchase. The price of each Fraction and any transaction or other fees that we charge in respect of the issue of the Fraction and storage of the Fraction Asset (together, the "Purchase Price") will be as quoted on the Service and displayed to you when you select the number of Fractions you wish the Purchase.
+                You can purchase Fractions through the artom.io platform or through the artom.io App by connecting your Wallet and selecting the number of Fractions you wish to purchase. The price of each Fraction and any transaction or other fees that we charge in respect of the issue of the Fraction and storage of the Fraction Asset (together, the &quot;Purchase Price&quot;) will be as quoted on the Service and displayed to you when you select the number of Fractions you wish the Purchase.
                 </li>
                 <li>You will be able to check and amend any errors before confirming your purchase of the Fractions. When you purchase a Fraction, you will:
                     <ul>
@@ -276,7 +276,7 @@ const FractionTerms = () =>{
                         own the Fraction Asset prior to fractionalization; or
                         </li>
                         <li>
-                        purchase the Fraction Asset once we have received sufficient funds from sales of the Fractions to which the Fraction Asset relates ("Consigned Fraction Asset").
+                        purchase the Fraction Asset once we have received sufficient funds from sales of the Fractions to which the Fraction Asset relates (&quot;Consigned Fraction Asset&quot;).
 
                         </li>
                     </ul>
@@ -303,7 +303,7 @@ const FractionTerms = () =>{
                         our Wallet address; and
                         </li>
                         <li>
-                        a statement of the amounts payable for delivering the Fraction Asset to you ("Delivery Costs").
+                        a statement of the amounts payable for delivering the Fraction Asset to you (&quot;Delivery Costs&quot;).
                         </li>
                     </ul>
                 </li>
@@ -340,7 +340,7 @@ const FractionTerms = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                We will publicly notify users via our Discord server at [Input discord address here] (“artom.io Official Discord Channel”) and/or via email if we have your email address, of any proposed sale of the Fraction Asset to which your Fractions relate by providing you with a "Sale Notice" setting out:                        
+                We will publicly notify users via our Discord server at [Input discord address here] (“artom.io Official Discord Channel”) and/or via email if we have your email address, of any proposed sale of the Fraction Asset to which your Fractions relate by providing you with a &quot;Sale Notice&quot; setting out:                        
                     <ul>
                             <li>
                             the Fraction Asset to be sold;
@@ -409,7 +409,7 @@ const FractionTerms = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                We will need to verify your identity in order for you to receive Fractions from us. This is known as "Know Your Customer" or "KYC", which we are required to do by law.                </li>
+                We will need to verify your identity in order for you to receive Fractions from us. This is known as &quot;Know Your Customer&quot; or &quot;KYC&quot;, which we are required to do by law.                </li>
                 <li>
                 We may ask you to provide certain information to help us verify your identity, information about the source of the funds you use to pay the Purchase Price or any other amounts paid to us and, if you are buying Fractions on behalf of a company, information about all direct or indirect beneficial owners of that company. You must ensure that any information you provide is accurate, as we will not be responsible to you if we are unable to verify your identity because of any errors or omissions in the information you have provided to us.
                 </li>
