@@ -200,7 +200,7 @@ const TermsAndConditions = () =>{
                 Artom Project S.L is the sole responsible in the event that the artom.io app does not comply with any warranties or other promises (including any promises made in respect of its functionality, suitability or fitness for purpose). To the maximum extent permitted by law, the Store Provider will not be responsible to you for any claims in relation to the artom.io App.
                 </li>
                 <li>
-                In the event of any claim that the artom.io App infringes another person's intellectual property rights, Artom Project S.L will be solely responsible for investigating, defending, settling or otherwise dealing with any such intellectual property infringement claim.
+                In the event of any claim that the artom.io App infringes another person&apos;s intellectual property rights, Artom Project S.L will be solely responsible for investigating, defending, settling or otherwise dealing with any such intellectual property infringement claim.
                 </li>
                 <li>
                 You acknowledge that:

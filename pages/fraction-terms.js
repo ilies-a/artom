@@ -397,7 +397,7 @@ const FractionTerms = () =>{
                             </ul>
                 </li>
                 <li>
-                If you propose a sale of the Fraction Asset to us, neither you nor any of your immediate family members will be eligible to vote in respect of that sale. The sale will proceed if the holders of more than 60% (in aggregate) of the remaining Fractions (after excluding yours and your family members') notify us that they agree to the sale in accordance with the relevant Sale Notice. We reserve the right to refuse to proceed with a sale if we believe, acting reasonably, that the sale would constitute or result in any fraudulent or other deceptive or misleading activity.
+                If you propose a sale of the Fraction Asset to us, neither you nor any of your immediate family members will be eligible to vote in respect of that sale. The sale will proceed if the holders of more than 60% (in aggregate) of the remaining Fractions (after excluding yours and your family members&apos;) notify us that they agree to the sale in accordance with the relevant Sale Notice. We reserve the right to refuse to proceed with a sale if we believe, acting reasonably, that the sale would constitute or result in any fraudulent or other deceptive or misleading activity.
                 </li>
                 <li>
                 From time to time and when deemed relevant, artom.io may also propose a resell of the physical asset. Such proposal shall be submitted to a vote through the artom.io official Discord Channel. The sale will proceed if the holders of more than 60% (in aggregate) of the Fractions agree to it. 

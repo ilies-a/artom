@@ -86,7 +86,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
             <div className={styles['illustration-7']}>
                 <div className={styles['sell-image']}>
                     <div className={styles['sell-image-shadow']}></div>
-                    <Image src={`${'/how-it-works-images/7.png'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    <Image src={`${'/how-it-works-images/7.png'}`} layout={'fill'} objectFit={'contain'} alt='sell' priority/>
                 </div>
             </div>
         )
