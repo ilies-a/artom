@@ -10,6 +10,7 @@ import Footer from '../components/footer/footer.component'
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectScrollToSectionFunction } from '../redux/homepage-handler/homepage-handler.selectors';
+import { selectSelectedNavButton } from '../redux/nav-bar/nav-bar.selectors';
 import { setScrollToSectionFunction } from '../redux/homepage-handler/homepage-handler.actions';
 import { setSelectedNavButton } from '../redux/nav-bar/nav-bar.actions';
 
@@ -32,12 +33,15 @@ class Home extends React.Component {
   }
   async componentDidMount(){
     this.props.setScrollToSectionFunction(this.scrollToSection)
-    this.addScrollListenerToWindow()
+    this.addScrollListenerToWindow();
+    if(this.props.selectedNavButton!==null){
+      this.scrollToSection(this.props.selectedNavButton);
+    }
   }
 
   componentWillUnmount(){
     this.removeScrollListenerToWindow();
-    this.props.setSelectedNavButton('');
+    this.props.setSelectedNavButton(null);
   }
 
   addScrollListenerToWindow(){
@@ -201,7 +205,8 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  scrollToSectionFunction: selectScrollToSectionFunction
+  scrollToSectionFunction: selectScrollToSectionFunction,
+  selectedNavButton: selectSelectedNavButton
 });
 
 const mapDispatchToProps = dispatch =>({
