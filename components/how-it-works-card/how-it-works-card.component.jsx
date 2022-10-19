@@ -8,7 +8,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return(
             <div className={styles['illustration-1']}>
                 <div className={styles['artwork']}>
-                        <Image src={`${'/artwork.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                        <Image src={`${'/artwork.jpg'}`} layout={'fill'} objectFit={'contain'} alt='artwork' priority/>
                     {/*<div className={styles['target']}>
                         <div className={styles['target-text']}>&#x2713;</div>
                     </div>*/}
@@ -23,7 +23,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
             fractions.map((value, index) => {
                 return(
                     <div key={index} className={styles['fraction']} style={{zIndex:index}}>
-                        <Image src={`${'/how-it-works-images/artwork-fractions/'+(index+1)}.jpg`} layout={'fill'} objectFit={'contain'} priority/>
+                        <Image src={`${'/how-it-works-images/artwork-fractions/'+(index+1)}.jpg`} layout={'fill'} objectFit={'contain'} alt='artwork-fraction' priority/>
                     </div>
                 );
             })}
@@ -33,13 +33,13 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return(
             <div className={styles['illustration-3']}>
                 <div className={styles['artwork']}>
-                    <Image src={`${'/artwork.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    <Image src={`${'/artwork.jpg'}`} layout={'fill'} objectFit={'contain'} alt='artwork' priority/>
                     {/*<div className={styles['target']}>
                         <div className={styles['target-text']}>&#x2713;</div>
                     </div>*/}
                 </div>
                 <div className={styles['artom-logo']}>
-                    <Image src={`${'/favicon.ico'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    <Image src={`${'/favicon.ico'}`} layout={'fill'} objectFit={'contain'} alt='artom-logo' priority/>
                 </div>
             </div>
         )
@@ -49,7 +49,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
             <div className={styles['illustration-4']}>
                 <div className={styles['vote-image']}>
                     <div className={styles['vote-image-shadow']}></div>
-                    <Image src={`${'/how-it-works-images/4.png'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    <Image src={`${'/how-it-works-images/4.png'}`} layout={'fill'} objectFit={'contain'} alt='vote' priority/>
                 </div>
             </div>
         )
@@ -58,7 +58,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return(
             <div className={styles['illustration-5']}>
                 <div className={styles['museum-image']}>
-                    <Image src={`${'/how-it-works-images/5.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    <Image src={`${'/how-it-works-images/5.jpg'}`} layout={'fill'} objectFit={'contain'} alt='museum' priority/>
                 </div>
             </div>
         )
@@ -67,16 +67,16 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return(
             <div className={styles['illustration-6']}>
                 <div className={styles['trade-image-1']}>
-                    <Image src={`${'/how-it-works-images/artwork-fractions/14.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    <Image src={`${'/how-it-works-images/artwork-fractions/14.jpg'}`} layout={'fill'} objectFit={'contain'} alt='trade-1' priority/>
                 </div>
                 <div className={styles['trade-image-2']}>
-                    <Image src={`${'/how-it-works-images/artwork-fractions/16.jpg'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    <Image src={`${'/how-it-works-images/artwork-fractions/16.jpg'}`} layout={'fill'} objectFit={'contain'} alt='trade-2' priority/>
                 </div>
                 <div className={styles['trade-arrow-1']}>
-                    <Image src={`${'/how-it-works-images/trade-arrow.png'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    <Image src={`${'/how-it-works-images/trade-arrow.png'}`} layout={'fill'} objectFit={'contain'} alt='arrow-1' priority/>
                 </div>
                 <div className={styles['trade-arrow-2']}>
-                    <Image src={`${'/how-it-works-images/trade-arrow.png'}`} layout={'fill'} objectFit={'contain'} priority/>
+                    <Image src={`${'/how-it-works-images/trade-arrow.png'}`} layout={'fill'} objectFit={'contain'} alt='arrow-2' priority/>
                 </div>
             </div>
         )
