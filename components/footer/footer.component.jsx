@@ -48,7 +48,7 @@ const Footer = (props)=>{
               <li><span onClick={()=> handleClickOnSection('stay-in-touch')}>Stay in Touch</span></li>
             </ul>
 
-            <div><span>White Paper</span></div>
+            <div><span><Link href="/white-paper">White Paper</Link></span></div>
             <a className={styles['artom-email']}><span>hello@artom.io</span></a>
         </div>
         <div className={styles['footer-block-2']}>
