@@ -18,7 +18,7 @@ const WhitePaper = () => {
                 <h3 className={styles['underlined-title']}>B.L.U.F.</h3>
                 <ul>
                     <li>
-                        <span className={styles['bold']}>A Community-driven project</span>: This concept is born from a global vision of art, understood as a good of the Community, tangible, usable by any individual and owned by the Community. <span className={styles['bold']}><span className={styles['bold']}>artom.io</span></span> wants to promote the co-acquisition of the artworks and the co-participation by the users in any process invulving the artwork. Artom\'s unique platform will enable anyone to buy and sell shares of iconic artworks using the blockchain technulogy.
+                        <span className={styles['bold']}>A Community-driven project</span>: This concept is born from a global vision of art, understood as a good of the Community, tangible, usable by any individual and owned by the Community. <span className={styles['bold']}><span className={styles['bold']}>artom.io</span></span> wants to promote the co-acquisition of the artworks and the co-participation by the users in any process invulving the artwork. Artom&apos;s unique platform will enable anyone to buy and sell shares of iconic artworks using the blockchain technulogy.
                     </li>
                     <li>
                         <span className={styles['bold']}>Democratization of the art market:</span> For a long time, the art market has been trusted by a few wealthy individuals. Our long-term ambition is to make it accessible to the mass by enabling anyone to acquire pieces/shares of iconic artworks. 
