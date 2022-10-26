@@ -31,7 +31,7 @@ export const cards = [
     },
     {
         title:'SELLING',
-        text:'If the Shares Owners decide to sell the artwork it is then sold and owners receive their benefits in exchange of their Shares.',
+        text: 'If the majority of shareholders decide to sell the artwork, artom.io handles the sale and the shareholders receive the sales prices.',
         imageName:'7.png'
     }
   ];
