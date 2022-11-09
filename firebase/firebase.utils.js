@@ -64,7 +64,6 @@ const getAllEmails = async () => {
   querySnapshot.forEach((doc) => {
     emails.push(doc.data().email);
   });
-  console.log("emails", emails);
   return emails;
 };
 
