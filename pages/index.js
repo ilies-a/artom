@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { scrollTo } from "seamless-scroll-polyfill";
 import FaqList from '../components/faq-list/faq-list.component'
 import Footer from '../components/footer/footer.component'
+import Spinner from '../components/spinner/spinner.component'
 /* redux */
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -14,13 +15,21 @@ import { selectSelectedNavButton } from '../redux/nav-bar/nav-bar.selectors';
 import { setScrollToSectionFunction } from '../redux/homepage-handler/homepage-handler.actions';
 import { setSelectedNavButton } from '../redux/nav-bar/nav-bar.actions';
 
-const HEADER_HEIGHT_FOR_DESKTOP = 70;
-const HEADER_HEIGHT_FOR_MOBILE = 100;
-const MIN_WIDTH_FOR_MOBILE_HEADER = 960;
+import { 
+  LARGE_SCREEN_HEADER_HEIGHT,
+  SMALL_SCREEN_HEADER_HEIGHT,
+  MEDIUM_SCREEN_MAX_WIDTH,
+  API_URL
+} from '../styles/variables';
 
 class Home extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      email: "",
+      emailRequestStatus: null,
+      emailRequestErrMsg: null
+    };
 
     this.sectionsContainer = React.createRef()
     this.section2 = React.createRef()
@@ -52,11 +61,10 @@ class Home extends React.Component {
   }
 
   getDesktopOrMobileHeight(){
-    return window.innerWidth>MIN_WIDTH_FOR_MOBILE_HEADER ? HEADER_HEIGHT_FOR_DESKTOP : HEADER_HEIGHT_FOR_MOBILE;
+    return window.innerWidth>MEDIUM_SCREEN_MAX_WIDTH ? LARGE_SCREEN_HEADER_HEIGHT : SMALL_SCREEN_HEADER_HEIGHT;
   }
 
   handleScroll = event => {
-    //console.log('window.scrollY', window.scrollY);
     if(this.enableSetSelectedNavButton){
       this.getCurrentScrolledSection(window.scrollY);
     }
@@ -67,7 +75,6 @@ class Home extends React.Component {
     const vh = window.innerHeight;
     const shift = -this.getDesktopOrMobileHeight();
     const section1Top = this.section1.current.offsetTop - vh/2 + shift;
-    console.log('offsetHeight', this.section1.current.offsetHeight)
     const section2Top = this.section2.current.offsetTop - vh/2 + shift;
     const section3Top = this.section3.current.offsetTop - vh/2 + shift;
     const section4Top = this.section4.current.offsetTop - vh/2 + shift;
@@ -118,7 +125,6 @@ class Home extends React.Component {
         break
     }
     this.disableSetSelectedNavButtonForShortTime()
-    //sectionRef.current.scrollIntoView({behavior: 'smooth'})
     this.scrollToY(sectionRef.current.offsetTop-this.getDesktopOrMobileHeight())
   }
 
@@ -126,18 +132,37 @@ class Home extends React.Component {
     scrollTo(window, { behavior: "smooth", top: y});
   }
 
-  /*scrollTo = (section)=>{
-    if(this.props.scrollToSectionFunction !== 'undefined'){
-        this.props.scrollToSectionFunction(section);
-        //this.props.setSelectedNavButton(section)
-    }
-  }*/
-
   disableSetSelectedNavButtonForShortTime(){
     this.enableSetSelectedNavButton = false;
     setTimeout(()=>{
       this.enableSetSelectedNavButton = true;
     },500)
+  }
+
+  handleEmailChange = (event) =>{
+    this.setState({"email": event.target.value});
+  }
+
+  sendEmail = async () => {
+    try {
+      this.setState({emailRequestStatus: "pending"});
+      const res = await fetch(`${API_URL}/api/emails`, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({email: this.state.email})
+      });
+      const data = await res.json();
+      if(res.ok){
+        this.setState({emailRequestStatus: "success"});
+      }
+      else{
+        this.setState({emailRequestStatus: "failure", emailRequestErrMsg: data.error});
+      }
+    } catch (err) {
+      this.setState({emailRequestStatus: "failure", emailRequestErrMsg: "Sorry, an internal error has occurred. Please try again later."});
+    }
   }
 
   render(){
@@ -176,9 +201,15 @@ class Home extends React.Component {
         <section className={`${styles['section']} ${styles['stay-in-touch']}`} ref={this.section4}>
           <h1 className={`${styles['section-title']} ${styles['stay-in-touch-title']}`} >Stay In Touch</h1>
           <div className={styles['email-input-container']}>
-            <input type='text' className={styles['stay-in-touch-email-input']} placeholder='Email...'/>
-            <button>Ok</button>
+            <input type='text' className={styles['stay-in-touch-email-input']} placeholder='Email...' onChange={(e) => {this.handleEmailChange(e)}}/>
+            <button onClick={this.sendEmail}>Ok</button>
+            { this.state.emailRequestStatus === "pending" ? <Spinner/>:
+              this.state.emailRequestStatus === "success" ? <span className={styles['check-symbol']}>&#10003;</span>:null}
           </div>
+          {
+            this.state.emailRequestStatus === "success" ? <div>Success message goes here</div>:
+            this.state.emailRequestStatus === "failure" ? <div>{this.state.emailRequestErrMsg}</div>:null
+          }
           <div className={styles['social-network-buttons-container']}>
             <div className={styles['social-network-logo']}>
               <Image src='/facebook-logo.png' alt='facebook-logo' layout={'fill'} objectFit={'contain'} priority/>
@@ -198,7 +229,6 @@ class Home extends React.Component {
           </div>
         </section>
       </div>
-      {/*<Footer handleClick={this.scrollTo}/>*/}
     </div>
     )
   }
@@ -215,70 +245,3 @@ const mapDispatchToProps = dispatch =>({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
-
-
-/*export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
-  )
-}*/

@@ -8,33 +8,13 @@ export default class FaqItem extends React.Component {
         super(props)
         this.containerRef = React.createRef()
         this.contentRef = React.createRef()
-        //this.unselectedContainerHeight = '50px'
         this.state = {
             contentHeight: null,
             isSelected: false
         }
     }
-    /*componentDidMount(){
-        window.addEventListener('resize',  this.handleResize);
-        setTimeout(()=>{ //without delay, this.contentRef.current.offsetHeight is not accurate...
-            this.handleResize();
-        },2000)
-    }
-    componentWillUnmount(){
-        window.removeEventListener('resize', this.handleResize);
-    }
-    handleResize = ()=>{
-        if( this.contentRef.current === null || this.contentRef.current.offsetHeight === null){
-            return
-        }
-        this.setState({contentHeight:this.contentRef.current.offsetHeight+'px'});
-    }*/
     handleClick =()=>{
-        /*if( this.contentRef.current === null || this.contentRef.current.offsetHeight === null){
-            return
-        }*/
         this.setState({contentHeight:this.contentRef.current.offsetHeight, isSelected:!this.state.isSelected});
-        //this.setState({isSelected:!this.state.isSelected})
     }
 
     render(){

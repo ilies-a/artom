@@ -38,7 +38,7 @@ const Header = (props) => {
         return props.selectedNavButton == section ? true : false;
     }
     const openPrototypePage = ()=>{
-        window.open("https://artom.io/");
+        window.open("https://prototype.artom.io/");
     }
 
 

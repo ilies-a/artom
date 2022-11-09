@@ -8,10 +8,7 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return(
             <div className={styles['illustration-1']}>
                 <div className={styles['artwork']}>
-                        <Image src={`${'/artwork.jpg'}`} layout={'fill'} objectFit={'contain'} alt='artwork' priority/>
-                    {/*<div className={styles['target']}>
-                        <div className={styles['target-text']}>&#x2713;</div>
-                    </div>*/}
+                    <Image src={`${'/artwork.jpg'}`} layout={'fill'} objectFit={'contain'} alt='artwork' priority/>
                 </div>
             </div>
         )
@@ -34,9 +31,6 @@ export default function HowItWorksCard({number, title, text, imageName}){
             <div className={styles['illustration-3']}>
                 <div className={styles['artwork']}>
                     <Image src={`${'/artwork.jpg'}`} layout={'fill'} objectFit={'contain'} alt='artwork' priority/>
-                    {/*<div className={styles['target']}>
-                        <div className={styles['target-text']}>&#x2713;</div>
-                    </div>*/}
                 </div>
                 <div className={styles['artom-logo']}>
                     <Image src={`${'/favicon.ico'}`} layout={'fill'} objectFit={'contain'} alt='artom-logo' priority/>
@@ -121,7 +115,6 @@ export default function HowItWorksCard({number, title, text, imageName}){
         return htmlIllustration;
     }
 
-
     const numberPrefixedByZero= (number<10?'0':'')+number
     return(
     <div className={styles['main-container']}>
@@ -135,10 +128,6 @@ export default function HowItWorksCard({number, title, text, imageName}){
         <div className= {`${styles['illustration-container']} ${styles['image-'+number+'-container']}`}>
             {getIllustrationHtml(number)}
         </div>
-        {/* imageName !== undefined ? 
-            <div className= {`${styles['image-container']} ${styles['image-'+number+'-container']}`}>
-                <Image src={`${'/how-it-works-images/'+imageName}`} layout={'fill'} objectFit={'contain'} priority/>
-    </div> : null */}
     </div>
     )
 }
