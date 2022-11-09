@@ -41,12 +41,20 @@ const Header = (props) => {
         window.open("https://prototype.artom.io/");
     }
 
+    const handleClickOnArtomLogo = ()=>{
+        if(isIndexPage){
+          scrollToTop();
+        }else{
+            props.setSelectedNavButton("");
+            push('/');
+        }
+      }
 
         return (
             <div>
                 <div className={styles['main-container']}>
                     <div className={styles['artom-logo']}>
-                        <Image src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'} priority onClick={scrollToTop}/>
+                        <Image src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'} priority onClick={handleClickOnArtomLogo}/>
                     </div>
                     <div className={styles['nav-container']}>
                         <NavButton text={{desktop:'ABOUT US', mobile:'About Us'}} onClickHandler={handleClickOnSection} section='about-us' isSelected={navButtonIsSelected('about-us')}/>

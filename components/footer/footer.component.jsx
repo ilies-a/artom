@@ -32,11 +32,20 @@ const Footer = (props)=>{
       }
   }
 
+  const handleClickOnArtomLogo = ()=>{
+    if(isIndexPage){
+      scrollToTop();
+    }else{
+        props.setSelectedNavButton("");
+        push('/');
+    }
+  }
+
     return(
         <footer className={styles.footer}>
         <div className={styles['footer-block-1']}>
           <div className={styles['artom-logo-container']}>
-            <div className={styles['artom-logo']} onClick={scrollToTop}>
+            <div className={styles['artom-logo']} onClick={handleClickOnArtomLogo}>
               <Image className={styles['artom-logo']} src='/artom-logo.png' alt='artom-logo' layout={'fill'} objectFit={'contain'} priority/>
             </div>
           </div>

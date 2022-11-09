@@ -210,7 +210,7 @@ class Home extends React.Component {
               this.state.emailRequestStatus === "success" ? <span className={styles['check-symbol']}>&#10003;</span>:null}
           </div>
           {
-            this.state.emailRequestStatus === "success" ? <div>Success message goes here</div>:
+            this.state.emailRequestStatus === "success" ? <div>Thank you for your subscribing!</div>:
             this.state.emailRequestStatus === "failure" ? <div>{this.state.emailRequestErrMsg}</div>:null
           }
           <div className={styles['social-network-buttons-container']}>
