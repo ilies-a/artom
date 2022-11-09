@@ -56,6 +56,7 @@ const addEmail = async (email) => {
 };
 
 const getAllEmails = async () => {
+  console.log("process.env.FIREBASE_API_KEY", process.env.FIREBASE_API_KEY);
   const emailsRef = collection(db, "emails");
   const q = query(emailsRef);
   const querySnapshot = await getDocs(q);
