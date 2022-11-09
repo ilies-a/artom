@@ -19,8 +19,11 @@ import {
   LARGE_SCREEN_HEADER_HEIGHT,
   SMALL_SCREEN_HEADER_HEIGHT,
   MEDIUM_SCREEN_MAX_WIDTH,
-  API_URL
 } from '../styles/variables';
+
+import {
+  API_URL
+} from '../global-variables'
 
 class Home extends React.Component {
   constructor(props){

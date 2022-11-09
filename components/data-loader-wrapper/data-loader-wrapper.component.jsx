@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectLoadingIsComplete } from '../../redux/data-loader/data-loader.selectors';
 import { setLoadingIsComplete} from '../../redux/data-loader/data-loader.actions';
+import { PRODUCTION_URL } from '../../global-variables'
 
 class DataLoaderWrapper extends React.Component {
     constructor(props){
@@ -13,6 +14,12 @@ class DataLoaderWrapper extends React.Component {
         this.totalOfImages = 14//21
         this.loadedImages = 0;
     }
+    componentDidMount(){
+        if(process.env.NODE_ENV === "production" && window.location.protocol === "http:" ){
+            window.location.replace(PRODUCTION_URL);
+        }
+    }
+
     handleImageLoad(){
         this.loadedImages++;
         if(this.loadedImages==this.totalOfImages){

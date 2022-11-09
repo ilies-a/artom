@@ -3,7 +3,7 @@ import Spinner from '../components/spinner/spinner.component';
 import styles from '../styles/admin.module.scss';
 import { 
   API_URL
-} from '../styles/variables';
+} from '../global-variables';
 
 const Admin = () =>{
   const [password, setPassword] = useState("");
