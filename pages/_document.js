@@ -6,9 +6,10 @@ export default function Document() {
       <Head>
         <link
             rel="preload"
-            href="/fonts/NeueMontreal-Medium.otf"
+            href="/_next/static/media/NeueMontreal-Medium.b9da7318.otf"
             as="font"
             type="font/otf"
+            crossOrigin="anonymous"
         />
       </Head>
       <body>
