@@ -18,7 +18,7 @@ const TermsAndConditions = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                artom project operates a platform, which is accessible through the artom.io website: http://artom.io, which allows users to search for and purchase fractions of real physical artworks (“The Service”). 
+                artom project operates a platform, which is accessible through the artom.io website: <a href="http://artom.io">http://artom.io</a>, which allows users to search for and purchase fractions of real physical artworks (“The Service”). 
                 </li>
             </ItemListContainer>
 
@@ -36,7 +36,7 @@ const TermsAndConditions = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                Your privacy is important to us. Please read our Privacy Notice at https://www.artom.io./privacy-policy to understand how we collect, use and share your private data.
+                Your privacy is important to us. Please read our Privacy Notice at <a href="https://www.artom.io./privacy-policy">https://www.artom.io./privacy-policy</a> to understand how we collect, use and share your private data.
 
                 </li>
             </ItemListContainer>
@@ -50,7 +50,7 @@ const TermsAndConditions = () =>{
                 These terms and conditions (the &quot;Terms & Conditions&quot;) set out the terms on which we will provide the artom.io to you. It is important that you read and understand these Terms & Conditions before using the Service. We will ask you to agree to these Terms and Conditions when you using the service. You will not be allowed to use the service if you do not agree to these Terms & Conditions. 
                 </li>
                 <li>
-                Additional terms will apply to the sale of Fractions to you through the artom.io platform, which are set out at https://www.artom.io/fraction-terms (&quot;Fraction Terms&quot;). You should ensure that you read and understand these Fraction Terms before you buy any Fractions through the artom.io platform, as we will ask you to agree to them when you buy Fractions through the Service.
+                Additional terms will apply to the sale of Fractions to you through the artom.io platform, which are set out at <a href="https://www.artom.io/fraction-terms">https://www.artom.io/fraction-terms</a> (&quot;Fraction Terms&quot;). You should ensure that you read and understand these Fraction Terms before you buy any Fractions through the artom.io platform, as we will ask you to agree to them when you buy Fractions through the Service.
                 </li>
             </ItemListContainer>
 
@@ -62,7 +62,7 @@ const TermsAndConditions = () =>{
                 Buying and selling Fractions
                 </li>
                 <li>
-                The Service is not available to residents of certain countries. For more information about the restricted countries please visit https://www.artom.io/restricted-countries.
+                The Service is not available to residents of certain countries. For more information about the restricted countries please visit <a href="https://www.artom.io/restricted-countries">https://www.artom.io/restricted-countries</a>.
 
                 </li>
                 <li>
@@ -121,7 +121,7 @@ const TermsAndConditions = () =>{
                 You are responsible for maintaining the confidentiality of your password and for any activities that occur under your Account.
                 </li>
                 <li>
-                You must be 18 years or older and capable in your country of residence of entering into a legally binding agreement to use the Service. Resident of countries listed as restricted shall not be able to access and use the service. Please check the list of restricted countries in the following link: https://www.artom.io/restricted-countries.
+                You must be 18 years or older and capable in your country of residence of entering into a legally binding agreement to use the Service. Resident of countries listed as restricted shall not be able to access and use the service. Please check the list of restricted countries in the following link: <a href="https://www.artom.io/restricted-countries">https://www.artom.io/restricted-countries</a>.
 
                 </li>
             </ItemListContainer>
@@ -327,7 +327,7 @@ const TermsAndConditions = () =>{
                 If you have a dispute with us relating to the Service, we would welcome the opportunity to try and make things right and resolve the dispute with you ourselves. In the first instance please contact us using the details set out in paragraph 2 of these Terms and Conditions so that we can attempt to resolve the dispute informally through our internal complaints handling process.
                 </li>
                 <li>
-                If you are in the European Economic Area, you may (but are not obliged to) seek resolution of any dispute with us through consumer mediation services. You can do this through the European Online Dispute Resolution (ODR) platform, available at this link: https://ec.europa.eu/consumers/odr/.
+                If you are in the European Economic Area, you may (but are not obliged to) seek resolution of any dispute with us through consumer mediation services. You can do this through the European Online Dispute Resolution (ODR) platform, available at this link: <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>.
                 </li>
                 <li>
                 In the unlikely event that we have not been able to resolve a dispute informally, we will discuss and agree with you the most effective way of resolving our dispute through a formal dispute resolution process.

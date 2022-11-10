@@ -2,6 +2,8 @@
 
 $box-shadow: 3px 3px 3px rgb(26, 100, 63);
 
+$medium-screen-max-width-adjust: 350px;
+
 .main-container{
     background-color: rgba(255, 255, 255, 0.75);
     display: flex;
@@ -13,14 +15,14 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
     border-radius: 25px;
     border: 1px solid rgb(68, 68, 68);
     //l
-    /*@media (min-width: $medium-screen-max-width) {
+    /*@media (min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)) {
         max-width: calc(100vw - 20vw); // 20/2 = 10 is the margin for large width sections see Home.module.css
       }*/
     //m
-    @media (max-width: $medium-screen-max-width) {
+    @media (max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)) {
         max-width: calc(100vw - 12vw); // 12/2 = 6 is the margin for non large width sections see Home.module.css
     }
-    @media (max-width: $medium-screen-max-width) {
+    @media (max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)) {
         height:215px;
         //max-width: calc(100vw - 12vw); // 12/2 = 6 is the margin for non large width sections see Home.module.css
     }
@@ -86,12 +88,12 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
         transform: rotate3d(0, 1, 0, -45deg);
         margin-left:0px;
         .illustration-1, .illustration-3{
-            @media(min-width: $medium-screen-max-width){
+            @media(min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                 width:  $artwork-size-large;
                 height:  $artwork-size-large;
             }
             //m
-            @media(max-width: $medium-screen-max-width){
+            @media(max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                 width:  $artwork-size-medium;
                 height:  $artwork-size-medium;
             }
@@ -120,12 +122,12 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
             display: flex;
             flex-wrap: wrap;
             //l
-            @media(min-width: $medium-screen-max-width){
+            @media(min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                 width:  $artwork-size-large*$growing-ratio;
                 height:  $artwork-size-large*$growing-ratio;
             }
             //m
-            @media(max-width: $medium-screen-max-width){
+            @media(max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                 width:  $artwork-size-medium*$growing-ratio;
                 height:  $artwork-size-medium*$growing-ratio;
             }
@@ -154,12 +156,12 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
         }
         .illustration-3{
             //l
-            @media(min-width: $medium-screen-max-width){
+            @media(min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                 width:  $artwork-size-large;
                 height:  $artwork-size-large;
             }
             //m
-            @media(max-width: $medium-screen-max-width){
+            @media(max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                 width:  $artwork-size-medium;
                 height:  $artwork-size-medium;
             }
@@ -195,12 +197,12 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 width: $vote-image-width;
                 height: $vote-image-height;
                 //l
-                @media(min-width: $medium-screen-max-width){
+                @media(min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     width: $vote-image-width;
                     height: $vote-image-height;
                 }
                 //m
-                @media(max-width: $medium-screen-max-width){
+                @media(max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     width: $vote-image-width * $phone-image-reduction-ratio-medium;
                     height: $vote-image-height * $phone-image-reduction-ratio-medium;
                 }
@@ -217,12 +219,12 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 box-shadow: $artwork-box-shadow;
 
                 //l
-                @media(min-width: $medium-screen-max-width){
+                @media(min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     width: $artwork-size-large;
                     height: $artwork-size-large;
                 }
                 //m
-                @media(max-width: $medium-screen-max-width){
+                @media(max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     width: $artwork-size-medium;
                     height: $artwork-size-medium;
                 }
@@ -238,12 +240,12 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
             width:  $artwork-size-large;
             height: $artwork-size-large;
             //l
-            @media(min-width: $medium-screen-max-width){
+            @media(min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                 width:  $artwork-size-large;
                 height: $artwork-size-large;
             }
             //m
-            @media(max-width: $medium-screen-max-width){
+            @media(max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                 width:  $artwork-size-medium;
                 height: $artwork-size-medium;
             }
@@ -263,13 +265,13 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 z-index: 1;
                 box-shadow: $artwork-box-shadow;
                 //l
-                @media(min-width: $medium-screen-max-width){
+                @media(min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     $size: $artwork-size-large*0.5 * $growing-ratio;
                     width: $size;
                     height: $size;
                 }
                 //m
-                @media(max-width: $medium-screen-max-width){
+                @media(max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     $size: $artwork-size-medium*0.5 * $growing-ratio;
                     width: $size;
                     height: $size;
@@ -294,13 +296,13 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 color: $artom-blue;
                 text-align: center;
                 //l
-                @media(min-width: $medium-screen-max-width){
+                @media(min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     $size: $artwork-size-large*0.5 * $growing-ratio;
                     width: $size * $width-ratio;
                     height: $size * $height-ratio;
                 }
                 //m
-                @media(max-width: $medium-screen-max-width){
+                @media(max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     $size: $artwork-size-medium*0.5 * $growing-ratio;
                     width: $size * $size-medium-reduction-ratio * $width-ratio;
                     height: $size * $size-medium-reduction-ratio * $height-ratio;
@@ -337,12 +339,12 @@ $box-shadow: 3px 3px 3px rgb(26, 100, 63);
                 width: $sell-image-width;
                 height: $sell-image-height;
                 //l
-                @media(min-width: $medium-screen-max-width){
+                @media(min-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     width: $sell-image-width;
                     height: $sell-image-height;
                 }
                 //m
-                @media(max-width: $medium-screen-max-width){
+                @media(max-width: calc($medium-screen-max-width - $medium-screen-max-width-adjust)){
                     width: $sell-image-width * $phone-image-reduction-ratio-medium;
                     height: $sell-image-height * $phone-image-reduction-ratio-medium;
                 }

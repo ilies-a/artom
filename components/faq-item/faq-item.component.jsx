@@ -23,7 +23,7 @@ export default class FaqItem extends React.Component {
             <FaqItemContainer contentHeight={this.state.contentHeight} isSelected = {this.state.isSelected} ref={this.containerRef}>
                 <div ref={this.contentRef}>
                     <TitleAndButtonContainer>
-                        <h3 className={styles['title']}>{title}</h3>
+                        <h1 className={styles['title']}>{title}</h1>
                         <div className={`${styles['arrow-button']} ${this.state.isSelected?styles['is-selected']:null}`} onClick={this.handleClick}>
                             <Image className={styles['arrow']} src='/arrow.png' alt='arrow' layout={'fill'} objectFit={'contain'}/>
                         </div>

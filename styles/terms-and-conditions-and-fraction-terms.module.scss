@@ -23,7 +23,9 @@
         display: inline-block;
         text-decoration: underline;
     }
-
+    a{
+        text-decoration: underline;
+    }
 
     .external-list {
         counter-reset: external-list-number;

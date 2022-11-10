@@ -13,7 +13,7 @@
     grid-column-gap: 25px;
     grid-template-columns: repeat(1, 1fr);
 
-    @media (min-width: $medium-screen-max-width) {
+    @media (min-width: calc($medium-screen-max-width + 90px)) {
       grid-template-columns: repeat(2, 1fr);
     }
     @media (max-width: $small-screen-max-width) {

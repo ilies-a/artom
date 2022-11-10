@@ -18,7 +18,7 @@ const FractionTerms = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                    artom project operates a platform, which is accessible through the artom.io website: http://artom.io, which 
+                    artom project operates a platform, which is accessible through the artom.io website: <a href="http://artom.io">http://artom.io</a>, which 
                     allows users to search for and purchase fractions of real physical artworks (“The Service”). 
                 </li>
                 <li>
@@ -53,7 +53,7 @@ const FractionTerms = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                    Your privacy is important to us. Please read our Privacy Notice at https://www.artom.io./privacy-policy to understand how 
+                    Your privacy is important to us. Please read our Privacy Notice at <a href="https://www.artom.io./privacy-policy">https://www.artom.io./privacy-policy</a> to understand how 
                     we collect, use and share your private data.
                 </li>
             </ItemListContainer>
@@ -171,7 +171,7 @@ const FractionTerms = () =>{
                     </ul>
                 </li>
                 <li>
-                For more information about Fractions that we issue and Fraction Holder Rights, please see our FAQs at https://www.artom.io/faq.
+                For more information about Fractions that we issue and Fraction Holder Rights, please see our FAQs at <a href="https://www.artom.io/faq">https://www.artom.io/faq</a>.
                 </li>
             </ItemListContainer>
 
@@ -194,7 +194,7 @@ const FractionTerms = () =>{
                         have set up a Wallet;
                         </li>
                         <li>
-                        not be a resident in one of the countries listed at https://www.artom.io/restricted-countries.
+                        not be a resident in one of the countries listed at <a href="https://www.artom.io/restricted-countries">https://www.artom.io/restricted-countries</a>.
                         </li>
                     </ul>
                 </li>
@@ -529,7 +529,7 @@ const FractionTerms = () =>{
                 If you have a dispute with us relating to the Fractions or Fraction Assets, we would welcome the opportunity to try and make things right and resolve the dispute with you ourselves. In the first instance please contact us using the details in paragraph 2 above so that we can attempt to resolve the dispute informally through our internal complaints handling process.
                 </li>
                 <li>
-                If you are in the European Economic Area, you may (but are not obliged to) seek resolution of any dispute with us through consumer mediation services. You can do this through the European Online Dispute Resolution (ODR) platform, available at this link: https://ec.europa.eu/consumers/odr/.
+                If you are in the European Economic Area, you may (but are not obliged to) seek resolution of any dispute with us through consumer mediation services. You can do this through the European Online Dispute Resolution (ODR) platform, available at this link: <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a>.
                 </li>
                 <li>
                 In the unlikely event that we have not been able to resolve a dispute informally, we will discuss and agree with you the most effective way of resolving our dispute through a formal dispute resolution process.               
@@ -573,7 +573,7 @@ const FractionTerms = () =>{
             </TitleListContainer>
             <ItemListContainer className={styles['item-list']}>
                 <li>
-                We may revise these Fraction Terms from time to time but the most current version will always be at https://www.artom.io/fraction-terms.
+                We may revise these Fraction Terms from time to time but the most current version will always be at <a href="https://www.artom.io/fraction-terms">https://www.artom.io/fraction-terms</a>.
                 </li>
                 <li>
                 Changes will usually occur because of changes in the law or where we need to clarify our position on something.

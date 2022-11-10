@@ -38,7 +38,7 @@ export default async function handler(req, res) {
   const msg = {
     to: email, // Change to your recipient
     from: "hello@artom.io", // Change to your verified sender
-    subject: "Welcome to Artom!",
+    subject: "Welcome to artom.io!",
     html: "<div>"
           +"<p>Hi there !</p>"
             +"<p>Thanks for signing up and welcome to the artom.io Community!</p>"

@@ -2,13 +2,12 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <link
             rel="preload"
             href="/fonts/NeueMontreal-Medium.otf"
             as="font"
-            crossOrigin="true"
             type="font/otf"
         />
       </Head>

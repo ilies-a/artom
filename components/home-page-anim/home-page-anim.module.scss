@@ -1,19 +1,9 @@
-/*$textWhiteColor: rgb(243, 243, 243);*/
-$artomBlue: rgb(0, 88, 219);
-$darkBlue: $artomBlue;
-
-$header-height-large-screen: 70px;
-$header-height-small-screen: 100px;
-
+@import "../../styles/variables";
 
 $artworkfadeinduration: 0.8s;
 
 $artworkshiftleftdelay: 0s;
 $artworkshiftleftduration: 1.2s;
-
-
-$horizontal-min-width: 1000px;
-$max-width-for-mobile: 420px;
 
 .main-container{
     --text-fadein-delay: 2.5s;
@@ -43,15 +33,15 @@ $max-width-for-mobile: 420px;
 
     position: relative;
     width: 100%;
-    height: calc(100vh - $header-height-large-screen);
-    @media(max-width: $horizontal-min-width){
-        height: calc(100vh - $header-height-small-screen);
+    height: calc(100vh - $large-screen-header-height);
+    @media(max-width: $medium-screen-max-width){
+        height: calc(100vh - $small-screen-header-height);
     }
 }
 
 
 
-@media (min-width: $horizontal-min-width) {
+@media (min-width: $medium-screen-max-width) {
     $artwork-img-height: 550px;
     .main-container{
         display: grid;
@@ -94,7 +84,7 @@ $max-width-for-mobile: 420px;
 }
 
 
-@media (max-width: $horizontal-min-width) { //small width
+@media (max-width: $medium-screen-max-width) { //small width
 
     $artwork-img-width: 95vw;
     $dim-ratio: 1;
@@ -103,9 +93,9 @@ $max-width-for-mobile: 420px;
 
     .main-container{
         height: auto;
-        min-height: calc(100vh - $header-height-large-screen);
-        @media(max-width: $horizontal-min-width){
-            min-height: calc(100vh - $header-height-small-screen);
+        min-height: calc(100vh - $large-screen-header-height);
+        @media(max-width: $medium-screen-max-width){
+            min-height: calc(100vh - $small-screen-header-height);
         }
         display: flex;
         flex-direction: column;
@@ -137,7 +127,7 @@ $max-width-for-mobile: 420px;
             font-size: 22px;
         }  
 
-        @media (max-width: $max-width-for-mobile) {
+        @media (max-width: $small-screen-max-width) {
             :first-child{
                 font-size: 22px;
             }

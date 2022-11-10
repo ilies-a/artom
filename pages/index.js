@@ -154,7 +154,7 @@ class Home extends React.Component {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({email: this.state.email})
+        body: JSON.stringify({email: this.state.email.trim()})
       });
       const data = await res.json();
       if(res.ok){
