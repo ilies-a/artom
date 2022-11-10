@@ -23,7 +23,7 @@ const Admin = () =>{
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({password: password})
+        body: JSON.stringify({password: password.trim()})
       });
       const data = await res.json();
       setEmails(data);
@@ -44,7 +44,7 @@ const Admin = () =>{
   return (
     <div className={styles['main-container']}>
       <div className={styles['password-input-container']}>
-        <input type='text' className={styles['password-input']} placeholder='Password' onChange={(e) => {handlePasswordChange(e)}}/>
+        <input type='password' className={styles['password-input']} placeholder='Password' onChange={(e) => {handlePasswordChange(e)}}/>
         <button onClick={authenticate}>Ok</button>
         { authRequestStatus === "pending" ? <Spinner/>:
           authRequestStatus === "success" ? null:
