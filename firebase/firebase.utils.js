@@ -25,13 +25,10 @@ export const db = getFirestore(app);
 const addEmail = async (email) => {
   const emailsRef = collection(db, "emails");
 
-  // Create a query against the collection.
   const q = query(emailsRef, where("email", "==", email));
 
   const querySnapshot = await getDocs(q);
   const emailDoesNotExists = querySnapshot.size == false;
-
-  console.log("emailDoesNotExists", emailDoesNotExists);
 
   if (emailDoesNotExists) {
     try {
