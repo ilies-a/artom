@@ -51,6 +51,23 @@ class Home extends React.Component {
     }
   }
 
+  test = async ()=>{
+    let username = 'admin';
+    let password = '12345';
+    let auth = Buffer.from(`${username}:${password}`).toString('base64');
+    const res = await fetch(`http://localhost:8000/emails/`, {
+      method: "get",
+      headers: {
+        "Content-Type": "application/json",
+        'Authorization': `Basic ${auth}`
+      },
+    });
+    console.log("res", res)
+    
+    // const data = await res.json();
+    // console.log("data", data)
+  }
+
   componentWillUnmount(){
     this.removeScrollListenerToWindow();
     this.props.setSelectedNavButton(null);
@@ -149,7 +166,7 @@ class Home extends React.Component {
   sendEmail = async () => {
     try {
       this.setState({emailRequestStatus: "pending"});
-      const res = await fetch(`${API_URL}/api/emails`, {
+      const res = await fetch(`${API_URL}/emails/`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -161,7 +178,20 @@ class Home extends React.Component {
         this.setState({emailRequestStatus: "success"});
       }
       else{
-        this.setState({emailRequestStatus: "failure", emailRequestErrMsg: data.error});
+        console.log("res.status",res.status)
+        let emailRequestErrMsg
+        switch(res.status){
+          case 400:
+            emailRequestErrMsg = "Oops ! Your email is not valid..."
+            break
+          case 403:
+            emailRequestErrMsg = "We already successfully saved your email. Thank you for your subscribing!"
+            break
+          default:
+            emailRequestErrMsg = "Sorry, an internal error has occurred. Please try again later."
+            break
+        }
+        this.setState({emailRequestStatus: "failure", emailRequestErrMsg});
       }
     } catch (err) {
       this.setState({emailRequestStatus: "failure", emailRequestErrMsg: "Sorry, an internal error has occurred. Please try again later."});
