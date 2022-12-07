@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm install && npm run build"
+    "deploy": "npm install --production && npm run build"
   },
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
