@@ -5,7 +5,6 @@ import HowItWorksCards from '../components/how-it-works-cards/how-it-works-cards
 import Image from 'next/image'
 import { scrollTo } from "seamless-scroll-polyfill";
 import FaqList from '../components/faq-list/faq-list.component'
-import Footer from '../components/footer/footer.component'
 import Spinner from '../components/spinner/spinner.component'
 /* redux */
 import { connect } from 'react-redux';
@@ -49,23 +48,6 @@ class Home extends React.Component {
     if(this.props.selectedNavButton!==null){
       this.scrollToSection(this.props.selectedNavButton);
     }
-  }
-
-  test = async ()=>{
-    let username = 'admin';
-    let password = '12345';
-    let auth = Buffer.from(`${username}:${password}`).toString('base64');
-    const res = await fetch(`http://localhost:8000/emails/`, {
-      method: "get",
-      headers: {
-        "Content-Type": "application/json",
-        'Authorization': `Basic ${auth}`
-      },
-    });
-    console.log("res", res)
-    
-    // const data = await res.json();
-    // console.log("data", data)
   }
 
   componentWillUnmount(){
