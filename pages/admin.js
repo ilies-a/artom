@@ -19,7 +19,7 @@ const Admin = () =>{
     try {
       setAuthRequestStatus("pending");
       let auth = Buffer.from(`${'admin'}:${password.trim()}`).toString('base64');
-      const res = await fetch(`http://localhost:8000/emails/`, {
+      const res = await fetch(`${API_URL}/emails/`, {
         method: "get",
         headers: {
           "Content-Type": "application/json",
