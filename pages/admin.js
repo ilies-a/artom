@@ -18,52 +18,34 @@ const Admin = () =>{
   const authenticate = async () => {
     try {
       setAuthRequestStatus("pending");
-      let auth = Buffer.from(`${'admin'}:${password.trim()}`).toString('base64');
-      const res = await fetch(`${API_URL}/emails/`, {
-        method: "get",
+      const res = await fetch(`${API_URL}/api/admin-data`, {
+        method: "post",
         headers: {
           "Content-Type": "application/json",
-          'Authorization': `Basic ${auth}`
         },
+        body: JSON.stringify({password: password.trim()})
       });
-      if(!res.ok){
-        if(res.status == 401){
-          setAuthRequestStatus("failure");
-          setAuthRequestErrMsg("Unauthorized");
-        }else{
-          setAuthRequestStatus("failure");
-          setAuthRequestErrMsg("Sorry, an internal error has occurred. Please try again later.");
-        }
-      }else{
+      const data = await res.json();
+      setEmails(data);
+      if(res.ok){
         setAuthRequestStatus("success");
-        const emails = await res.json();
-        responseEmailsToEmailsArray(emails)
-   
+      }
+      else{
+        setAuthRequestStatus("failure");
+        setAuthRequestErrMsg(data.error);
       }
     } catch (err) {
       setAuthRequestStatus("failure");
       setAuthRequestErrMsg("Sorry, an internal error has occurred. Please try again later.");
-      return
+      console.log(err);
     }
-  }
-
-  const responseEmailsToEmailsArray = (responseEmails) => {
-    const emails = []
-    for(const responseEmail of responseEmails){
-      emails.push(responseEmail["value"])
-    }
-    setEmails(emails);  
   }
 
   return (
     <div className={styles['main-container']}>
       <div className={styles['password-input-container']}>
-        {authRequestStatus === "success" ? null:
-          <div>
-            <input type='password' className={styles['password-input']} placeholder='Password' onChange={(e) => {handlePasswordChange(e)}}/>
-            <button onClick={authenticate}>Ok</button>
-          </div>
-        }
+        <input type='password' className={styles['password-input']} placeholder='Password' onChange={(e) => {handlePasswordChange(e)}}/>
+        <button onClick={authenticate}>Ok</button>
         { authRequestStatus === "pending" ? <Spinner/>:
           authRequestStatus === "success" ? null:
           authRequestStatus === "failure" ? <div>{authRequestErrMsg}</div>:null}

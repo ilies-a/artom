@@ -5,6 +5,7 @@ import HowItWorksCards from '../components/how-it-works-cards/how-it-works-cards
 import Image from 'next/image'
 import { scrollTo } from "seamless-scroll-polyfill";
 import FaqList from '../components/faq-list/faq-list.component'
+import Footer from '../components/footer/footer.component'
 import Spinner from '../components/spinner/spinner.component'
 /* redux */
 import { connect } from 'react-redux';
@@ -148,7 +149,7 @@ class Home extends React.Component {
   sendEmail = async () => {
     try {
       this.setState({emailRequestStatus: "pending"});
-      const res = await fetch(`${API_URL}/emails/`, {
+      const res = await fetch(`${API_URL}/api/emails`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -160,20 +161,7 @@ class Home extends React.Component {
         this.setState({emailRequestStatus: "success"});
       }
       else{
-        console.log("res.status",res.status)
-        let emailRequestErrMsg
-        switch(res.status){
-          case 400:
-            emailRequestErrMsg = "Oops ! Your email is not valid..."
-            break
-          case 403:
-            emailRequestErrMsg = "We already successfully saved your email. Thank you for your subscribing!"
-            break
-          default:
-            emailRequestErrMsg = "Sorry, an internal error has occurred. Please try again later."
-            break
-        }
-        this.setState({emailRequestStatus: "failure", emailRequestErrMsg});
+        this.setState({emailRequestStatus: "failure", emailRequestErrMsg: data.error});
       }
     } catch (err) {
       this.setState({emailRequestStatus: "failure", emailRequestErrMsg: "Sorry, an internal error has occurred. Please try again later."});
