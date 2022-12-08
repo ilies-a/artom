@@ -154,7 +154,7 @@ class Home extends React.Component {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({email: this.state.email.trim()})
+        body: JSON.stringify({email: this.state.email.trim().toLowerCase()})
       });
       if(res.ok){
         this.setState({emailRequestStatus: "success"});
