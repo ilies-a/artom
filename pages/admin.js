@@ -18,27 +18,42 @@ const Admin = () =>{
   const authenticate = async () => {
     try {
       setAuthRequestStatus("pending");
-      const res = await fetch(`${API_URL}/api/admin-data`, {
-        method: "post",
+      const res = await fetch(`${API_URL}/emails/`, {
+        method: "get",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": "Basic " + Buffer.from(`admin:${password.trim()}`).toString('base64')
         },
-        body: JSON.stringify({password: password.trim()})
       });
-      const data = await res.json();
-      setEmails(data);
       if(res.ok){
         setAuthRequestStatus("success");
+        const requestEmails = await res.json();
+        setEmails(requestEmailsToEmails(requestEmails));
       }
       else{
+        switch(res.status){
+          case 401:
+            setAuthRequestErrMsg("Unauthorized.");
+            break
+          default:
+            setAuthRequestErrMsg("Sorry, an internal error has occurred. Please try again later.");
+            break
+        }
         setAuthRequestStatus("failure");
-        setAuthRequestErrMsg(data.error);
       }
     } catch (err) {
       setAuthRequestStatus("failure");
       setAuthRequestErrMsg("Sorry, an internal error has occurred. Please try again later.");
       console.log(err);
     }
+  }
+
+  const requestEmailsToEmails = (requestEmails) => {
+    const emails = []
+    for (const requestEmail of requestEmails){
+      emails.push(requestEmail["value"])
+    }
+    return emails
   }
 
   return (

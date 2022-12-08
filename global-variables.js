@@ -1,2 +1,4 @@
-export const PRODUCTION_URL = "https://artom.com";
-export const API_URL = process.env.NODE_ENV === "production" ? PRODUCTION_URL:"http://localhost:3000";
+export const PRODUCTION_URL = "https://artom.io";
+const API_DEVELOPMENT_URL = "http://localhost:8000";
+const API_PRODUCTION_URL = "https://artom-api.render.com";
+export const API_URL = process.env.NODE_ENV === "production" ? API_PRODUCTION_URL:API_DEVELOPMENT_URL;

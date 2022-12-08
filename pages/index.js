@@ -149,19 +149,30 @@ class Home extends React.Component {
   sendEmail = async () => {
     try {
       this.setState({emailRequestStatus: "pending"});
-      const res = await fetch(`${API_URL}/api/emails`, {
+      const res = await fetch(`${API_URL}/emails/`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({email: this.state.email.trim()})
       });
-      const data = await res.json();
       if(res.ok){
         this.setState({emailRequestStatus: "success"});
       }
       else{
-        this.setState({emailRequestStatus: "failure", emailRequestErrMsg: data.error});
+        let emailRequestErrMsg;
+        switch (res.status) {
+          case 400:
+            emailRequestErrMsg = "Oops! Your email is invalid.";
+            break
+          case 403:
+            emailRequestErrMsg = "We already saved your email. Thank you for your subscribing!";
+            break;
+          default:
+            emailRequestErrMsg = "Sorry, an internal error has occurred. Please try again later.";
+            break;
+        }
+        this.setState({emailRequestStatus: "failure", emailRequestErrMsg});
       }
     } catch (err) {
       this.setState({emailRequestStatus: "failure", emailRequestErrMsg: "Sorry, an internal error has occurred. Please try again later."});
