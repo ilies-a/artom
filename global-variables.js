@@ -2,4 +2,4 @@ export const PRODUCTION_URL = "https://artom.com";
 const API_URL_FOR_PRODUCTION = "https://artom-api.onrender.com"
 const API_URL_FOR_DEVELOPMENT = "http://localhost:8000"
 console.log("process.env.NODE_ENV",process.env.NODE_ENV)
-export const API_URL = process.env.NODE_ENV === "production" ? API_URL_FOR_PRODUCTION:API_URL_FOR_PRODUCTION;
+export const API_URL = process.env.NODE_ENV === "production" ? API_URL_FOR_PRODUCTION:API_URL_FOR_DEVELOPMENT;
